@@ -1,0 +1,132 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Typography
+******************************************************************/
+
+/* Headings
+================================================== */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	margin: 0 0 @line-height;
+
+	a {}
+	@media (max-width: @screen-sm-min) {
+		> br {
+			display: none;
+		}
+	}
+}
+
+h1, .h1 {
+	@media (max-width: @screen-sm-min) {
+    font-size: 30px;
+  }
+}
+
+h2, .h2 {
+	@media (max-width: @screen-sm-min) {
+    font-size: 25px;
+  }
+}
+
+h3, .h3 {}
+
+h4, .h4 {}
+
+h5, .h5 {}
+
+.add-divider {
+  border-bottom: 1px solid @gray-lighter;
+  clear: both;
+  padding-bottom: 0.65em;
+}
+
+/* Body text
+================================================== */
+p {
+  margin: 0 0 @line-height;
+}
+
+p:empty {
+	display: none; 
+}
+
+cite {
+  font-style: italic;
+}
+
+.lead {
+	color: @gray;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 38px;
+}
+
+/* Link Styles
+================================================== */
+a, a:visited {
+
+	.transition(all .2s ease);
+
+	/* on hover */
+	&:hover, &:focus {
+		text-decoration: none;
+    outline: 0 none;
+	}
+
+	/* on click */
+	&:active {}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+	}
+}
+
+a.link-inverted {
+	color: @text-color;
+	&:hover {
+		color: @link-color;
+	}
+}
+
+.post-edit-link{
+	.btn;
+	.btn-sm;
+	.btn-warning;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2000;
+}
+
+a.full-width {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+
+/* Blockquote
+================================================== */
+
+blockquote {
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 38px;
+
+	footer, small, .small {
+		letter-spacing: 0.2em;
+		font-size: 11px;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-style: normal;
+	}
+}

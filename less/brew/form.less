@@ -1,0 +1,53 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Forms
+******************************************************************/
+
+.form-control::-webkit-input-placeholder { color: @gray-light; }
+.form-control:-moz-placeholder { color: @gray-light; }
+.form-control::-moz-placeholder { color: @gray-light; }
+.form-control:-ms-input-placeholder { color: @gray-light; }
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+select, textarea, 
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input {
+  .form-control;
+}
+
+legend {
+	font-size: 20px;
+	margin-bottom: (@line-height / 2);
+}
+
+.input-group-btn {
+	.btn {
+		white-space: nowrap;
+	}
+}
+
+/* RESPONSIVE
+================================================== */
+
+// Screens smaller than @screen-sm;
+@media (max-width: @screen-sm-min) {
+	.form-horizontal .control-label {
+		display: block;
+	}
+}

@@ -1,0 +1,52 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Sidebars
+******************************************************************/
+
+#sidebar {
+  .widget {
+    margin-bottom: @line-height;
+  }
+}
+
+.widgettitle {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid @gray-lighter;
+}
+
+.widget {
+	ul {
+    padding: 0;
+    margin: 0;
+		li {
+      list-style: none;
+		}
+	}
+  select {
+    margin-bottom: 10px;
+  }
+}
+
+/* Blog Sidebar - Mobile Devices 
+================================================== */
+#sidebar-mobile {
+  display: none;
+  .widgettitle {
+    display: none;
+  }
+}
+
+
+/* RESPONSIVE
+================================================== */
+
+// Screens smaller than @screen-md;
+@media (max-width: @screen-md-min) {
+  .sidebar-blog {
+    display: none;
+  }
+  #sidebar-mobile {
+    display: block;
+  }
+}

@@ -1,0 +1,17 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Body
+
+Wordpress automatically adds classes to certain pages.  You can target
+pages with something such as  body.tag or body.archive
+******************************************************************/
+
+
+body {
+  &.admin-bar .navbar-fixed-top { // THIS FIXES THE TOP NAV WHEN ADMIN BAR IS ENABLED
+  	top: 46px;
+  	@media (min-width: 783px) {
+    	top: 32px;
+ 		}
+ 	}
+}

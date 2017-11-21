@@ -1,0 +1,87 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Content Styles
+
+These are the styles for posts, pages, archive, & blog index
+******************************************************************/
+
+/* General Content
+================================================== */
+.bg-img {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: none;
+  position: relative;
+
+  > .container {
+    position: relative;
+  }
+}
+
+.bg-img-shaded::before {
+  content: "";
+  background-color:#000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0; 
+  opacity: 0.4;
+}
+
+/* Entry Header
+================================================== */
+#page-header-outer {
+  background-color: @gray-lighter;
+
+  .entry-header > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Entry Content
+================================================== */
+#page-content-outer {
+}
+
+.row-outer {
+  position: relative;
+  padding: (@line-height * 2) 0;
+  @media (max-width: @screen-md-min) {
+    padding: (@line-height * 2) 0;
+  }
+}
+
+.row-outer-sm {
+  position: relative;
+  padding: @line-height 0;
+}
+
+.row-outer-lg {
+  position: relative;
+  padding: (@line-height * 4) 0;
+  @media (max-width: @screen-md-min) {
+    padding: (@line-height * 2) 0;
+  }
+}
+
+.content-block {
+  margin-bottom: (@line-height * 2);
+  
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content-block-sm {
+  margin-bottom: @line-height;
+  
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}

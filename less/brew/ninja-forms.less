@@ -1,0 +1,85 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Ninja Forms, commented out in /style.less by default
+******************************************************************/
+
+
+.field-wrap .ninja-forms-field {
+	.form-control;
+	padding: 8px 14px;
+	display: inline-block;
+	color: @gray;
+	height: auto;
+	width: auto;
+	background-color: @well-bg;
+	border: 1px solid darken(@well-bg, 10%);
+	width: 100%;
+}
+
+.field-wrap.submit-wrap input[type=button] {
+	.btn;
+	.btn-primary;
+	.transition(all .2s ease);
+	display: inline;
+	width: auto;
+}
+
+.ninja-forms-form-wrap label {
+  font-weight: normal;
+  font-family: @font-family-ss;
+}
+
+.text-center-wrap {
+	text-align: center;
+}
+
+.ninja-forms-required-items,
+.ninja-forms-field-error {
+  color: #DE5959;
+  font-size: 12px;
+  font-style: oblique;
+}
+
+.ninja-forms-required-items {
+	color: @gray-light;
+}
+
+.ninja-forms-error input, 
+.ninja-forms-error select, 
+.ninja-forms-error textarea {
+	border: 1px solid #DE5959;
+}
+
+.nf-form-fields-required {
+	font-family: @font-family-ss;
+	font-size: @font-size-small;
+	margin-bottom: 10px;
+}
+
+.ninja-forms-response-msg {
+	border-radius: @border-radius-base;
+	margin-bottom: 5px; 
+	p:empty {
+		display: none;
+	}
+	p {
+		margin:0;
+	}
+}
+
+.nf-response-msg {
+	.well;
+}
+
+.nf-error-msg.nf-error-field-errors {
+	background: none repeat scroll 0 0 #ffe9e9;
+  border: 1px solid #fbc4c4;
+  color: #de5959;
+  font-family: @font-family-ss;
+  padding: 20px;
+}
+
+.nf-error-msg.nf-error-required-error {
+	color: #de5959;
+	font-family: @font-family-ss;
+}

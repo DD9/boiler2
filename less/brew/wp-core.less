@@ -1,0 +1,90 @@
+/******************************************************************
+Author: DD9
+Stylesheet: WP Core Styles
+
+This stylesheet contains CSS needed for WP Core
+******************************************************************/
+
+.alignnone {
+  margin: 0 0 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.alignright {
+  float:right;
+  margin: 0 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  img {
+    max-width: 100%;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  p.wp-caption-text {
+    font-size: 0.85em;
+    margin: 2px 0 7px;
+    text-align: center;
+  }
+} 
+
+.wp-caption.alignleft {
+  margin-right: 20px;
+}
+
+.wp-caption.alignright {
+  margin-left: 20px;
+}
+
+.wp-caption.alignnone img{
+}
+
+/* image gallery styles */
+.gallery {
+  dl {
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    width: 33%;
+    img {
+      border: 2px solid #cfcfcf;
+    }
+  }
+}
+
+/* Screen Reader Text */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+
+@media (max-width: @screen-sm-min) {
+  img.alignright, .wp-caption.alignright, .alignright,
+  img.alignleft, .wp-caption.alignleft, .alignleft,
+  img.aligncenter, .wp-caption.aligncenter, .aligncenter {
+    display: block;
+    float: none;
+    margin: 0 auto 20px;
+  }
+}

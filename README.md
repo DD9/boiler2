@@ -1,5 +1,5 @@
-# boiler
-Boilerplate Theme (v2)
+# boiler2
+Boilerplate Theme (v2), with Bootstrap 4+
 
 ----
 

@@ -1,0 +1,139 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Comments
+******************************************************************/
+
+
+#comments, .respond-form {
+  margin: 0 0 @line-height 0;
+}
+
+#comments {
+  margin-bottom: @line-height;
+  padding-bottom: @line-height;
+  font-size: 14px;
+  border-bottom: 1px solid @gray-lighter;
+
+  .comment-container {
+    padding: 20px 20px;
+  }
+}
+
+/* author vcard 
+================================================== */
+.vcard {
+  img.avatar {
+    padding: 2px;
+    border: 1px solid #cecece;
+    background: #fff;
+  }
+}
+
+/* comment content 
+================================================== */
+.comment-content {
+  width: 88%;
+  margin-left: 2%;
+  float: left;
+  p {
+    margin: 0 0 (@line-height / 2);
+    line-height: 1.4em;
+  }
+  cite.fn, cite.fn a {
+    color: @gray-light;
+    font-style: normal;
+  }
+  time {
+    a {
+      color: @gray-light;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.commentlist {
+  .list-unstyled;
+  margin:0;
+
+  > li {
+    border-top: 1px solid @gray-lighter;
+  }
+
+  ol {
+    margin:0;
+  }
+
+  li {
+    ul.children {
+      margin: 0 0 0 84px;
+      padding: 0
+    } 
+  }
+  li.depth-1 {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  li:not(.depth-1) {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* general comment classes */
+  .comment {
+    position: relative;
+    clear: both;
+    overflow: hidden;
+  }
+ 
+  .pingback {}
+  .bypostauthor {
+    //background: lighten(@brand-warning, 30%);
+  }
+  .comment-author {
+    width: 10%;
+    float: left;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .alert {
+    margin: 10px 0;
+  }
+
+  /* comment reply link */
+  .comment-reply-link {
+    .btn;
+    .btn-xs;
+    .btn-info;
+    opacity: 0.65;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  } 
+
+} /* end .commentlist */
+
+
+.comment-nav {
+  padding: 10px 20px;
+  ul {
+    .list-unstyled;
+  }
+}
+.comment-prev {
+  float: left;
+}
+.comment-next {
+  float: right;
+}
+
+#pings {
+  padding: 20px;
+}
