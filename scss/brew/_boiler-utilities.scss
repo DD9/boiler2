@@ -26,34 +26,7 @@ img {
   }
 }
 
-/* Centered Columns
-================================================== */
-@media (min-width: @grid-float-breakpoint) { 
-  /* centered columns styles */
-  .row-centered {
-    text-align:center;
-  }
-  .col-centered {
-    display:inline-block;
-    float:none;
-    vertical-align: top;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-5px;
-  }
-  .col-centered.text-center {
-    text-align: center;
-  }
-}
 
-.col-centered { 
-  text-align: left;
-}
-
-.col-centered.text-center { 
-  text-align: center;
-}
 
 /* Class to make light text 
 // (for use on dark background)
@@ -133,23 +106,8 @@ various breakpoints.
 .pbottom-100 { padding-bottom: 100px; }
 
 
-/* Borders
-================================================== */
-.default-border-top{
-  border-top: solid 1px @default-border-color;
-}
-.default-border-bottom{
-  border-bottom: solid 1px @default-border-color;
-}
-.default-border-left{
-  border-left: solid 1px @default-border-color;
-}
-.default-border-right{
-  border-right: solid 1px @default-border-color;
-}
-
 /* Assets page - outputs available colors
-================================================== */
+
 .color-demo{
   .color-block{
     width: 100px;
@@ -187,4 +145,5 @@ various breakpoints.
     .-((@i - 1));
   } .-;
 }
+================================================== */
 

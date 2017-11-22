@@ -5,14 +5,14 @@ Stylesheet: Comments
 
 
 #comments, .respond-form {
-  margin: 0 0 @line-height 0;
+  margin: 0 0 $line-height-base 0;
 }
 
 #comments {
-  margin-bottom: @line-height;
-  padding-bottom: @line-height;
+  margin-bottom: $line-height-base;
+  padding-bottom: $line-height-base;
   font-size: 14px;
-  border-bottom: 1px solid @gray-lighter;
+  border-bottom: 1px solid $hr-border-color;
 
   .comment-container {
     padding: 20px 20px;
@@ -24,7 +24,7 @@ Stylesheet: Comments
 .vcard {
   img.avatar {
     padding: 2px;
-    border: 1px solid #cecece;
+    border: 1px solid $hr-border-color;
     background: #fff;
   }
 }
@@ -36,16 +36,16 @@ Stylesheet: Comments
   margin-left: 2%;
   float: left;
   p {
-    margin: 0 0 (@line-height / 2);
+    margin: 0 0 ($line-height-base / 2);
     line-height: 1.4em;
   }
   cite.fn, cite.fn a {
-    color: @gray-light;
+    color: $gray-600;
     font-style: normal;
   }
   time {
     a {
-      color: @gray-light;
+      color: $gray-600;
       text-decoration: none;
       &:hover {
         text-decoration: underline;
@@ -55,11 +55,11 @@ Stylesheet: Comments
 }
 
 .commentlist {
-  .list-unstyled;
+  @extend .list-unstyled;
   margin:0;
 
   > li {
-    border-top: 1px solid @gray-lighter;
+    border-top: 1px solid $hr-border-color;
   }
 
   ol {
@@ -91,7 +91,7 @@ Stylesheet: Comments
  
   .pingback {}
   .bypostauthor {
-    //background: lighten(@brand-warning, 30%);
+    //background: red;
   }
   .comment-author {
     width: 10%;
@@ -107,9 +107,9 @@ Stylesheet: Comments
 
   /* comment reply link */
   .comment-reply-link {
-    .btn;
-    .btn-xs;
-    .btn-info;
+    @extend .btn;
+    @extend .btn-sm;
+    @extend .btn-info;
     opacity: 0.65;
 
     &:hover,
@@ -124,7 +124,7 @@ Stylesheet: Comments
 .comment-nav {
   padding: 10px 20px;
   ul {
-    .list-unstyled;
+    @extend .list-unstyled;
   }
 }
 .comment-prev {

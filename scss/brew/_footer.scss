@@ -4,13 +4,13 @@ Stylesheet: Footer
 ******************************************************************/
 
 #footer {
-  background: @gray-lighter;
+  background: $gray-200;
   clear: both;
-  padding: @line-height 0;
+  padding: $paragraph-margin-bottom 0;
 
   //Hide site credit
   .site-credit{
-    .opacity(0);
+    opacity: 0;
     cursor: default;
   }
 }
@@ -20,5 +20,5 @@ Stylesheet: Footer
 }
 
 .footer-contact {
-  .list-unstyled;
+  @extend .list-unstyled;
 }

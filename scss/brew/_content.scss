@@ -8,9 +8,6 @@ These are the styles for posts, pages, archive, & blog index
 /* General Content
 ================================================== */
 .bg-img {
-  background-attachment: scroll;
-  background-clip: border-box;
-  background-origin: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,7 +34,7 @@ These are the styles for posts, pages, archive, & blog index
 /* Entry Header
 ================================================== */
 #page-header-outer {
-  background-color: @gray-lighter;
+  background-color: $gray-300;
 
   .entry-header > *:last-child {
     margin-bottom: 0;
@@ -51,27 +48,27 @@ These are the styles for posts, pages, archive, & blog index
 
 .row-outer {
   position: relative;
-  padding: (@line-height * 2) 0;
-  @media (max-width: @screen-md-min) {
-    padding: (@line-height * 2) 0;
+  padding: ($paragraph-margin-bottom * 4) 0;
+  @include media-breakpoint-up(sm) {
+    
   }
 }
 
 .row-outer-sm {
   position: relative;
-  padding: @line-height 0;
+  padding: $paragraph-margin-bottom 0;
 }
 
 .row-outer-lg {
   position: relative;
-  padding: (@line-height * 4) 0;
-  @media (max-width: @screen-md-min) {
-    padding: (@line-height * 2) 0;
+  padding: ($paragraph-margin-bottom * 6) 0;
+  @include media-breakpoint-up(sm) {
+    
   }
 }
 
 .content-block {
-  margin-bottom: (@line-height * 2);
+  margin-bottom: ($paragraph-margin-bottom * 2);
   
   > *:last-child {
     margin-bottom: 0;
@@ -79,7 +76,7 @@ These are the styles for posts, pages, archive, & blog index
 }
 
 .content-block-sm {
-  margin-bottom: @line-height;
+  margin-bottom: $paragraph-margin-bottom;
   
   > *:last-child {
     margin-bottom: 0;

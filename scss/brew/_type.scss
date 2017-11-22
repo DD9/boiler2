@@ -6,10 +6,10 @@ Stylesheet: Typography
 /* Headings
 ================================================== */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	//margin: 0 0 $line-height;
+	margin: 0 0 $paragraph-margin-bottom;
 
 	a {}
-	@include media-breakpoint-up(sm) {
+	@include media-breakpoint-down(sm) {
 		> br {
 			display: none;
 		}
@@ -17,13 +17,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-	@include media-breakpoint-up(sm) {
+	@include media-breakpoint-down(sm) {
     font-size: 30px;
 	}
 }
 
 h2, .h2 {
-	@include media-breakpoint-up(sm) {
+	@include media-breakpoint-down(sm) {
     font-size: 25px;
   }
 }
@@ -35,15 +35,15 @@ h4, .h4 {}
 h5, .h5 {}
 
 .add-divider {
-  //border-bottom: 1px solid @gray-lighter;
+  border-bottom: 1px solid $hr-border-color;
   clear: both;
-  padding-bottom: 0.65em;
+  padding-bottom: 1rem;
 }
 
 /* Body text
 ================================================== */
 p {
-  //margin: 0 0 $line-height;
+  margin: 0 0 $paragraph-margin-bottom;
 }
 
 p:empty {
@@ -87,7 +87,7 @@ a, a:visited {
 }
 
 a.link-inverted {
-	//color: $text-color;
+	color: $body-color;
 	&:hover {
 		color: $link-color;
 	}
@@ -119,8 +119,8 @@ a.full-width {
 
 blockquote {
 	font-weight: normal;
-	font-size: 30px;
-	line-height: 38px;
+	font-size: $font-size-lg;
+	line-height: $line-height-lg;
 
 	footer, small, .small {
 		letter-spacing: 0.2em;

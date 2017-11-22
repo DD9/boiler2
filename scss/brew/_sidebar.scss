@@ -5,14 +5,14 @@ Stylesheet: Sidebars
 
 #sidebar {
   .widget {
-    margin-bottom: @line-height;
+    margin-bottom: $paragraph-margin-bottom;
   }
 }
 
 .widgettitle {
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid @gray-lighter;
+  border-bottom: 1px solid $hr-border-color;
 }
 
 .widget {
@@ -41,8 +41,8 @@ Stylesheet: Sidebars
 /* RESPONSIVE
 ================================================== */
 
-// Screens smaller than @screen-md;
-@media (max-width: @screen-md-min) {
+// Screens smaller than $screen-md;
+@include media-breakpoint-down(md) {
   .sidebar-blog {
     display: none;
   }

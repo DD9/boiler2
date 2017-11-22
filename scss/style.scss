@@ -59,21 +59,21 @@ or the proper file inside scss/brew
 // BREW files
 //@import "brew/wp-core"; // styles for text formatting, captions, galleries, etc
 @import "brew/type"; 
-//@import "brew/comments"; 
-//@import "brew/tables"; 
-//@import "brew/form"; 
-//@import "brew/sidebar"; 
-//@import "brew/footer"; 
-//@import "brew/content";
-//@import "brew/posts"; 
+@import "brew/comments"; 
+@import "brew/tables"; 
+@import "brew/form"; 
+@import "brew/sidebar"; 
+@import "brew/footer"; 
+@import "brew/content";
+@import "brew/posts"; 
 @import "brew/nav";
 //@import "brew/body"; // target specific body classes
 @import "brew/components"; // components built for BREW such as breadcrumbs, next/previous buttons, etc
-//@import "brew/home"; // home page styles
-//@import "brew/authors"; // WP author styles
-//@import "brew/ninja-forms"; // for the Ninja Forms plugin
-//@import "brew/shortcodes"; // for the DD9 shortcodes plugin
-//@import "brew/boiler-utilities"; //Boiler utilities, misc
+@import "brew/home"; // home page styles
+@import "brew/authors"; // WP author styles
+@import "brew/ninja-forms"; // for the Ninja Forms plugin
+@import "brew/shortcodes"; // for the DD9 shortcodes plugin
+@import "brew/boiler-utilities"; //Boiler utilities, misc
 
 // Project specific customizations here
 @import "custom-styles";

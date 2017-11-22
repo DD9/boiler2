@@ -308,47 +308,59 @@
         </div>
 
         <!-- Headings -->
+				<div class="row">
+					<div class="col-lg-6">
+						<h1>Heading 1</h1>
+						<h2>Heading 2</h2>
+						<h3>Heading 3</h3>
+						<h4>Heading 4</h4>
+						<h5>Heading 5</h5>
+						<h6>Heading 6</h6>
+						<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					</div>
+					<div class="col-lg-6">
+						<h3 class="add-divider">Heading with divider</h3>
+						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
 
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="bs-component">
-              <h1>Heading 1</h1>
-              <h2>Heading 2</h2>
-              <h3>Heading 3</h3>
-              <h4>Heading 4</h4>
-              <h5>Heading 5</h5>
-              <h6>Heading 6</h6>
-              <h3>
-                Heading
-                <small class="text-muted">with muted text</small>
-              </h3>
-              <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="bs-component">
-              <h2>Example body text</h2>
-              <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-              <p><small>This line of text is meant to be treated as fine print.</small></p>
-              <p>The following is <strong>rendered as bold text</strong>.</p>
-              <p>The following is <em>rendered as italicized text</em>.</p>
-              <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
-            </div>
+						<h3 class="add-divider">Links to Fonts (if available online)</h3>
+						<p><a href="#" class="btn btn-secondary btn-sm" target="_blank">Font Name One <i class="fa fa-external-link"></i></a> </p>
+						<p><a href="#" class="btn btn-secondary btn-sm" target="_blank">Font Name Two <i class="fa fa-external-link"></i></a> </p>
+						<p><a href="#" class="btn btn-secondary btn-sm" target="_blank">Font Name Three <i class="fa fa-external-link"></i></a> </p>
+					</div>
+				</div><!-- /row -->
 
-          </div>
-          <div class="col-lg-4">
-            <div class="bs-component">
-              <h2>Emphasis classes</h2>
-              <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
-              <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-              <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
-              <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-              <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            </div>
+				<hr />
 
-          </div>
-        </div>
+				<div class="row">
+					<div class="col-lg-4">
+						<h2>Example body text</h2>
+						<p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+						<p><small>This line of text is meant to be treated as fine print.</small></p>
+						<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+						<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+						<p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+					</div>
+					<div class="col-lg-4">
+							<h2>Emphasis classes</h2>
+							<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+							<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+							<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+							<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+							<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+					</div>
+					<div class="col-lg-4">
+						<h2>Highlight Inline Text</h2>
+						<p>Lorem ipsum dolor sit amet, <span class="bg-success">text with bg-success</span> consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt <span class="bg-info">text with bg-info</span> ut labore et dolore magna aliqua. 
+							Ut enim ad minim veniam, quis nostrud <span class="bg-warning">text with bg-warning</span> exercitation ullamco 
+							laboris nisi ut aliquip ex ea commodo <span class="bg-danger">text with bg-danger</span> consequat. Duis aute 
+							irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						</p>
+					</div>
+				</div><!-- /row -->
+
+				<hr />	
 
         <!-- Blockquotes -->
 
@@ -460,78 +472,80 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <div class="bs-component">
-              <form>
-                <fieldset>
-                  <legend>Legend</legend>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleSelect1">Example select</label>
-                    <select class="form-control" id="exampleSelect1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleSelect2">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleTextarea">Example textarea</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                    <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-                  </div>
-                  <fieldset class="form-group">
-                    <legend>Radio buttons</legend>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                        Option one is this and that&mdash;be sure to include why it's great
-                      </label>
-                    </div>
-                    <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-                        Option two can be something else and selecting it will deselect option one
-                      </label>
-                    </div>
-                    <div class="form-check disabled">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-                        Option three is disabled
-                      </label>
-                    </div>
-                  </fieldset>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input">
-                      Check me out
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </fieldset>
-              </form>
+            <div class="bs-component card text-black bg-light">
+							<div class="card-body">
+								<form>
+									<fieldset>
+										<legend>Legend</legend>
+										<div class="form-group">
+											<label for="exampleInputEmail1">Email address</label>
+											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+											<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+										</div>
+										<div class="form-group">
+											<label for="exampleInputPassword1">Password</label>
+											<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+										</div>
+										<div class="form-group">
+											<label for="exampleSelect1">Example select</label>
+											<select class="form-control" id="exampleSelect1">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="exampleSelect2">Example multiple select</label>
+											<select multiple class="form-control" id="exampleSelect2">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="exampleTextarea">Example textarea</label>
+											<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+										</div>
+										<div class="form-group">
+											<label for="exampleInputFile">File input</label>
+											<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+											<small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+										</div>
+										<fieldset class="form-group">
+											<legend>Radio buttons</legend>
+											<div class="form-check">
+												<label class="form-check-label">
+													<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+													Option one is this and that&mdash;be sure to include why it's great
+												</label>
+											</div>
+											<div class="form-check">
+											<label class="form-check-label">
+													<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+													Option two can be something else and selecting it will deselect option one
+												</label>
+											</div>
+											<div class="form-check disabled">
+											<label class="form-check-label">
+													<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+													Option three is disabled
+												</label>
+											</div>
+										</fieldset>
+										<div class="form-check">
+											<label class="form-check-label">
+												<input type="checkbox" class="form-check-input">
+												Check me out
+											</label>
+										</div>
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</fieldset>
+								</form>
+							</div>
             </div>
           </div>
           <div class="col-lg-4 offset-lg-1">

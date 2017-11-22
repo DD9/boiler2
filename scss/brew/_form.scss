@@ -3,10 +3,10 @@ Author: DD9
 Stylesheet: Forms
 ******************************************************************/
 
-.form-control::-webkit-input-placeholder { color: @gray-light; }
-.form-control:-moz-placeholder { color: @gray-light; }
-.form-control::-moz-placeholder { color: @gray-light; }
-.form-control:-ms-input-placeholder { color: @gray-light; }
+.form-control::-webkit-input-placeholder { color: $gray-600; }
+.form-control:-moz-placeholder { color: $gray-600; }
+.form-control::-moz-placeholder { color: $gray-600; }
+.form-control:-ms-input-placeholder { color: $gray-600; }
 
 .form-horizontal .control-label {
 	text-align: left;
@@ -28,12 +28,11 @@ input[type="search"],
 input[type="tel"], 
 input[type="color"], 
 .uneditable-input {
-  .form-control;
+  @extend .form-control;
 }
 
 legend {
 	font-size: 20px;
-	margin-bottom: (@line-height / 2);
 }
 
 .input-group-btn {
@@ -42,12 +41,3 @@ legend {
 	}
 }
 
-/* RESPONSIVE
-================================================== */
-
-// Screens smaller than @screen-sm;
-@media (max-width: @screen-sm-min) {
-	.form-horizontal .control-label {
-		display: block;
-	}
-}
