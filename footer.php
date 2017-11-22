@@ -16,8 +16,7 @@ $instagram = get_field('instagram_url', 'option');
       <div class="row">
       
         <div class="col-sm-6 col-md-3">
-          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-1') ) : ?>
-          <?php endif; ?>
+          <?php wp_nav_menu( array( 'theme_location' => 'footer-nav', 'container' => false, 'menu_id' => 'footer-nav', 'depth' => 1 ) ); ?>
           
           <?php // ACF global options: Contact Info ?>
           <ul class="footer-contact">

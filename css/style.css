@@ -7370,6 +7370,9 @@ These are the styles for posts, pages, archive, & blog index
   z-index: 0;
   opacity: 0.4; }
 
+.bg-gray {
+  background-color: #dee2e6; }
+
 /* Entry Header
 ================================================== */
 #page-header-outer {

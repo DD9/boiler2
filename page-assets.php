@@ -6,15 +6,9 @@
 
 	<div class="container">
 
-      <div class="page-header" id="banner">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1><?php the_title(); ?></h1>
-            <p class="lead">Bootstrap 4</p>
-          </div>
-        </div>
-      </div>
-		
+      <h1><?php the_title(); ?></h1>
+      <p class="lead">Bootstrap 4</p>
+          
 		
 			<!-- Navbar
       ================================================== -->
@@ -145,6 +139,8 @@
               <button type="button" class="btn btn-info">Info</button>
               <button type="button" class="btn btn-warning">Warning</button>
               <button type="button" class="btn btn-danger">Danger</button>
+							<button type="button" class="btn btn-light">Light</button>
+							<button type="button" class="btn btn-dark">Dark</button>
               <button type="button" class="btn btn-link">Link</button>
             </p>
 
@@ -155,6 +151,8 @@
               <button type="button" class="btn btn-info disabled">Info</button>
               <button type="button" class="btn btn-warning disabled">Warning</button>
               <button type="button" class="btn btn-danger disabled">Danger</button>
+							<button type="button" class="btn btn-light disabled">Light</button>
+							<button type="button" class="btn btn-dark disabled">Dark</button>
               <button type="button" class="btn btn-link disabled">Link</button>
             </p>
 
@@ -165,6 +163,8 @@
               <button type="button" class="btn btn-outline-info">Info</button>
               <button type="button" class="btn btn-outline-warning">Warning</button>
               <button type="button" class="btn btn-outline-danger">Danger</button>
+							<button type="button" class="btn btn-outline-light">Light</button>
+							<button type="button" class="btn btn-outline-dark">Dark</button>
             </p>
 
             <div class="bs-component">
