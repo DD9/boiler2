@@ -141,9 +141,10 @@ function bones_scripts_and_styles() {
 
     // Register Scripts --------------------
 
-    //Minified Vendor script instead
+    //Vendors JS, including Bootstrap core JS
     wp_register_script( 'vendors-min', TMPL_URL . '/js/vendors.min.js', array('jquery'), '1.0', TRUE );
-
+		
+		//Custom theme JS
     wp_register_script( 'custom-js', TMPL_URL . '/js/scripts.js', array( 'jquery' ), '', true );
     
 

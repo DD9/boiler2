@@ -11,7 +11,7 @@
 
 <?php //<meta name="HandheldFriendly" content="True">  ?>
 <?php //<meta name="MobileOptimized" content="320">  ?>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png"> 
