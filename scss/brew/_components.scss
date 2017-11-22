@@ -12,7 +12,6 @@ as well as Bootstrap components
   -moz-font-feature-settings: normal;
   -moz-font-language-override: normal;
   -moz-osx-font-smoothing: grayscale;
-  //display: inline-block;
   font-family: FontAwesome;
   font-size-adjust: none;
   font-stretch: normal;
@@ -36,13 +35,11 @@ Basic styling used in footer and the #author-info box
     list-style: none;
   }
   a {
-    color: @gray-light;
     padding-right: 15px;
-    .transition(color .4s ease);
+    //.transition(color .4s ease);
     font-size: 1.4em;
   }
   a:hover { 
-    color: @gray-dark;
   }
 }
 
@@ -57,17 +54,16 @@ Basic styling used in footer and the #author-info box
 /* Lists
 ================================================== */
 .checkmark-list > ul, ul.checkmark-list {
-  .list-unstyled;
+  @extend .list-unstyled;
   font-size: 110%;
-  font-family: @font-family-ss;
   li {
     padding: 0 0 10px 22px;
     position: relative;
   }
   li::before {
-    .fa;
+    @extend .fa;
     content: "\f00c";
-    color: @brand-success;
+    color: $success;
     font-size: 80%;
     height: 10px;
     left: 0;

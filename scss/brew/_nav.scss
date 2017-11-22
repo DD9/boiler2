@@ -33,12 +33,11 @@ Stylesheet: Header & Navigation
 /* Primary Menu
 ================================================== */
 #menu-primary {
-	text-transform: uppercase;
 
 	> .active > a, 
 	> .active > a:hover, 
 	> .active > a:focus {
-	  color: @link-color;
+	  color: $link-color;
 	}
 }
 
@@ -49,14 +48,13 @@ Stylesheet: Header & Navigation
   > li.current-menu-parent,
   > li.current-menu-ancestor,
   > li.current_page_parent {
-  	@media (min-width: @grid-float-breakpoint) { // Only enable on larger screens
-	    > a, > a:hover {
-	      color: @link-color;
-	    }
-	  }
+  	
+	  > a, > a:hover {
+      color: $link-color;
+    }
 
     .dropdown-menu > li.active > a {
-      color: @link-color;
+      color: $link-color;
     }
   }  
 }

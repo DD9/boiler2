@@ -6,10 +6,10 @@ Stylesheet: Typography
 /* Headings
 ================================================== */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	margin: 0 0 @line-height;
+	//margin: 0 0 $line-height;
 
 	a {}
-	@media (max-width: @screen-sm-min) {
+	@include media-breakpoint-up(sm) {
 		> br {
 			display: none;
 		}
@@ -17,13 +17,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-	@media (max-width: @screen-sm-min) {
+	@include media-breakpoint-up(sm) {
     font-size: 30px;
-  }
+	}
 }
 
 h2, .h2 {
-	@media (max-width: @screen-sm-min) {
+	@include media-breakpoint-up(sm) {
     font-size: 25px;
   }
 }
@@ -35,7 +35,7 @@ h4, .h4 {}
 h5, .h5 {}
 
 .add-divider {
-  border-bottom: 1px solid @gray-lighter;
+  //border-bottom: 1px solid @gray-lighter;
   clear: both;
   padding-bottom: 0.65em;
 }
@@ -43,7 +43,7 @@ h5, .h5 {}
 /* Body text
 ================================================== */
 p {
-  margin: 0 0 @line-height;
+  //margin: 0 0 $line-height;
 }
 
 p:empty {
@@ -55,7 +55,7 @@ cite {
 }
 
 .lead {
-	color: @gray;
+	//color: $gray;
 	font-weight: normal;
 	font-size: 30px;
 	line-height: 38px;
@@ -65,7 +65,7 @@ cite {
 ================================================== */
 a, a:visited {
 
-	.transition(all .2s ease);
+	//.transition(all .2s ease);
 
 	/* on hover */
 	&:hover, &:focus {
@@ -87,16 +87,16 @@ a, a:visited {
 }
 
 a.link-inverted {
-	color: @text-color;
+	//color: $text-color;
 	&:hover {
-		color: @link-color;
+		color: $link-color;
 	}
 }
 
 .post-edit-link{
-	.btn;
-	.btn-sm;
-	.btn-warning;
+	@extend .btn;
+	@extend .btn-sm;
+	@extend .btn-warning;
   position: fixed;
   right: 10px;
   bottom: 10px;

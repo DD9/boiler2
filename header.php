@@ -33,27 +33,21 @@
 <?php edit_post_link('Edit'); ?>  
 
 <header id="site-header">
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage">
+				<img src="<?= get_bloginfo('template_directory'); ?>/images/logo_dd9.png" alt="<?php bloginfo( 'name' ) ?> Logo" />
+			</a>
 
-  <nav role="navigation">
-    <div class="navbar navbar-default">
-      <div class="container">
-        <?php //.navbar-toggle is used as the toggle for collapsed navbar content ?>
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-            <i class="fa fa-bars"></i>
-          </button>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-responsive-collapse" aria-controls="navbar-responsive-collapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-          <a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage">
-            <img src="<?= get_bloginfo('template_directory'); ?>/images/logo_dd9.png" alt="<?php bloginfo( 'name' ) ?> Logo" />
-          </a>
-        </div>
-
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <?php bones_main_nav(); ?>
-        </div>
-        
-      </div><!-- /container -->
-    </div><!-- /navbar --> 
-  </nav>
+			<div class="collapse navbar-collapse" id="navbar-responsive-collapse">
+				<?php bones_main_nav(); ?>
+			</div>
+		</div><!-- /container -->
+	</nav><!-- /navbar --> 
 
 </header> <?php // end site-header ?>
