@@ -3,21 +3,21 @@
 <div id="page-header-outer" class="row-outer">
   <div class="container">
     <div class="row">
-
-			<header class="entry-header text-center">
-				<h5><?php _e("Search Results for","bonestheme"); ?>: </h5>
-				<h1 class="entry-title"> <?php echo esc_attr(get_search_query()); ?></h1>
-			</header> 
-        
+			<div class="col-md-12">
+				<header class="entry-header text-center">
+					<h5><?php _e("Search Results for","bonestheme"); ?>: </h5>
+					<h1 class="entry-title"> <?php echo esc_attr(get_search_query()); ?></h1>
+				</header> 
+    	</div><!-- /col -->    
     </div> <!-- /row -->
   </div> <!-- /container -->
 </div> <!-- /page-header-outer -->
 
 <div id="page-content-outer" class="row-outer">
 	<div class="container">
-		<div class="row">
+		<div class="row justify-content-md-center">
 
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-8">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

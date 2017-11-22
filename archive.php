@@ -3,42 +3,44 @@
 <div id="page-header-outer" class="row-outer">
   <div class="container">
     <div class="row">
-
-			<header class="entry-header">
-				<?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
-
-				<?php if (is_category()) { ?>
-						<h6><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></h6>
-						<h1 class="entry-title"><?php single_cat_title(); ?></h1>
-
-					<?php } elseif (is_tag()) { ?>
-						<h6><?php _e( 'Posts Tagged:', 'bonestheme' ); ?></h6>
-						<h1 class="entry-title"><?php single_tag_title(); ?>
-
-					<?php } elseif (is_author()) {
-						global $post;
-						$author_id = $post->post_author;
-					?>
-						<h6><?php _e( 'Posts By:', 'bonestheme' ); ?></h6>
-						<h1 class="entry-title"><?php the_author_meta('display_name', $author_id); ?></h1>
-
-					<?php } elseif (is_day()) { ?>
-						<h6><?php _e( 'Daily Archives:', 'bonestheme' ); ?></h6>
-						<h1 class="entry-title"><?php the_time('l, F j, Y'); ?></h1>
-
-					<?php } elseif (is_month()) { ?>
-						<h6><?php _e( 'Monthly Archives:', 'bonestheme' ); ?></h6>
-						<h1 class="entry-title"><?php the_time('F Y'); ?></h1>
-
-					<?php } elseif (is_year()) { ?>
-						<h6><?php _e( 'Yearly Archives:', 'bonestheme' ); ?></h6>
-						<h1 class="entry-title"><?php the_time('Y'); ?></h1>
-
-					<?php } else { ?>
-					<?php } ?>
+			<div class="col-md-12">
 				
-			</header><!-- /entry-header -->
-        
+				<header class="entry-header">
+					<?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
+
+					<?php if (is_category()) { ?>
+							<h6><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></h6>
+							<h1 class="entry-title"><?php single_cat_title(); ?></h1>
+
+						<?php } elseif (is_tag()) { ?>
+							<h6><?php _e( 'Posts Tagged:', 'bonestheme' ); ?></h6>
+							<h1 class="entry-title"><?php single_tag_title(); ?>
+
+						<?php } elseif (is_author()) {
+							global $post;
+							$author_id = $post->post_author;
+						?>
+							<h6><?php _e( 'Posts By:', 'bonestheme' ); ?></h6>
+							<h1 class="entry-title"><?php the_author_meta('display_name', $author_id); ?></h1>
+
+						<?php } elseif (is_day()) { ?>
+							<h6><?php _e( 'Daily Archives:', 'bonestheme' ); ?></h6>
+							<h1 class="entry-title"><?php the_time('l, F j, Y'); ?></h1>
+
+						<?php } elseif (is_month()) { ?>
+							<h6><?php _e( 'Monthly Archives:', 'bonestheme' ); ?></h6>
+							<h1 class="entry-title"><?php the_time('F Y'); ?></h1>
+
+						<?php } elseif (is_year()) { ?>
+							<h6><?php _e( 'Yearly Archives:', 'bonestheme' ); ?></h6>
+							<h1 class="entry-title"><?php the_time('Y'); ?></h1>
+
+						<?php } else { ?>
+						<?php } ?>
+
+				</header><!-- /entry-header -->
+					
+    	</div> <!-- /col --> 	   
     </div> <!-- /row -->
   </div> <!-- /container -->
 </div> <!-- /page-header-outer -->

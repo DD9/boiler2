@@ -3,10 +3,11 @@
 <div id="page-header-outer" class="row-outer">
   <div class="container">
     <div class="row">
-
-			<header class="entry-header text-center">
-				<h1 class="entry-title">404: Page not found.</h1>
-			</header>
+			<div class="col-md-12">
+				<header class="entry-header text-center">
+					<h1 class="entry-title">404: Page not found.</h1>
+				</header>
+			</div><!-- /col -->
         
     </div> <!-- /row -->
   </div> <!-- /container -->
