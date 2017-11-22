@@ -58,9 +58,6 @@ jQuery(document).ready(function($) {
 
   // add all your scripts here
 
-
-
-
 });
 
 
@@ -68,6 +65,17 @@ jQuery(document).ready(function($) {
 
 // OUTSIDE DOCUMENT READY SCRIPTS -----------------------------
 // Lost of copypasta stuff here
+
+// Initialize popovers
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+// Initialize tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+
 
 // IE8 ployfill for GetComputed Style (for Responsive Script below)
 if (!window.getComputedStyle) {
