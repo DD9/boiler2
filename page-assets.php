@@ -1360,11 +1360,10 @@
         <div class="row">
           <div class="col-lg-6">						
 						<ul>
-							<li><a href="http://getbootstrap.com/docs/4.0/utilities/float/#responsive" target="_blank">Responsive floats <i class="fa fa-external-link"></i></a></li>
-							<li><a href="http://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">Spacing <i class="fa fa-external-link"></i></a></li>
 							<li><a href="http://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints" target="_blank">Responsive breakpoints <i class="fa fa-external-link"></i></a></li>
 							<li><a href="http://getbootstrap.com/docs/4.0/layout/grid/#no-gutters" target="_blank">No gutters <i class="fa fa-external-link"></i></a></li>
-
+							<li><a href="http://getbootstrap.com/docs/4.0/utilities/float/#responsive" target="_blank">Responsive floats <i class="fa fa-external-link"></i></a></li>
+							<li><a href="http://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">Spacing (margin and padding classes) <i class="fa fa-external-link"></i></a></li>
 						</ul>
           </div>
         </div>
