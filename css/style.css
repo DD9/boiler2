@@ -7433,19 +7433,25 @@ Stylesheet: Posts
 
 /* Featured Image
 ================================================== */
-.featured-content {
-  margin-bottom: 1rem; }
-
-.featured-img-bg {
-  height: 300px;
+.excerpt-img-bg {
+  height: 200px;
   background-width: 100% !important;
   background-size: cover !important;
   background-repeat: none !important;
   background-position: center center !important; }
+  @media (min-width: 576px) {
+    .excerpt-img-bg {
+      height: 300px; } }
 
-.featured-img img {
-  width: 100%;
-  height: auto; }
+.excerpt-img {
+  margin-bottom: 20px; }
+  @media (min-width: 576px) {
+    .excerpt-img {
+      margin-right: 1.5;
+      margin-bottom: 0; } }
+  .excerpt-img img {
+    width: 100%;
+    height: auto; }
 
 /* Entry Footer
 ================================================== */
