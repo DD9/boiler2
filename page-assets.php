@@ -1,18 +1,36 @@
 <?php get_header(); the_post(); ?>
 
+<?php // Styles for this page only ?>
 <style>
 	pre{background:#f7f7f9}@media (min-width: 768px){body>.navbar-transparent{box-shadow:none}body>.navbar-transparent .navbar-nav>.open>a{box-shadow:none}}#home{padding-top:0px}#home .navbar{transition:box-shadow 200ms ease-in}#home .navbar-brand .nav-link{display:inline-block;margin-right:-30px}#home .navbar-brand img{display:inline-block;margin:0 10px;width:30px}#home .btn{padding:0.6em 0.7em;box-shadow:none;font-size:0.7rem}.bs-docs-section{margin-top:4em}.bs-docs-section .page-header h1{padding:2rem 0;font-size:3rem}.dropdown-menu.show[aria-labelledby="themes"]{display:flex;width:420px;flex-wrap:wrap}.dropdown-menu.show[aria-labelledby="themes"] .dropdown-item{width:33.333%}.dropdown-menu.show[aria-labelledby="themes"] .dropdown-item:first-child{width:100%}.bs-component{position:relative}.bs-component+.bs-component{margin-top:1rem}.bs-component .card{margin-bottom:1rem}.bs-component .modal{position:relative;top:auto;right:auto;left:auto;bottom:auto;z-index:1;display:block}.bs-component .modal-dialog{width:90%}.bs-component .popover{position:relative;display:inline-block;width:220px;margin:20px}#source-button{position:absolute;top:0;right:0;z-index:100;font-weight:bold}.nav-tabs{margin-bottom:15px}.progress{margin-bottom:10px}#footer{margin:5em 0}#footer li{float:left;margin-right:1.5em;margin-bottom:1.5em}#footer p{clear:left;margin-bottom:0}.splash{padding:12em 0 6em;background-color:#2196F3;color:#fff;text-align:center}.splash .logo{width:160px}.splash h1{font-size:3em;color:#fff}.splash #social{margin:2em 0 6em}.splash .alert{margin:2em 0;border:none}.splash .sponsor a{color:#fff}.section-tout{padding:6em 0 1em;border-bottom:1px solid rgba(0,0,0,0.05);background-color:#eaf1f1}.section-tout .fa{margin-right:0.2em}.section-tout p{margin-bottom:5em}.section-preview{padding:4em 0 4em}.section-preview .preview{margin-bottom:4em;background-color:#eaf1f1}.section-preview .preview img{max-width:100%}.section-preview .preview .image{position:relative}.section-preview .preview .image:before{box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);position:absolute;top:0;left:0;width:100%;height:100%;content:"";pointer-events:none}.section-preview .preview .options{padding:2em;border:1px solid rgba(0,0,0,0.05);border-top:none;text-align:center}.section-preview .preview .options p{margin-bottom:2em}.section-preview .dropdown-menu{text-align:left}.section-preview .lead{margin-bottom:2em}@media (max-width: 767px){.section-preview .image img{width:100%}}.sponsor img{max-width:100%}.sponsor #carbonads{max-width:240px;margin:0 auto}.sponsor .carbon-text{display:block;margin-top:1em;font-size:12px}.sponsor .carbon-poweredby{float:right;margin-top:1em;font-size:10px}@media (max-width: 767px){.splash{padding-top:8em}.splash .logo{width:100px}.splash h1{font-size:2em}#banner{margin-bottom:2em;text-align:center}}
 </style>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 	<div class="container">
 
       <h1><?php the_title(); ?></h1>
       <p class="lead">Bootstrap 4</p>
           
-		
-			<!-- Navbar
-      ================================================== -->
-			[Add modal demo here]
 
       <!-- Navbar
       ================================================== -->
@@ -1207,6 +1225,11 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>Modals</h2>
+						
+						<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
+							Launch demo modal
+						</button>
+						
             <div class="bs-component">
               <div class="modal">
                 <div class="modal-dialog" role="document">
@@ -1259,19 +1282,7 @@
         </div>
       </div>
 
-      <div id="source-modal" class="modal fade">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Source Code</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div>
-            <div class="modal-body">
-              <pre></pre>
-            </div>
-          </div>
-        </div>
-      </div>
+     
 
 
     </div><!-- /container -->
