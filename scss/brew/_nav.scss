@@ -34,27 +34,22 @@ Stylesheet: Header & Navigation
 ================================================== */
 #menu-primary {
 
-	> .active > a, 
-	> .active > a:hover, 
-	> .active > a:focus {
-	  color: $link-color;
-	}
 }
 
 /* Current page highlighting 
 ================================================== */
-.menu-primary.nav {
+#menu-primary {
+	> .active > a,
   > li.current-menu-item,
   > li.current-menu-parent,
-  > li.current-menu-ancestor,
-  > li.current_page_parent {
+  > li.current-menu-ancestor {
   	
-	  > a, > a:hover {
-      color: $link-color;
-    }
-
-    .dropdown-menu > li.active > a {
+	  > a, > a:hover, > a:focus {
       color: $link-color;
     }
   }  
+
+  .dropdown-menu > li.active > a {
+    color: $link-color;
+  }
 }
