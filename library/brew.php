@@ -124,7 +124,7 @@ function emm_paginate_loop($start, $max, $page = 0) {
 function custom_breadcrumb()
 {
     $home      = 'Home'; // text for the 'Home' link
-    $before    = '<li class="active">'; // tag before the current crumb
+    $before    = '<li class="breadcrumb-item active">'; // tag before the current crumb
     $sep       = '';
     $after     = '</li>'; // tag after the current crumb
 
@@ -134,7 +134,7 @@ function custom_breadcrumb()
 
         global $post;
         $homeLink = home_url();
-            echo '<li><a href="' . $homeLink . '">' . $home . '</a> '.$sep. '</li> ';
+            echo '<li class="breadcrumb-item"><a href="' . $homeLink . '">' . $home . '</a> '.$sep. '</li> ';
             if (is_category()) {
                 global $wp_query;
                 $cat_obj   = $wp_query->get_queried_object();
@@ -146,15 +146,15 @@ function custom_breadcrumb()
                 }
                 echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
             } elseif (is_day()) {
-                echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
+                echo '<li class="breadcrumb-item"><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
                     'Y'
                 ) . '</a></li> ';
-                echo '<li><a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time(
+                echo '<li class="breadcrumb-item"><a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time(
                     'F'
                 ) . '</a></li> ';
                 echo $before . get_the_time('d') . $after;
             } elseif (is_month()) {
-                echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
+                echo '<li class="breadcrumb-item"><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
                     'Y'
                 ) . '</a></li> ';
                 echo $before . get_the_time('F') . $after;
@@ -164,12 +164,12 @@ function custom_breadcrumb()
                 if (get_post_type() != 'post') {
                     $post_type = get_post_type_object(get_post_type());
                     $slug      = $post_type->rewrite;
-                    echo '<li><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a></li> ';
+                    echo '<li class="breadcrumb-item"><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a></li> ';
                     echo $before . get_the_title() . $after;
                 } else {
                     $cat = get_the_category();
                     $cat = $cat[0];
-                    echo '<li>'.get_category_parents($cat, true, $sep).'</li>';
+                    echo '<li class="breadcrumb-item">'.get_category_parents($cat, true, $sep).'</li>';
                     echo $before . get_the_title() . $after;
                 }
             } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
@@ -180,7 +180,7 @@ function custom_breadcrumb()
                 $cat    = get_the_category($parent->ID);
                 $cat    = $cat[0];
                 echo get_category_parents($cat, true, $sep);
-                echo '<li><a href="' . get_permalink(
+                echo '<li class="breadcrumb-item"><a href="' . get_permalink(
                     $parent
                 ) . '">' . $parent->post_title . '</a></li> ';
                 echo $before . get_the_title() . $after;
@@ -192,7 +192,7 @@ function custom_breadcrumb()
                 $breadcrumbs = array();
                 while ($parent_id) {
                     $page          = get_page($parent_id);
-                    $breadcrumbs[] = '<li><a href="' . get_permalink($page->ID) . '">' . get_the_title(
+                    $breadcrumbs[] = '<li class="breadcrumb-item"><a href="' . get_permalink($page->ID) . '">' . get_the_title(
                         $page->ID
                     ) . '</a>' . $sep . '</li>';
                     $parent_id     = $page->post_parent;

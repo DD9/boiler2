@@ -16,9 +16,22 @@ Stylesheet: Footer
 }
 
 #sub-floor {
+  font-size: 70%;
   padding: 10px 0;
 }
 
 .footer-contact {
   @extend .list-unstyled;
+}
+
+/* Footer Menu
+================================================== */
+#footer-nav {
+  @extend .list-unstyled;
+  position: relative;
+  margin-bottom: ($line-height-base / 1.5);
+ 
+  > li {
+    display: inline;
+  }
 }

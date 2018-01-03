@@ -406,7 +406,7 @@ mark,
   padding: 0.2em;
   background-color: #fcf8e3; }
 
-.list-unstyled, .commentlist, .comment-nav ul, .footer-contact, .checkmark-list > ul, ul.checkmark-list {
+.list-unstyled, .commentlist, .comment-nav ul, .footer-contact, #footer-nav, .checkmark-list > ul, ul.checkmark-list {
   padding-left: 0;
   list-style: none; }
 
@@ -7340,7 +7340,16 @@ Stylesheet: Footer
     cursor: default; }
 
 #sub-floor {
+  font-size: 70%;
   padding: 10px 0; }
+
+/* Footer Menu
+================================================== */
+#footer-nav {
+  position: relative;
+  margin-bottom: 1; }
+  #footer-nav > li {
+    display: inline; }
 
 /******************************************************************
 Author: DD9
