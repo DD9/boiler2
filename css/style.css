@@ -7923,14 +7923,14 @@ img {
 /* Class to make light text 
 // (for use on dark background)
 ================================================== */
-.content-light {
-  color: #FFF; }
-  .content-light h1, .content-light .h1, .content-light h2, .content-light .h2, .content-light h3, .content-light .h3, .content-light h4, .content-light .h4,
-  .content-light h5, .content-light .h5, .content-light h6, .content-light .h6, .content-light h6.subtitle, .content-light .h6.subtitle, .content-light a:not(.btn):not(.post-edit-link), .content-light .lead,
-  .content-light blockquote footer, .content-light blockquote small, .content-light blockquote .small,
-  .content-light .pullquote-content, .content-light .pullquote-cite {
+.text-light {
+  color: #fff; }
+  .text-light h1, .text-light .h1, .text-light h2, .text-light .h2, .text-light h3, .text-light .h3, .text-light h4, .text-light .h4,
+  .text-light h5, .text-light .h5, .text-light h6, .text-light .h6, .text-light h6.subtitle, .text-light .h6.subtitle, .text-light a:not(.btn):not(.post-edit-link), .text-light .lead,
+  .text-light blockquote footer, .text-light blockquote small, .text-light blockquote .small,
+  .text-light .pullquote-content, .text-light .pullquote-cite {
     color: #fff; }
-  .content-light .pullquote::before {
+  .text-light .pullquote::before {
     color: rgba(255, 255, 255, 0.3); }
 
 /* Add margins or padding

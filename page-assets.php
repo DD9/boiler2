@@ -26,10 +26,21 @@
 </div>
 
 
-	<div class="container">
+<div id="page-header-outer" class="row-outer">
+  <div class="container">
+    <div class="row">
+			<div class="col-md-12">
+				<header class="entry-header text-center">
+					<h6>Bootstrap 4</h6>
+					<h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
+				</header> 
+			</div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+</div> <!-- /page-header-outer -->
 
-      <h1><?php the_title(); ?></h1>
-      <p class="lead">Bootstrap 4</p>
+	<div class="container">
+			
           
 
       <!-- Navbar
@@ -328,6 +339,12 @@
         <!-- Headings -->
 				<div class="row">
 					<div class="col-lg-6">
+						
+						<h1 class="display-1">Display 1</h1>
+						<h1 class="display-2">Display 2</h1>
+						<h1 class="display-3">Display 3</h1>
+						<h1 class="display-4">Display 4</h1>
+						
 						<h1>Heading 1</h1>
 						<h2>Heading 2</h2>
 						<h3>Heading 3</h3>
@@ -360,12 +377,16 @@
 					</div>
 					<div class="col-lg-4">
 							<h2>Emphasis classes</h2>
-							<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+							<p class="text-muted">.text-muted Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
 							<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 							<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
 							<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
 							<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
 							<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+							
+							<p class="text-light bg-dark">.text-light Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p class="text-dark">.text-dark Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+							<p class="text-white bg-dark">.text-white Etiam porta sem malesuada magna mollis euismod.</p>
 					</div>
 					<div class="col-lg-4">
 						<h2>Highlight Inline Text</h2>
@@ -388,7 +409,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <div class="bs-component">
               <blockquote class="blockquote">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -396,17 +417,30 @@
               </blockquote>
             </div>
           </div>
-          <div class="col-lg-6">
+          
+					<div class="col-lg-4">
             <div class="bs-component">
-              <blockquote class="blockquote blockquote-reverse">
+              <blockquote class="blockquote text-center">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                 <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
               </blockquote>
             </div>
           </div>
+					
+					<div class="col-lg-4">
+            <div class="bs-component">
+              <blockquote class="blockquote text-right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+              </blockquote>
+            </div>
+          </div>
+					
         </div>
       </div>
-
+		
+		
+		
       <!-- Tables
       ================================================== -->
       <div class="bs-docs-section">
@@ -1061,7 +1095,7 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h2>Cards</h2>
+            <h2>Cards &amp; BG colors </h2>
           </div>
         </div>
 
@@ -1071,7 +1105,7 @@
               <div class="card text-white bg-primary">
                 <div class="card-body">
                   <blockquote class="card-blockquote">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <p>.bg-primary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
@@ -1079,7 +1113,7 @@
               <div class="card text-white bg-success">
                 <div class="card-body">
                   <blockquote class="card-blockquote">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <p>.bg-success Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
@@ -1087,7 +1121,7 @@
               <div class="card text-white bg-info">
                 <div class="card-body">
                   <blockquote class="card-blockquote">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <p>.bg-info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
@@ -1095,7 +1129,7 @@
               <div class="card text-white bg-warning">
                 <div class="card-body">
                   <blockquote class="card-blockquote">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <p>.bg-warning Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
@@ -1103,7 +1137,7 @@
               <div class="card text-white bg-danger">
                 <div class="card-body">
                   <blockquote class="card-blockquote">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <p>.bg-danger Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
@@ -1111,7 +1145,7 @@
               <div class="card text-black bg-light">
                 <div class="card-body">
                   <blockquote class="card-blockquote">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <p>.bg-light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
@@ -1119,7 +1153,7 @@
               <div class="card text-white bg-dark">
                 <div class="card-body">
                   <blockquote class="card-blockquote">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <p>.bg-dark Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
@@ -1210,6 +1244,35 @@
         </div>
 
       </div>
+		
+		
+		
+			<!-- Flexbox
+      ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header mb-2">
+              <h1 id="flexbox">Flexbox</h1>
+							<a href="http://getbootstrap.com/docs/4.0/utilities/flex/" class="btn btn-sm btn-secondary" target="_blank">BS 4 reference <i class="fa fa-external-link"></i></a></em>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">						
+						<div class="d-flex align-items-center justify-content-center bg-primary" style="height: 200px">
+							<div class="p-2 m-1 bg-light">Flex item</div>
+							<div class="p-2 m-1 bg-light">Flex item <br /> Line two</div>
+							<div class="p-2 m-1 bg-light">Flex item</div>
+						</div>
+          </div>
+        </div>
+				
+      </div>
+		
+		
+		
 
       <!-- Dialogs
       ================================================== -->
@@ -1280,6 +1343,32 @@
 						</div>
           </div>
         </div>
+      </div>
+
+
+			<!-- Other Documentation
+      ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header mb-2">
+              <h1 id="other-docs">Other Helpful Doc Reference</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">						
+						<ul>
+							<li><a href="http://getbootstrap.com/docs/4.0/utilities/float/#responsive" target="_blank">Responsive floats <i class="fa fa-external-link"></i></a></li>
+							<li><a href="http://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">Spacing <i class="fa fa-external-link"></i></a></li>
+							<li><a href="http://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints" target="_blank">Responsive breakpoints <i class="fa fa-external-link"></i></a></li>
+							<li><a href="http://getbootstrap.com/docs/4.0/layout/grid/#no-gutters" target="_blank">No gutters <i class="fa fa-external-link"></i></a></li>
+
+						</ul>
+          </div>
+        </div>
+				
       </div>
 
      
