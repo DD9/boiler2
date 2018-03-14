@@ -133,7 +133,7 @@ function bones_scripts_and_styles() {
   
   //First Handle Jquery
   wp_deregister_script('jquery');
-  wp_register_script('jquery', ("https://code.jquery.com/jquery-3.2.1.slim.min.js"), false);
+  wp_register_script('jquery', ("https://code.jquery.com/jquery-3.3.1.min.js"), false);
   wp_enqueue_script('jquery');
 
 

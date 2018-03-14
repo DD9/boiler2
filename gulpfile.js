@@ -28,16 +28,10 @@
  */
 
 // START Editing Project Variables.
-// Project related.
-var project                 = 'Boilder'; // Project Name.
-var projectURL              = 'boilerdemo.localhost'; // Project URL. Could be something like localhost:8888.
-var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Style related.
-var styleLessSRC            = './less/style.less'; // Path to main .scss file.
-var styleLessDestination    = './css/'; // Path to place the compiled CSS file.
-var styleSRC                = './assets/css/style.scss'; // Path to main .scss file.
-var styleDestination        = './'; // Path to place the compiled CSS file.
+var styleSassSRC                = './scss/style.scss'; // Path to main .scss file.
+var styleSassDestination    = './css/'; // Path to place the compiled CSS file.
 // Defualt set to root folder.
 
 // JS Vendor related.
@@ -53,14 +47,13 @@ var jsCustomFile            = 'custom'; // Compiled JS custom file name.
 // Default set to custom i.e. custom.js.
 
 // Images related.
-var imagesSRC               = './assets/img/raw/**/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
-var imagesDestination       = './assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
+var imagesSRC               = './images/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
+var imagesDestination       = './images-optimized/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 // Watch files paths.
-var styleWatchFiles         = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
-var styleLessWatchFiles     = './less/**/*.less'; // Path to all *.less files inside css folder and inside them.
+var sassWatchFiles         = './scss/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
 var vendorJSWatchFiles      = './js/libs/*.js'; // Path to all vendor JS files.
-var customJSWatchFiles      = './assets/js/custom/*.js'; // Path to all custom JS files.
+var customJSWatchFiles      = './js/scripts.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
 
 
@@ -78,7 +71,7 @@ const AUTOPREFIXER_BROWSERS = [
     'ios >= 7',
     'android >= 4',
     'bb >= 10'
-  ];
+];
 
 // STOP Editing Project Variables.
 
@@ -129,31 +122,14 @@ var reload       = browserSync.reload; // For manual browser reload.
  *    4. You may want to stop the browser from openning automatically
  */
 gulp.task( 'browser-sync', function() {
-  browserSync.init( {
-
-    // For more options
-    // @link http://www.browsersync.io/docs/options/
-
-    // Project URL.
-    proxy: projectURL,
-
-    // `true` Automatically open the browser with BrowserSync live server.
-    // `false` Stop the browser from automatically opening.
-    open: true,
-
-    // Inject CSS changes.
-    // Commnet it to reload browser for every CSS change.
-    injectChanges: true,
-
-    // Use a specific port (instead of the one auto-detected by Browsersync).
-    // port: 7000,
-
-  } );
+    browserSync.init( {
+        proxy : "http://localhost:8888/wordpress"
+    });
 });
 
 
 /**
- * Task: `styles`.
+ * Task: `compile-sass`.
  *
  * Compiles Sass, Autoprefixes it and Minifies CSS.
  *
@@ -166,159 +142,149 @@ gulp.task( 'browser-sync', function() {
  *    6. Minifies the CSS file and generates style.min.css
  *    7. Injects CSS or reloads the browser via browserSync
  */
- gulp.task('styles', function () {
-    gulp.src( styleSRC )
-    .pipe( sourcemaps.init() )
-    .pipe( sass( {
-      errLogToConsole: true,
-      outputStyle: 'compact',
-      //outputStyle: 'compressed',
-      // outputStyle: 'nested',
-      // outputStyle: 'expanded',
-      precision: 10
-    } ) )
-    .on('error', console.error.bind(console))
-    .pipe( sourcemaps.write( { includeContent: false } ) )
-    .pipe( sourcemaps.init( { loadMaps: true } ) )
-    .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
+gulp.task('compile-sass', function () {
+    gulp.src( styleSassSRC )
+        .pipe( sourcemaps.init() )
+        .pipe( sass( {
+            errLogToConsole: true,
+            outputStyle: 'compact',
+            //outputStyle: 'compressed',
+            // outputStyle: 'nested',
+            // outputStyle: 'expanded',
+            precision: 10
+        } ) )
+        .on('error', console.error.bind(console))
+        .pipe( sourcemaps.write( { includeContent: false } ) )
+        .pipe( sourcemaps.init( { loadMaps: true } ) )
+        .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
 
-    .pipe( sourcemaps.write ( styleDestination ) )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( styleDestination ) )
+        .pipe( sourcemaps.write ( styleSassDestination ) )
+        .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+        .pipe( gulp.dest( styleSassDestination ) )
 
-    .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
-    .pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
+        .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
+        .pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
 
-    .pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
+        .pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
 
-    .pipe( rename( { suffix: '.min' } ) )
-    .pipe( minifycss( {
-      maxLineLen: 10
-    }))
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( styleDestination ) )
+        .pipe( rename( { suffix: '.min' } ) )
+        .pipe( minifycss( {
+            maxLineLen: 10
+        }))
+        .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+        .pipe( gulp.dest( styleSassDestination ) )
 
-    .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
-    .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
-    .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
- });
+        .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
+        .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
+        .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
+});
 
+/**
+ * Task: `compile-sass-lite`.
+ *
+ * Compiles Sass.
+ *
+ * This task does the following:
+ *    1. Gets the source scss file
+ *    2. Compiles Sass to CSS
+ */
+/* Task to compile sass unminified & unmapped */
+gulp.task('compile-sass-lite', function() {
+    gulp.src(styleSassSRC)
+        .pipe(sass())
+        .pipe(gulp.dest(styleSassDestination))
+        .pipe( notify( { message: 'TASK: "compile-sass" Completed! 💯', onLast: true } ) )
+});
 
-/* Task to compile less */
-gulp.task('compile-less', function() {  
-  gulp.src(styleLessSRC)
-    .pipe(less())
-    .pipe(gulp.dest(styleLessDestination))
-    .pipe( notify( { message: 'TASK: "compile-less" Completed! 💯', onLast: true } ) )
-}); 
-/* Task to watch less changes */
-gulp.task('watch-less', function() {  
-  gulp.watch( styleLessWatchFiles, ['compile-less']);
+/**
+ * Task: `vendorJS`.
+ *
+ * Concatenate and uglify vendor JS scripts.
+ *
+ * This task does the following:
+ *     1. Gets the source folder for JS vendor files
+ *     2. Concatenates all the files and generates vendors.js
+ *     3. Renames the JS file with suffix .min.js
+ *     4. Uglifes/Minifies the JS file and generates vendors.min.js
+ */
+gulp.task( 'vendorsJs', function() {
+    gulp.src( jsVendorSRC )
+        .pipe( concat( jsVendorFile + '.js' ) )
+        .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+        .pipe( gulp.dest( jsVendorDestination ) )
+        .pipe( rename( {
+            basename: jsVendorFile,
+            suffix: '.min'
+        }))
+        .pipe( uglify() )
+        .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+        .pipe( gulp.dest( jsVendorDestination ) )
+        .pipe( notify( { message: 'TASK: "vendorsJs" Completed! 💯', onLast: true } ) );
 });
 
 
-
- /**
-  * Task: `vendorJS`.
-  *
-  * Concatenate and uglify vendor JS scripts.
-  *
-  * This task does the following:
-  *     1. Gets the source folder for JS vendor files
-  *     2. Concatenates all the files and generates vendors.js
-  *     3. Renames the JS file with suffix .min.js
-  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
-  */
- gulp.task( 'vendorsJs', function() {
-  gulp.src( jsVendorSRC )
-    .pipe( concat( jsVendorFile + '.js' ) )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsVendorDestination ) )
-    .pipe( rename( {
-      basename: jsVendorFile,
-      suffix: '.min'
-    }))
-    .pipe( uglify() )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsVendorDestination ) )
-    .pipe( notify( { message: 'TASK: "vendorsJs" Completed! 💯', onLast: true } ) );
- });
-
-
- /**
-  * Task: `customJS`.
-  *
-  * Concatenate and uglify custom JS scripts.
-  *
-  * This task does the following:
-  *     1. Gets the source folder for JS custom files
-  *     2. Concatenates all the files and generates custom.js
-  *     3. Renames the JS file with suffix .min.js
-  *     4. Uglifes/Minifies the JS file and generates custom.min.js
-  */
- gulp.task( 'customJS', function() {
+/**
+ * Task: `customJS`.
+ *
+ * Concatenate and uglify custom JS scripts.
+ *
+ * This task does the following:
+ *     1. Gets the source folder for JS custom files
+ *     2. Concatenates all the files and generates custom.js
+ *     3. Renames the JS file with suffix .min.js
+ *     4. Uglifes/Minifies the JS file and generates custom.min.js
+ */
+gulp.task( 'customJS', function() {
     gulp.src( jsCustomSRC )
-    .pipe( concat( jsCustomFile + '.js' ) )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsCustomDestination ) )
-    .pipe( rename( {
-      basename: jsCustomFile,
-      suffix: '.min'
-    }))
-    .pipe( uglify() )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsCustomDestination ) )
-    .pipe( notify( { message: 'TASK: "customJs" Completed! 💯', onLast: true } ) );
- });
+        .pipe( concat( jsCustomFile + '.js' ) )
+        .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+        .pipe( gulp.dest( jsCustomDestination ) )
+        .pipe( rename( {
+            basename: jsCustomFile,
+            suffix: '.min'
+        }))
+        .pipe( uglify() )
+        .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+        .pipe( gulp.dest( jsCustomDestination ) )
+        .pipe( notify( { message: 'TASK: "customJs" Completed! 💯', onLast: true } ) );
+});
 
 
- /**
-  * Task: `images`.
-  *
-  * Minifies PNG, JPEG, GIF and SVG images.
-  *
-  * This task does the following:
-  *     1. Gets the source of images raw folder
-  *     2. Minifies PNG, JPEG, GIF and SVG images
-  *     3. Generates and saves the optimized images
-  *
-  * This task will run only once, if you want to run it
-  * again, do it with the command `gulp images`.
-  */
- gulp.task( 'images', function() {
-  gulp.src( imagesSRC )
-    .pipe( imagemin( {
-          progressive: true,
-          optimizationLevel: 3, // 0-7 low-high
-          interlaced: true,
-          svgoPlugins: [{removeViewBox: false}]
+/**
+ * Task: `images`.
+ *
+ * Minifies PNG, JPEG, GIF and SVG images.
+ *
+ * This task does the following:
+ *     1. Gets the source of images raw folder
+ *     2. Minifies PNG, JPEG, GIF and SVG images
+ *     3. Generates and saves the optimized images
+ *
+ * This task will run only once, if you want to run it
+ * again, do it with the command `gulp images`.
+ */
+gulp.task( 'images', function() {
+    gulp.src( imagesSRC )
+        .pipe( imagemin( {
+            progressive: true,
+            optimizationLevel: 3, // 0-7 low-high
+            interlaced: true,
+            svgoPlugins: [{removeViewBox: false}]
         } ) )
-    .pipe(gulp.dest( imagesDestination ))
-    .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
- });
+        .pipe(gulp.dest( imagesDestination ))
+        .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
+});
 
-
-
-
- /**
-  * Watch Tasks.
-  *
-  * Watches for file changes and runs specific tasks.
-  */
- // gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
- //  gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
- //  gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
- //  gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
- //  gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
- // });
-
-
-gulp.task( 'default', ['vendorsJs','watch-less'], function () {
-  // gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
-  // gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
-  gulp.watch( styleLessWatchFiles, [ 'watch-less' ] );
-  gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
-
-  //gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
+/**
+ * Default Gulp & Watch Tasks.
+ *
+ * Runs Gulp and watches for specified file changes.
+ * Reruns tasks and reloads browserSync on change.
+ */
+gulp.task( 'default', ['vendorsJs', 'customJS', 'compile-sass', 'browser-sync'], function () {
+    gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
+    gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
+    gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
+    gulp.watch( sassWatchFiles, ['compile-sass', reload]); // Reload on CSS file on SASS changes.
 });
 
