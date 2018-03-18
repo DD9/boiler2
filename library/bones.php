@@ -146,22 +146,22 @@ function bones_scripts_and_styles() {
         // Register Scripts --------------------
 
         //Vendors JS, including Bootstrap core JS
-        wp_register_script( 'vendors-min', TMPL_URL . '/js/vendors.min.js', array('jquery'), current_time('timestamp'), TRUE );
+        wp_register_script( 'vendors-min', TMPL_URL . '/js/vendors.min.js', array('jquery'), filemtime( get_template_directory() . '/js/vendors.min.js') , TRUE );
 
         //Custom theme JS
         //wp_register_script( 'custom-js', TMPL_URL . '/js/scripts.js', array( 'jquery' ), '', true );
-        wp_register_script( 'custom-js', TMPL_URL . '/js/custom.min.js', array( 'jquery' ), current_time('timestamp'), true );
+        wp_register_script( 'custom-js', TMPL_URL . '/js/custom.min.js', array( 'jquery' ), filemtime( get_template_directory() . '/js/custom.min.js'), true );
 
 
         // Register Styles --------------------
-        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), current_time('timestamp'), 'all' );
-        wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), current_time('timestamp') );
-        wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), current_time('timestamp'), 'all' ); //enable below as needed
+        wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.min.css', array(), filemtime( get_template_directory() . '/css/style.min.css' ) , 'all' );
+        wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), filemtime( get_template_directory() . '/css/ie.css' )  );
+        wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), filemtime( get_template_directory() . '/css/shame.css' ) , 'all' ); //enable below as needed
 
 
         //Register 3rd Party Hosted Libraries --------------------
-        wp_enqueue_script('bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', array( 'jquery' ), current_time('timestamp'), true );
-        wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), current_time('timestamp'), 'all' );
+        wp_enqueue_script('bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', array( 'jquery' ), '', true );
+        wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '', 'all' );
 
 
         //Enqueue styles  --------------------

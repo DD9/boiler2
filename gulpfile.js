@@ -32,7 +32,7 @@
 // Style related.
 var styleSassSRC                = './scss/style.scss'; // Path to main .scss file.
 var styleSassDestination    = './css/'; // Path to place the compiled CSS file.
-// Defualt set to root folder.
+// Default set to root folder.
 
 // JS Vendor related.
 var jsVendorSRC             = './js/libs/*.js'; // Path to JS vendor folder.
