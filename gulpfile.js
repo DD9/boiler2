@@ -29,6 +29,9 @@
 
 // START Editing Project Variables.
 
+// Project related.
+var browsersyncConfig = require('./browser-sync-config.json');
+
 // Style related.
 var styleSassSRC                = './scss/style.scss'; // Path to main .scss file.
 var styleSassDestination    = './css/'; // Path to place the compiled CSS file.
@@ -128,7 +131,7 @@ var reload       = browserSync.reload; // For manual browser reload.
  */
 gulp.task( 'browser-sync', function() {
     browserSync.init( {
-        proxy : "http://localhost:8888/wordpress"
+        proxy : browsersyncConfig.proxy
     });
 });
 
