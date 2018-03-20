@@ -1,0 +1,5 @@
+// Create a browser-sync-config.json file and copy you're WP_SITEURL here
+// See your MAMP/XAMP configuration to find your WP_SITEURL, typically http://localhost:8888/
+{
+  "proxy": "WP_SITEURL here"
+}
