@@ -12,14 +12,14 @@ Configure GULP to automate several tasks, starting with minifying vendor JS file
 - Install **Node** https://nodejs.org/en/
 - Install **NPM** globally  `npm install npm -g` (Node will come installed with NPM)
 - Install **gulp** globally `npm install gulp -g`
-- Install **less** globally `npm install less -g`
+- Install **less** globally `npm install sass -g`
 - Verify Installs
 
 ```
 node -v
 npm -v
 gulp -v
-less -v
+sass -v
 ```
 
 - Navigate to theme directory and from command line `npm install`
@@ -160,6 +160,9 @@ git pull -s subtree boiler2 master
 
 
 ```
+
+## Converting local dependencies into NPM dependencies and injecting them
+See example: https://basecamp.com/1922309/projects/772526/todos/344872769#comment_607942957
 
 
 
