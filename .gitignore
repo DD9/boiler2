@@ -1,2 +1,3 @@
 node_modules/
 .idea/
+browser-sync-config.json
