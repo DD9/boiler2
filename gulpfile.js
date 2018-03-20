@@ -35,7 +35,12 @@ var styleSassDestination    = './css/'; // Path to place the compiled CSS file.
 // Default set to root folder.
 
 // JS Vendor related.
-var jsVendorSRC             = './js/libs/*.js'; // Path to JS vendor folder.
+var jsVendorSRC = {
+    vendorPaths: [
+        'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        './js/libs/*.js'
+    ]
+};
 var jsVendorDestination     = './js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile            = 'vendors'; // Compiled JS vendors file name.
 // Default set to vendors i.e. vendors.js.
@@ -208,7 +213,7 @@ gulp.task('compile-sass-lite', function() {
  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
  */
 gulp.task( 'vendorsJs', function() {
-    gulp.src( jsVendorSRC )
+    gulp.src( jsVendorSRC.vendorPaths )
         .pipe( concat( jsVendorFile + '.js' ) )
         .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
         .pipe( gulp.dest( jsVendorDestination ) )

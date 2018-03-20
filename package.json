@@ -8,7 +8,9 @@
   },
   "author": "DD9",
   "homepage": "https://github.com/dd9/boiler#readme",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  },
   "devDependencies": {
     "browser-sync": "",
     "gulp": "^3.8.11",
