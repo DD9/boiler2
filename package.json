@@ -9,7 +9,8 @@
   "author": "DD9",
   "homepage": "https://github.com/dd9/boiler#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
+    "jquery.easing": "^1.4.1",
   },
   "devDependencies": {
     "browser-sync": "",

@@ -40,8 +40,8 @@ var styleSassDestination    = './css/'; // Path to place the compiled CSS file.
 // JS Vendor related.
 var jsVendorSRC = {
     vendorPaths: [
-        'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        './js/libs/*.js'
+        './node_modules/jquery.easing/bower_components/jquery-easing-original/jquery.easing.min.js',
+        './node_modules/bootstrap/dist/js/bootstrap.min.js'
     ]
 };
 var jsVendorDestination     = './js/'; // Path to place the compiled JS vendors file.
