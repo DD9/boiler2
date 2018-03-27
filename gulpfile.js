@@ -55,10 +55,6 @@ var jsCustomDestination     = './js/'; // Path to place the compiled JS custom s
 var jsCustomFile            = 'custom'; // Compiled JS custom file name.
 // Default set to custom i.e. custom.js.
 
-// Images related.
-var imagesSRC               = './images/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
-var imagesDestination       = './images-optimized/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
-
 // Watch files paths.
 var sassWatchFiles         = './scss/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
 var vendorJSWatchFiles      = './js/libs/*.js'; // Path to all vendor JS files.
@@ -258,30 +254,6 @@ gulp.task( 'customJS', function() {
 });
 
 
-/**
- * Task: `images`.
- *
- * Minifies PNG, JPEG, GIF and SVG images.
- *
- * This task does the following:
- *     1. Gets the source of images raw folder
- *     2. Minifies PNG, JPEG, GIF and SVG images
- *     3. Generates and saves the optimized images
- *
- * This task will run only once, if you want to run it
- * again, do it with the command `gulp images`.
- */
-gulp.task( 'images', function() {
-    gulp.src( imagesSRC )
-        .pipe( imagemin( {
-            progressive: true,
-            optimizationLevel: 3, // 0-7 low-high
-            interlaced: true,
-            svgoPlugins: [{removeViewBox: false}]
-        } ) )
-        .pipe(gulp.dest( imagesDestination ))
-        .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
-});
 
 /**
  * Default Gulp & Watch Tasks.
