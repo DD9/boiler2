@@ -1,37 +1,30 @@
 <?php
 /*
-Author: DD9, Eddie Machado, and Others
-
-This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images,
-sidebars, comments, ect.
+* Author: DD9 and Others
 */
 
 /************* INCLUDE NEEDED FILES ***************/
 
-require_once( 'library/navwalker.php' ); // needed for bootstrap navigation
-require_once( 'library/utilities.php' ); // misc generic helpers
-require_once( 'library/shortcodes.php' ); // shortcodes 
+require_once( 'library/navwalker.php' );   // needed for bootstrap navigation
+require_once( 'library/utilities.php' );   // misc generic helpers
+require_once( 'library/shortcodes.php' );  // shortcodes 
+require_once( 'vendor/autoload.php' );     // For Composer scripts
 
-/************* SETUP DEFAULT PAGES ON ACTIVATION ***************/
 
-// Disable this section until we move it into a dedicated function
-/*
-require_once( 'library/site_init.php' ); 
+/************* SETUP DEFAULT PAGES ***************/
 
-$pages = array(
-  array('page_title' => 'Assets'),
-  array('page_title' => 'Home'),
-  array('page_title' => 'About'),
-  array('page_title' => 'News'),
-  array('page_title' => 'Contact'),
-  );
+// require_once( 'library/site_init.php' ); // Disabled until we move it into a dedicated function
 
-add_pages($pages);
-*/
+
+/************* OPTIONAL BOILER SCRIPTS ***************/
+/*                enable as needed                   */
+
+require_once( 'library/admin.php' ); // dashboard customizations
+// require_once( 'library/custom-post-types.php' );  // project-specific CPTs
+
+
 
 /************* INSERT THEME FUNCTIONS HERE ********************/
-
 
 
 
@@ -60,13 +53,13 @@ if( function_exists('acf_add_options_page') ) {
 
 
 
-/* library/bones.php (functions specific to BREW)
+/* library/brew.php (functions specific to BREW)
   - navwalker
   - Read more > Bootstrap button
   - Bootstrap style pagination
   - Bootstrap style breadcrumbs
 */
-require_once( 'library/brew.php' ); // if you remove this, BREW will break
+require_once( 'library/brew.php' ); 
 
 /*
 1. library/bones.php
@@ -81,81 +74,19 @@ require_once( 'library/brew.php' ); // if you remove this, BREW will break
 	- custom google+ integration
 	- adding custom fields to user profiles
 */
-require_once( 'library/bones.php' ); // if you remove this, bones will break
-
-
-//Optional for Boiler
-require_once( 'library/admin.php' ); // dashboard customizations
-
-
-/************* CUSTOM POST TYPES *************/
-
-/* 
-Hardcode custom post types here if you want to keep them out of the dashboard
-This is a good idea in many cases. Otherwise use:  https://wordpress.org/plugins/custom-post-type-ui/
-*/
-
-//WP Custom Post Type Class 
-//https://github.com/jjgrainger/wp-custom-post-type-class
-
-//require_once( 'library/CPT.php' );
-
-// Flush rewrite rules for custom post types
-// function boiler_flush_rewrite_rules() {
-//   flush_rewrite_rules();
-// } 
-// add_action( 'after_switch_theme', 'boiler_flush_rewrite_rules' );
-
-/* 
-Add active/current class to CPT menu items
-https://gist.github.com/gerbenvandijk/5253921
-*/
-
-//function custom_active_item_classes($classes = array(), $menu_item = false) {
-    //global $post;
-
-    //// Get post ID, if nothing found set to NULL
-    //$id = ( isset( $post->ID ) ? get_the_ID() : NULL );
-
-    //// Checking if post ID exist...
-    //if (isset( $id )){
-	    //$classes[] = ($menu_item->url == get_post_type_archive_link($post->post_type)) ? 'current-menu-item active' : '';
-    //}
-
-    //return $classes;
-//}
-//add_filter( 'nav_menu_css_class', 'custom_active_item_classes', 10, 2 );
-
+require_once( 'library/bones.php' ); 
 
 
 
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
-// Thumbnail sizes
+
 //add_image_size( 'bones-thumb-600', 600, 150, true );
 //add_image_size( 'bones-thumb-300', 300, 100, true );
 //add_image_size( 'post-featured', 750, 300, true );
 
-/*
-to add more sizes, simply copy a line from above
-and change the dimensions & name. As long as you
-upload a "featured image" as large as the biggest
-set width or height, all the other sizes will be
-auto-cropped.
 
-To call a different size, simply change the text
-inside the thumbnail function.
-
-For example, to call the 300 x 300 sized image,
-we would use the function:
-<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-for the 600 x 100 image:
-<?php the_post_thumbnail( 'bones-thumb-600' ); ?>
-
-You can change the names and dimensions to whatever
-you like. Enjoy!
-*/
 
 /************* ACTIVE SIDEBARS ********************/
 
@@ -224,15 +155,8 @@ function bones_register_sidebars() {
     'after_title' => '</h4>',
   ));
 
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
 
-
-
-	*/
-} // don't remove this bracket!
+} 
 
 
 

@@ -7,6 +7,22 @@ Add pages on theme activation
  - Will re-add pages if deleted 
 
 */
+
+/*
+Disabled  until we move it into a dedicated dasbhoard function
+
+$pages = array(
+  array('page_title' => 'Assets'),
+  array('page_title' => 'Home'),
+  array('page_title' => 'About'),
+  array('page_title' => 'News'),
+  array('page_title' => 'Contact'),
+  );
+
+add_pages($pages);
+*/
+
+
 function add_pages($pages){
   if (isset($_GET['activated']) && is_admin()){
     foreach ($pages as $page) {
