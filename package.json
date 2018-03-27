@@ -1,13 +1,13 @@
 {
-  "name": "Boiler",
-  "version": "1.1.0",
+  "name": "Boiler 2",
+  "version": "1.0",
   "description": "DD9 Boilerplate Theme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dd9/boiler.git"
+    "url": "git+https://github.com/dd9/boiler2.git"
   },
   "author": "DD9",
-  "homepage": "https://github.com/dd9/boiler#readme",
+  "homepage": "https://github.com/dd9/boiler2#readme",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "jquery.easing": "^1.4.1"
