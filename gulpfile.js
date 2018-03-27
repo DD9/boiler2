@@ -224,7 +224,7 @@ gulp.task( 'vendorsJs', function() {
             basename: jsVendorFile,
             suffix: '.min'
         }))
-        .pipe( uglify() )
+        .pipe( uglify( { mangle: false } ) )
         .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
         .pipe( gulp.dest( jsVendorDestination ) )
         .pipe( notify( { message: 'TASK: "vendorsJs" Completed! 💯', onLast: true } ) );
