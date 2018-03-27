@@ -93,7 +93,6 @@ var gulp         = require('gulp'); // Gulp of-course
 
 // CSS related plugins.
 
-var less         = require('gulp-less'); // Gulp pluign for less compilation.
 var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation.
 var minifycss    = require('gulp-uglifycss'); // Minifies CSS files.
 var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic.

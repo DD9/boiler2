@@ -1,5 +1,5 @@
 {
-  "name": "Boiler 2",
+  "name": "Boiler2",
   "version": "1.0",
   "description": "DD9 Boilerplate Theme",
   "repository": {
@@ -14,17 +14,16 @@
   },
   "devDependencies": {
     "browser-sync": "",
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.5.2",
     "gulp-filter": "",
     "gulp-imagemin": "",
-    "gulp-less": "^3.3.0",
     "gulp-line-ending-corrector": "^1.0.1",
     "gulp-merge-media-queries": "",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^2.0.0",
+    "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.1.0",
     "gulp-uglifycss": "^1.0.4"
