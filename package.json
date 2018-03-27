@@ -10,7 +10,8 @@
   "homepage": "https://github.com/dd9/boiler2#readme",
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "jquery.easing": "^1.4.1"
+    "jquery.easing": "^1.4.1",
+    "popper.js": "^1.14.1"
   },
   "devDependencies": {
     "browser-sync": "",
