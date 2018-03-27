@@ -27,6 +27,24 @@ npm -v
 See example: https://basecamp.com/1922309/projects/772526/todos/344872769#comment_607942957
 
 
-
 # Install Boiler2
 
+--
+
+## Fork it (As a solo repo)
+
+Create a WordPress install 
+
+Create a theme folder (i.e /wp-content/themes/themename/), navigate to that folder, and pull down the repo
+
+```
+git clone git@github.com:dd9/boiler2.git .
+
+#or
+
+git clone https://github.com/dd9/boiler2.git .
+
+```
+
+
+--
