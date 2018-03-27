@@ -33,7 +33,7 @@
 var browsersyncConfig = require('./browser-sync-config.json');
 
 // Style related.
-var styleSassSRC                = './scss/style.scss'; // Path to main .scss file.
+var styleSassSRC            = './scss/style.scss'; // Path to main .scss file.
 var styleSassDestination    = './css/'; // Path to place the compiled CSS file.
 // Default set to root folder.
 
