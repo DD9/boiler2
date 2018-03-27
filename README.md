@@ -13,17 +13,15 @@ Configure GULP to automate several tasks, starting with minifying vendor JS file
 ```
 node -v
 npm -v
-gulp -v
 ```
-
+- Copy `browser-sync-config-sample.json` to `browser-sync-config.json`  (the later will not be commited to git)
+- Customize `browser-sync-config.json` with your local  `WP_SITEURL` (i.e. http://boiler.localhost/)
 - Navigate to theme directory and from command line `npm install`
 - Confirm creation of /node_modules/ (which will be ignored by Git)
 - From the theme directory and from command line `gulp`
-- Verify gulp is monitoring for changes by tweaking .less and .js files
+- This will fire up a `browser-sync` window, which should force reload whenever changes to PHP/SASS/JS are made
+- Verify gulp is monitoring for changes by tweaking .php, .sass and .js files
 
-
-## Setting browsersync configs
-See the browser-sync-config-sample.json in the Boiler2 theme folder to setup browsersync auto refresh. 
 
 # Converting local dependencies into NPM dependencies and injecting them
 See example: https://basecamp.com/1922309/projects/772526/todos/344872769#comment_607942957
