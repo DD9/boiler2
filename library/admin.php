@@ -43,9 +43,6 @@ function disable_default_dashboard_widgets() {
 }
 add_action( 'admin_menu', 'disable_default_dashboard_widgets' );
 
-//Disable YOAST nag messages
-//remove_action( 'admin_notices', array( Yoast_Notification_Center::get(), 'display_notifications' ) );
-//remove_action( 'all_admin_notices', array( Yoast_Notification_Center::get(), 'display_notifications' ) );
 
 
 
