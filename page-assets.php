@@ -56,19 +56,19 @@
 						<div class="owl-carousel owl-carousel-standard owl-carousel-centered-nav">
 
 							<div class="owl-carousel-item" style="background-image:url('https://source.unsplash.com/rbJB0x5VBok');">
-								<div class="owl-content-centered text-light">
+								<div class="owl-content-centered text-white">
 									<h1 class="entry-title" itemprop="headline">Slide One</h1>
 								</div> <!-- /owl-content-centered -->
 							</div> <!-- /owl-carousel-item -->
 
 							<div class="owl-carousel-item" style="background-image:url('https://source.unsplash.com/728DGN-qqnA');">
-								<div class="owl-content-centered text-light">
+								<div class="owl-content-centered text-white">
 									<h1 class="entry-title" itemprop="headline">Slide Two</h1>
 								</div> <!-- /owl-content-centered -->
 							</div> <!-- /owl-carousel-item -->
 
 							<div class="owl-carousel-item" style="background-image:url('https://source.unsplash.com/uKmRGSTsafg');">
-								<div class="owl-content-centered content-light">
+								<div class="owl-content-centered content-white">
 									<h1 class="entry-title" itemprop="headline">Slide Three</h1>
 								</div> <!-- /owl-content-centered -->
 							</div> <!-- /owl-carousel-item -->
@@ -1071,6 +1071,12 @@
                 <h1 class="display-3">Jumbotron</h1>
                 <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                 <p><a class="btn btn-primary btn-lg" href="#">Learn more</a></p>
+              </div>
+							
+							<div class="jumbotron text-white bg-dark">
+                <h1 class="display-3">Jumbotron (dark)</h1>
+                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <p><a class="btn btn-light btn-lg" href="#">Learn more</a></p>
               </div>
             </div>
           </div>

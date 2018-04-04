@@ -975,12 +975,26 @@ a.text-dark:hover,a.text-dark:focus{color:#1d2124 !important}
 .text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
 .visible{visibility:visible !important}
 .invisible{visibility:hidden !important}
+.alignnone{margin:0 0 20px 0}
+.aligncenter,div.aligncenter{display:block;margin:0 auto 20px auto}
+.alignright{float:right;margin:0 0 20px 20px}
+.alignleft{float:left;margin:0 20px 20px 0}
+.aligncenter{display:block;margin:0 auto 20px auto}
+.wp-caption{max-width:100%;background:#eee}
+.wp-caption img{max-width:100%;margin-bottom:0;width:100%}
+.wp-caption p.wp-caption-text{font-size:.85em;margin:2px 0 7px;text-align:center}
+.wp-caption.alignleft{margin-right:20px}
+.wp-caption.alignright{margin-left:20px}
+.gallery dl{float:left;margin-top:10px;text-align:center;width:33%}
+.gallery dl img{border:2px solid #cfcfcf}
+.screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6,.comment-content cite.fn,.comment-content cite.fn a,.comment-content time{margin:0 0 1rem}
 .add-divider{border-bottom:1px solid rgba(0,0,0,0.1);clear:both;padding-bottom:1rem}
 p{margin:0 0 1rem}
 p:empty{display:none}
 cite{font-style:italic}
 .lead{font-weight:normal;font-size:30px;line-height:38px}
+a,a:visited{-webkit-transition:all .2s ease;transition:all .2s ease}
 a:hover,a:focus,a:visited:hover,a:visited:focus{text-decoration:none;outline:0 none}
 a.link-inverted{color:#212529}
 a.link-inverted:hover{color:#007bff}
@@ -1119,9 +1133,9 @@ legend{font-size:20px}
 img{max-width:100%;height:auto}
 .relative{position:relative}
 .last-child-no-bm>*:last-child{margin-bottom:0}
-.text-light{color:#fff}
-.text-light h1,.text-light .h1,.text-light h2,.text-light .h2,.text-light h3,.text-light .h3,.text-light h4,.text-light .h4,.text-light h5,.text-light .h5,.text-light h6,.text-light .h6,.text-light .comment-content cite.fn,.comment-content .text-light cite.fn,.text-light .comment-content cite.fn a,.comment-content cite.fn .text-light a,.text-light .comment-content time,.comment-content .text-light time,.text-light h6.subtitle,.text-light .h6.subtitle,.text-light .comment-content cite.subtitle.fn,.comment-content .text-light cite.subtitle.fn,.text-light .comment-content cite.fn a.subtitle,.comment-content cite.fn .text-light a.subtitle,.text-light .comment-content time.subtitle,.comment-content .text-light time.subtitle,.text-light a:not(.btn):not(.post-edit-link):not(#cancel-comment-reply-link),.text-light .lead,.text-light blockquote footer,.text-light blockquote small,.text-light blockquote .small,.text-light .pullquote-content,.text-light .pullquote-cite{color:#fff}
-.text-light .pullquote::before{color:rgba(255,255,255,0.3)}
+.text-white{color:#fff}
+.text-white h1,.text-white .h1,.text-white h2,.text-white .h2,.text-white h3,.text-white .h3,.text-white h4,.text-white .h4,.text-white h5,.text-white .h5,.text-white h6,.text-white .h6,.text-white .comment-content cite.fn,.comment-content .text-white cite.fn,.text-white .comment-content cite.fn a,.comment-content cite.fn .text-white a,.text-white .comment-content time,.comment-content .text-white time,.text-white h6.subtitle,.text-white .h6.subtitle,.text-white .comment-content cite.subtitle.fn,.comment-content .text-white cite.subtitle.fn,.text-white .comment-content cite.fn a.subtitle,.comment-content cite.fn .text-white a.subtitle,.text-white .comment-content time.subtitle,.comment-content .text-white time.subtitle,.text-white a:not(.btn):not(.post-edit-link):not(#cancel-comment-reply-link),.text-white .lead,.text-white blockquote footer,.text-white blockquote small,.text-white blockquote .small,.text-white .pullquote-content,.text-white .pullquote-cite{color:#fff}
+.text-white .pullquote::before{color:rgba(255,255,255,0.3)}
 .mtop-0{margin-top:0}
 .mtop-5{margin-top:5px}
 .mtop-10{margin-top:10px}
@@ -1912,6 +1926,7 @@ img{max-width:100%;height:auto}
 }@media(max-width:767.98px){.table-responsive-md{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}
 .table-responsive-md>.table-bordered{border:0}
 .navbar-expand-md>.container,.navbar-expand-md>.container-fluid{padding-right:0;padding-left:0}
+img.alignright,.wp-caption.alignright,.alignright,img.alignleft,.wp-caption.alignleft,.alignleft,img.aligncenter,.wp-caption.aligncenter,.aligncenter{display:block;float:none;margin:0 auto 20px}
 h1>br,.h1>br,h2>br,.h2>br,h3>br,.h3>br,h4>br,.h4>br,h5>br,.h5>br,h6>br,.h6>br,.comment-content cite.fn>br,.comment-content cite.fn a>br,.comment-content time>br{display:none}
 h1,.h1{font-size:30px}
 h2,.h2{font-size:25px}

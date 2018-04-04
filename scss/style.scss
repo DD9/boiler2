@@ -45,7 +45,7 @@ Stylesheet: Main Stylesheet
 
 
 // Boiler ------------------------------------------------
-// @import "boiler/wp-core"; // styles for text formatting, captions, galleries, etc
+@import "boiler/wp-core"; // styles for text formatting, captions, galleries, etc
 @import "boiler/type";
 @import "boiler/comments";
 @import "boiler/tables";
@@ -67,6 +67,3 @@ Stylesheet: Main Stylesheet
 // @import "boiler/ninja-forms"; // for the Ninja Forms plugin
 @import "boiler/_owlcarousel"; 
 @import "boiler/_owlcarousel-custom";
-
-// Project Custom ---------------------------------------------
-@import "custom-styles";

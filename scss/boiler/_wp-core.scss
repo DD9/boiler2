@@ -79,7 +79,7 @@ div.aligncenter {
 }
 
 
-@media (max-width: @screen-sm-min) {
+@include media-breakpoint-down(sm) {
   img.alignright, .wp-caption.alignright, .alignright,
   img.alignleft, .wp-caption.alignleft, .alignleft,
   img.aligncenter, .wp-caption.aligncenter, .aligncenter {
