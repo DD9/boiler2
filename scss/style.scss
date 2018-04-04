@@ -65,7 +65,8 @@ Stylesheet: Main Stylesheet
 
 // Plugins ---------------------------------------------
 // @import "boiler/ninja-forms"; // for the Ninja Forms plugin
-
+@import "boiler/_owlcarousel"; 
+@import "boiler/_owlcarousel-custom";
 
 // Project Custom ---------------------------------------------
 @import "custom-styles";

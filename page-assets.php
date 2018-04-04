@@ -41,6 +41,44 @@
 
 	<div class="container">
 			
+		
+		
+		
+		
+			<!-- Owl Carousel
+      ================================================== -->
+		
+		
+			<div class="bs-docs-section clearfix">
+				<div class="row">
+					<div class="col-lg-12">
+
+						<div class="owl-carousel owl-carousel-standard owl-carousel-centered-nav">
+
+							<div class="owl-carousel-item" style="background-image:url('https://source.unsplash.com/rbJB0x5VBok');">
+								<div class="owl-content-centered text-light">
+									<h1 class="entry-title" itemprop="headline">Slide One</h1>
+								</div> <!-- /owl-content-centered -->
+							</div> <!-- /owl-carousel-item -->
+
+							<div class="owl-carousel-item" style="background-image:url('https://source.unsplash.com/728DGN-qqnA');">
+								<div class="owl-content-centered text-light">
+									<h1 class="entry-title" itemprop="headline">Slide Two</h1>
+								</div> <!-- /owl-content-centered -->
+							</div> <!-- /owl-carousel-item -->
+
+							<div class="owl-carousel-item" style="background-image:url('https://source.unsplash.com/uKmRGSTsafg');">
+								<div class="owl-content-centered content-light">
+									<h1 class="entry-title" itemprop="headline">Slide Three</h1>
+								</div> <!-- /owl-content-centered -->
+							</div> <!-- /owl-carousel-item -->
+
+						</div><!-- /owl-carousel -->
+		
+					</div><!-- /col -->
+        </div><!-- /row -->
+      </div><!-- /bs-docs-section -->
+			
           
 
       <!-- Navbar

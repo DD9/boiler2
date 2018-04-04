@@ -51,6 +51,36 @@ jQuery(document).ready(function($) {
 
 
   // add all your scripts here
+	
+	
+	// Initialize owl carousel(s)
+	$(".owl-carousel-standard").each(function(){
+		// If there is more than one slide
+		 if( $(this).find(".owl-carousel-item").length > 1 ) {
+		   $(this).owlCarousel ({
+				 loop: true,
+				 nav: true,
+				 dots: true,
+				 navText: ["<i class='fa fa-long-arrow-left'></i>", "<i class='fa fa-long-arrow-right'></i>"],
+				 items:1,
+				 autoHeight: false,
+				 margin:0,
+				 navSpeed: 500,
+         autoplay: false,
+         autoplaySpeed: 500,
+         autoplayTimeout: 4500,
+				 autoplayHoverPause: true
+			 });
+		 // Else, there if there is only one slide	 
+		 } else {
+			 $(this).owlCarousel ({
+				 loop: false,
+				 nav : false,
+				 dots: false,
+				 items:1
+			 });
+		};
+	});	
 
 });
 

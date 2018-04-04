@@ -40,7 +40,8 @@ var styleSassDestination    = './css/'; // Path to place the compiled CSS file.
 // JS Vendor related.
 var jsVendorSRC = {
     vendorPaths: [
-        './node_modules/jquery.easing/bower_components/jquery-easing-original/jquery.easing.min.js',
+        './node_modules/owl.carousel/dist/owl.carousel.min.js',
+			  './node_modules/jquery.easing/bower_components/jquery-easing-original/jquery.easing.min.js',
         './node_modules/popper.js/dist/umd/popper.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js'
     ]
