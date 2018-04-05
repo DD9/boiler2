@@ -23,7 +23,9 @@ npm -v
 - Verify gulp is monitoring for changes by tweaking .php, .sass and .js files
 
 
-# Adding Vendor Scripts (JavaScript)
+# Adding Vendor Scripts 
+
+## JavaScript
 
 - Stop gulp (`ctrl +c` from terminal)
 - `npm install [some_npm_package] --save`  (This will pull down the node_module and update the (production) dependencies in `package.json`
@@ -39,13 +41,13 @@ var jsVendorSRC = {
 - Run `gulp` and the new script should be compiled into `vendors.min.js`
 
 
-## Adding Vendor Scripts (PHP)
+## PHP
 
 PHP libraries will be added via https://getcomposer.org/
 
 *More details on this later, ask TGD if you need a PHP script in the meantime.*
 
-# Install Boiler2
+# Install Boiler2 Theme
 
 Create a WordPress install 
 
