@@ -47,10 +47,6 @@ PHP libraries will be added via https://getcomposer.org/
 
 # Install Boiler2
 
---
-
-## Fork it (As a solo repo)
-
 Create a WordPress install 
 
 Create a theme folder (i.e /wp-content/themes/themename/), navigate to that folder, and pull down the repo
