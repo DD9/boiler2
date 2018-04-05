@@ -1,5 +1,5 @@
 # boiler2
-Boilerplate Theme (v2), with Bootstrap 4+
+DD9's Boilerplate Theme (v2), with Bootstrap 4+
 
 ----
 
