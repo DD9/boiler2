@@ -45,10 +45,10 @@ function emm_paginate($args = null) {
     $output = "";
     if ($pages > 1) {   
         $output .= "$before";
-        $ellipsis = "<li><span>...</span></li>";
+        $ellipsis = "<li class='page-item'><a class='page-link'>...</a></li>";
 
         if ($page > 1 && !empty($previouspage)) {
-            $output .= "<li><a href='" . get_pagenum_link($page - 1) . "'>$previouspage</a></li>";
+            $output .= "<li class='page-item'><a class='page-link' href='" . get_pagenum_link($page - 1) . "'>$previouspage</a></li>";
         }
         
         $min_links = $range * 2 + 1;
@@ -85,7 +85,7 @@ function emm_paginate($args = null) {
         }
 
         if ($page < $pages && !empty($nextpage)) {
-            $output .= "<li><a href='" . get_pagenum_link($page + 1) . "'>$nextpage</a></li>";
+            $output .= "<li><a class='page-link' href='" . get_pagenum_link($page + 1) . "'>$nextpage</a></li>";
         }
 
         $output .= $after;
@@ -107,8 +107,8 @@ function emm_paginate_loop($start, $max, $page = 0) {
     $output = "";
     for ($i = $start; $i <= $max; $i++) {
         $output .= ($page === intval($i)) 
-            ? "<li class='active'><span>$i</span></li>" 
-            : "<li><a href='" . get_pagenum_link($i) . "' class=''>$i</a></li>";
+            ? "<li class='page-item active'><a class='page-link'>$i</a></li>" 
+            : "<li class='page-item'><a href='" . get_pagenum_link($i) . "' class='page-link'>$i</a></li>";
     }
     return $output;
 }
