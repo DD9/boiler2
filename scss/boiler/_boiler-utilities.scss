@@ -35,9 +35,9 @@ img {
   color: #fff;
   
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, 
-  h5, .h5, h6, .h6, h6.subtitle, .h6.subtitle, a:not(.btn), .lead,
-  blockquote footer, blockquote small, blockquote .small,
-  .pullquote-content, .pullquote-cite {
+  h5, .h5, h6, .h6, h6.subtitle, .h6.subtitle, a:not(.btn), .btn-link, 
+  .lead, blockquote footer, blockquote small, blockquote .small,
+  .pullquote-content, .pullquote-cite, .byline, .entry-meta {
     color: #fff;
   }
 

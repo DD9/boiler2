@@ -11,8 +11,8 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 	color: $body-color;
 	height: auto;
 	width: auto;
-	background-color: $gray-300;
-	border: 1px solid $gray-400;
+	background-color: $gray-100;
+	border: 1px solid $gray-200;
 	width: 100%;
 }
 
@@ -50,9 +50,10 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 }
 
 .nf-form-fields-required {
-	font-family: $font-family-sans-serif;
+	color: $gray-500;
+	font-style: oblique;
 	font-size: $font-size-sm;
-	margin-bottom: 10px;
+	margin-bottom: ($paragraph-margin-bottom / 2);
 }
 
 .ninja-forms-response-msg {
@@ -67,7 +68,13 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 }
 
 .nf-response-msg {
-	
+	@extend .card;
+	@extend .border-primary;
+	padding: 1.6rem;
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .nf-error-msg.nf-error-field-errors {
