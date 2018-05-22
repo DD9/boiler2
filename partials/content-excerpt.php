@@ -10,7 +10,7 @@
   </header>
   
   <?php if ($image) { ?>
-  <section class="excerpt-img excerpt-img-bg" style="background-image: url('<?php echo $image[0]; ?>')">
+  <section class="excerpt-img excerpt-bg-img" style="background-image: url('<?php echo $image[0]; ?>')">
   </section>
   <?php } ?>
 

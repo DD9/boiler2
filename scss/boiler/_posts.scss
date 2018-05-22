@@ -42,6 +42,16 @@ Stylesheet: Posts
   }
 }
 
+.excerpt-img {
+
+}
+
+.excerpt-bg-img {
+  @extend .bg-img;
+  height: 350px;
+  margin-bottom: $spacer;
+}
+
 /* Entry Footer
 ================================================== */
 .article-footer  {
