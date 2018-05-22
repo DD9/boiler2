@@ -35,14 +35,26 @@ img {
   color: #fff;
   
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, 
-  h5, .h5, h6, .h6, h6.subtitle, .h6.subtitle, a:not(.btn), .btn-link, 
-  .lead, blockquote footer, blockquote small, blockquote .small,
+  h5, .h5, h6, .h6, h6.subtitle, a:not(.btn), .btn-link, 
+  .lead, blockquote, blockquote footer, blockquote small, blockquote .small,
   .pullquote-content, .pullquote-cite, .byline, .entry-meta {
     color: #fff;
   }
 
   .pullquote::before {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  a:not(.btn):hover {
+    text-decoration: underline;
+  }
+
+  hr {
+    border-top-color: rgba($white, .5);
+  }
+
+  .divider-bar {
+    background-color: rgba($white, .5);
   }
 }
 

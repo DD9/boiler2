@@ -20,6 +20,14 @@ Stylesheet: Posts
   margin: -15px 0 0;
 }
 
+.entry-content {
+  margin-bottom: ($spacer * 3);
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
 
 /* Featured Image
 ================================================== */

@@ -54,11 +54,23 @@ cite {
 }
 
 .lead {
-	//color: $gray;
-	font-weight: normal;
-	font-size: 30px;
-	line-height: 38px;
+	color: $primary;
+	line-height: $line-height-lg;
+	@include media-breakpoint-down(lg) {
+    font-size: 26px;
+    line-height: 30px;
+  }
 }
+
+#page-content-outer ul,
+#page-content-outer ol {
+	margin-bottom: $paragraph-margin-bottom;
+	> *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
 
 /* Link Styles
 ================================================== */
@@ -115,17 +127,36 @@ a.full-width {
 
 /* Blockquote
 ================================================== */
-
 blockquote {
-	font-weight: normal;
+	color: $primary;
+	font-weight: $font-weight-light;
 	font-size: $font-size-lg;
 	line-height: $line-height-lg;
+	border-left: 2px solid lighten($primary, 40);
+	padding: 10px $spacer;
+	margin-bottom: $paragraph-margin-bottom;
 
-	footer, small, .small {
+	footer, small, .small, cite {
+		display: block;
 		letter-spacing: 0.2em;
 		font-size: 11px;
 		font-weight: bold;
+		line-height: 1;
 		text-transform: uppercase;
 		font-style: normal;
+		margin-top:15px;
 	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+blockquote.text-center {
+	border: none;
+}
+
+blockquote.text-right {
+	border-left: none;
+	border-right: 2px solid lighten($primary, 40);
 }

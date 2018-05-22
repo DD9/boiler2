@@ -3,10 +3,10 @@
 
   <header class="excerpt-header">
     <h3 class="excerpt-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-    <p class="byline vcard">
-      by <span class="author"><em><?php echo bones_get_the_author_posts_link() ?></em></span> - 
-      <time class="updated" datetime="<?php get_the_time('Y-m-j') ?>"><?php echo get_the_time(get_option('date_format')) ?></time>
-    </p>
+    <p class="entry-meta byline vcard">
+			<span class="entry-date"><?php echo get_the_time( 'm.d.Y') ?></span><!-- /entry-date -->
+			by <span class="author"><em><?php echo bones_get_the_author_posts_link() ?></em></span>
+		</p>
   </header>
   
   <?php if ($image) { ?>

@@ -36,6 +36,35 @@ function dividerbar_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'dividerbar', 'dividerbar_shortcode' );
 
+
+// Spacer shortcode 
+function spacer_shortcode( $atts, $content = null ) {
+	extract( shortcode_atts( array(
+		'height' => ''
+	), $atts ) );
+	
+	$output = '<div class="spacer" style="height: '. $height . 'px"></div>';
+	
+	return $output;
+}
+add_shortcode('spacer', 'spacer_shortcode'); 
+
+
+// Display text shortcode 
+function display_text_shortcode( $atts, $content = null ) {
+	extract( shortcode_atts( array(
+		'size' => '',
+		'class' => ''
+	), $atts ) );
+	
+	$output = '<h1 class="display-'. $size . ' '. $class . '">' . $content . '</h1>';
+	
+	return $output;
+}
+add_shortcode('display_text', 'display_text_shortcode'); 
+
+
+
 // Lead text shortcode 
 function lead_shortcode( $atts, $content = null ) {
 	extract( shortcode_atts( array(
@@ -56,17 +85,17 @@ add_shortcode( 'small', 'small_shortcode' );
 
 
 // Checkmark list
-function checkmarklist_shortcode( $atts, $content = null ) {
+function checkmark_list_shortcode( $atts, $content = null ) {
    return '<div class="checkmark-list">' . $content . '</div>';
 }
-add_shortcode( 'checkmarklist', 'checkmarklist_shortcode' );
+add_shortcode( 'checkmark_list', 'checkmark_list_shortcode' );
 
 
 // Buttons
 function buttons( $atts, $content = null ) {
   extract( shortcode_atts( array(
   'class' => '', /* primary, default, info, success, danger, warning */
-  'size' => '', /* xs, sm, default, large */
+  'size' => '', /* sm, default, large */
   'target' => 'self', /* self, blank */
   'url'  => '' 
   ), $atts ) );

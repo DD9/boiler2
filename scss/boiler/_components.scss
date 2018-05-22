@@ -43,6 +43,41 @@ Basic styling used in footer and the #author-info box
   }
 }
 
+/* Buttons
+================================================== */
+.btn {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  margin-bottom: 6px;
+  white-space: normal;
+  text-transform: uppercase;
+  @include transition(all .2s ease);
+}
+
+.modal-footer .btn,
+.input-group-btn .btn,
+.navbar .btn {
+  margin-bottom: 0;
+}
+
+.btn-lg {
+  font-size: .95rem;
+  letter-spacing: 0.2em;
+}
+
+.btn-sm {
+  font-size: .75rem;
+}
+
+#page-content-outer {
+  .btn + p,
+  .btn + blockquote,
+  .btn + ul,
+  .btn + ol {
+    margin-top: 2rem;
+  }
+}
+
 /* Wells, Alerts
 ================================================== */
 .well, .alert {
@@ -55,20 +90,20 @@ Basic styling used in footer and the #author-info box
 ================================================== */
 .checkmark-list > ul, ul.checkmark-list {
   @extend .list-unstyled;
-  font-size: 110%;
-  li {
-    padding: 0 0 10px 22px;
+
+  > li {
+    padding: 0 0 10px 25px;
     position: relative;
   }
-  li::before {
+
+  > li::before {
     @extend .fa;
     content: "\f00c";
     color: $success;
-    font-size: 80%;
     height: 10px;
     left: 0;
     position: absolute;
-    top: 6px;
+    top: 4px;
     width: 15px;
   }
 }
