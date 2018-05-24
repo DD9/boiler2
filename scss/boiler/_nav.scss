@@ -19,37 +19,98 @@ Stylesheet: Header & Navigation
 
 /* Dropdown menus */
 // Fix non-wrapping menu items
-.dropdown-menu {
-	line-height: 18px;
-	> li {
-		margin-bottom: 3px;
-	}
-	> li > a {
-		white-space: normal;
-		line-height: inherit;
-	}
+.navbar-light #menu-primary,
+.navbar-dark #menu-primary {
+   .dropdown-menu {
+    font-size: 14px;
+  	line-height: 18px;
+  	> li {
+  		margin-bottom: 3px;
+  	}
+  	> li > a {
+  		white-space: normal;
+  		line-height: inherit;
+      color: $primary;
+      padding: .4rem .65rem;
+
+      &:hover {
+        color: $secondary;
+      }
+  	}
+  }
 }
 
 /* Primary Menu
 ================================================== */
 #menu-primary {
+	margin-top: 10px;
 
+ 	br {
+  	display: none;
+  }
+  > li > a {
+    font-size: 13px;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  } 
+
+  @include media-breakpoint-up(lg) {
+  	margin-top: 0;
+
+    > li > a {
+    	position: relative;
+
+    	&::before {
+    		background-color: rgba($white, .3);
+    		content: "";
+    		position: absolute;
+    		top: -2px;
+    		left: $navbar-nav-link-padding-x;
+    		right: $navbar-nav-link-padding-x;
+    		height: 2px;
+    		opacity: 0;
+    		@include transition(all .2s ease);
+    	}
+    }
+    > li > a:hover {
+    	&::before {
+    		opacity: 1;
+    	}
+    }
+	}
+
+  @include media-breakpoint-up(xl) {
+    > li > a {
+      padding-right: .55rem;
+      padding-left: .55rem;
+    }
+  }
 }
+
 
 /* Current page highlighting 
 ================================================== */
 #menu-primary {
-	> .active > a,
   > li.current-menu-item,
   > li.current-menu-parent,
-  > li.current-menu-ancestor {
+  > li.current-menu-ancestor,
+  > li.current_page_parent {
   	
-	  > a, > a:hover, > a:focus {
-      color: $link-color;
+  	> a::before {
+      opacity: 1;
     }
-  }  
 
-  .dropdown-menu > li.active > a {
-    color: $link-color;
+  }  
+  > li.dropdown.open > a:hover {
+    color: $secondary;
+  }
+
+  .dropdown-menu {
+    > li.current-menu-item {
+      > a {
+        color: $secondary;
+      }
+    }
   }
 }
