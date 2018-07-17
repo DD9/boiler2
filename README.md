@@ -5,7 +5,7 @@ DD9's Boilerplate Theme (v2), with Bootstrap 4+
 
 # Compile Boiler2 (NPM + GULP)
 
-Configure GULP to automate several tasks, starting with minifying vendor JS files and compiling LESS 
+Configure GULP to automate several tasks, starting with minifying vendor JS files and compiling SASS 
 
 - Install **Node** & **NPM** https://nodejs.org/en/ (NPM will insall with Node)
 - Verify Installs
