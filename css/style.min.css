@@ -1094,8 +1094,6 @@ legend{font-size:20px}
 .widget ul{padding:0;margin:0}
 .widget ul li{list-style:none}
 .widget select{margin-bottom:10px}
-#sidebar-mobile{display:none}
-#sidebar-mobile .widgettitle{display:none}
 #footer{background:#e9ecef;clear:both;padding:1rem 0}
 #footer .site-credit{opacity:0;cursor:default}
 #sub-floor{font-size:70%;padding:10px 0}
@@ -2029,8 +2027,6 @@ a,a:visited{-webkit-transition:none;transition:none}
 }@media(max-width:991.98px){.table-responsive-lg{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}
 .table-responsive-lg>.table-bordered{border:0}
 .navbar-expand-lg>.container,.navbar-expand-lg>.container-fluid{padding-right:0;padding-left:0}
-.sidebar-blog{display:none}
-#sidebar-mobile{display:block}
 .pager li>a,.pager li>span>a{display:block}
 }@media(max-width:767.98px){.table-responsive-md{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}
 .table-responsive-md>.table-bordered{border:0}
