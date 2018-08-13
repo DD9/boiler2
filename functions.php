@@ -26,6 +26,12 @@ require_once( 'library/admin.php' ); // dashboard customizations
 
 /************* INSERT THEME FUNCTIONS HERE ********************/
 
+// Add Editor Stylesheet
+function my_theme_add_editor_styles() {
+    add_editor_style( '/css/editor-styles.css' );
+}
+add_action( 'init', 'my_theme_add_editor_styles' );
+
 
 
 
