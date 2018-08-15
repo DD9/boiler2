@@ -1102,7 +1102,8 @@ legend{font-size:20px}
 .bg-image,.excerpt-bg-image{background-position:center center;background-repeat:no-repeat;background-size:cover;border-bottom:0;position:relative}
 .bg-image>.container,.excerpt-bg-image>.container{position:relative}
 .bg-image-shaded::before{content:"";background-color:#000;top:0;left:0;bottom:0;right:0;position:absolute;z-index:0;opacity:.4}
-.bg-gray{background-color:#dee2e6}
+.bg-gray-light{background-color:#dee2e6}
+.bg-gray-dark{background-color:#343a40}
 #page-header-outer{background-color:#dee2e6}
 #page-header-outer .entry-header>*:last-child{margin-bottom:0}
 .row-outer{position:relative;padding:4rem 0}
