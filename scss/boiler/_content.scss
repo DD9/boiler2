@@ -7,7 +7,7 @@ These are the styles for general content
 
 /* General Content
 ================================================== */
-.bg-img {
+.bg-image {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,7 +19,7 @@ These are the styles for general content
   }
 }
 
-.bg-img-shaded::before {
+.bg-image-shaded::before {
   content: "";
   background-color:#000;
   top: 0;

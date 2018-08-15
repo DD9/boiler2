@@ -15,15 +15,11 @@
 
 <div id="page-content-outer" class="row-outer">
 	<div class="container">
-		<div class="row">
+		<div class="row justify-content-center">
 
-			<div class="col-md-8 justify-content-md-center">
+			<div class="col-md-9">
 
-				<article class="hentry clearfix">
-					<section class="entry-content text-center">
-						<p><?php get_search_form(); ?></p>
-					</section>
-				</article> 
+				<?php get_template_part( 'partials/content', 'none' ); ?>
 
 			</div><!-- /col -->
 

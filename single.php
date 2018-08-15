@@ -1,28 +1,46 @@
-<?php get_header(); ?>
-      
-<div class="container">  
-  <div class="row">
-		
-     <?php get_sidebar(); ?>
-    
-    <div class="col-md-8">
+<?php get_header(); 
+$blog['id'] = get_option('page_for_posts');
+$blog['title'] = get_the_title( $blog['id'] );
+$blog['permalink'] = get_the_permalink( $blog['id'] );
+?>
 
-      <?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
 
-      <?php if (have_posts()) : while (have_posts()) : the_post(); $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );?>
+<div id="page-header-outer" class="row-outer">
+  <div class="container">
+    <div class="row">
+			<div class="col-md-12">
+				<header class="entry-header text-center">
+					<h1 class="entry-title" itemprop="headline"><a href="<?= $blog['permalink']?>"><?= $blog['title']; ?></a></h1>
+				</header> 
+			</div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+</div> <!-- /page-header-outer -->
 
-        <?php get_template_part( 'partials/content'); ?>
 
-      <?php endwhile; ?>
+<div id="page-content-outer"  class="row-outer">						
+	<div class="container">	
+		<div class="row justify-content-center">
+			<div class="col-md-9">
+				<?php if (have_posts()) : while (have_posts()) : the_post();?>
+					<?php get_template_part( 'partials/content'); ?>
 
-      <?php else : ?>
+				<?php endwhile; ?>
 
-        <?php get_template_part( 'partials/content', 'none' ); ?>
+				<?php else : ?>
+					<?php get_template_part( 'partials/content', 'none' ); ?>
 
-      <?php endif; ?>
+				<?php endif; ?>
+				
+			</div><!-- /col -->
+			
+			
+			<?php /*?><?php get_sidebar(); ?><?php */?>
+			
+			
+		</div><!-- /row -->
+	</div> <!-- /container-->
+</div><!-- /row-outer -->
 
-    </div><!-- /col -->   
-
- </div> <!-- /row -->
-</div> <!-- /container -->
+	
 <?php get_footer(); ?>

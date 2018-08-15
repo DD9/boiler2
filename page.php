@@ -14,9 +14,9 @@
 
 <div id="page-content-outer" class="row-outer">
 	<div class="container">
-		<div class="row">
+		<div class="row justify-content-center">
 
-			<div class="col-md-8">
+			<div class="col-md-9">
 
 				<?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
 
@@ -25,8 +25,6 @@
 				</article> 
 			
 			</div> <!-- /col -->
-
-			<?php get_sidebar(); ?>
 
 		</div> <!-- /row -->
 	</div> <!-- /container -->

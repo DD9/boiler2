@@ -60,6 +60,13 @@ Basic styling used in footer and the #author-info box
   margin-bottom: 0;
 }
 
+.input-group-btn .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 100%;
+  margin-left: -1px;
+}
+
 .btn-lg {
   font-size: .95rem;
   letter-spacing: 0.2em;

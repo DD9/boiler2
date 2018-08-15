@@ -1,34 +1,37 @@
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
-  <header class="excerpt-header">
-    <h3 class="excerpt-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-    <p class="entry-meta byline vcard">
-			<span class="entry-date"><?php echo get_the_time( 'm.d.Y') ?></span><!-- /entry-date -->
-			by <span class="author"><em><?php echo bones_get_the_author_posts_link() ?></em></span>
-		</p>
-  </header>
-  
-  <?php if ($image) { ?>
-  <section class="excerpt-img excerpt-bg-img" style="background-image: url('<?php echo $image[0]; ?>')">
-  </section>
-  <?php } ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-excerpt-row'); ?> role="article">
+	<div class="row">
 
-  <section class="excerpt-content clearfix">
-    <?php the_excerpt('<span class="read-more">' . __("Read more on","bonestheme") . ' "'.the_title('', '', false).'" &raquo;</span>'); ?>
-    <?php wp_link_pages(
-      array(
-        'before' => '<div class="page-link"><span>' . __( 'Pages:', 'brew' ) . '</span>',
-        'after' => '</div>'
-      ) 
-    ); ?>
-  </section>
+		<div class="col-md-6">
+			<section class="excerpt-image excerpt-bg-image card-image" style="background-image: url('<?php if ($image) : ?><?php echo $image[0]; ?><?php else: ?><?= get_bloginfo('template_directory'); ?>/images/default_thumbnail.jpg<?php endif; ?>')">
+				<a href="<?php the_permalink() ?>" class="full-width"></a>
+			</section>
+		</div><!-- /col -->
 
-  <footer class="excerpt-footer clearfix">
-    <span class="tags pull-left"><?php printf( '<span class="">' . __( 'in %1$s&nbsp;&nbsp;', 'bonestheme' ) . '</span>', get_the_category_list(', ') ); ?> <?php the_tags( '<span class="tags-title">' . __( '<i class="fa fa-tags"></i>', 'bonestheme' ) . '</span> ', ', ', '' ); ?></span>
-    <span class="commentnum pull-right"><a href="<?php comments_link(); ?>"><?php comments_number( '<i class="fa fa-comment"></i> 0', '<i class="fa fa-comment"></i> 1', '<i class="fa fa-comment"></i> %' ); ?></a></span>
-  </footer> <?php // end excerpt footer ?>
+		<div class="col-md-6">
+			<header class="entry-excerpt-header">
+				<h3 class="entry-excerpt-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+			</header>
 
-  <?php // comments_template(); // uncomment if you want to use them ?>
+			<section class="entry-excerpt clearfix">
+				<?php the_excerpt('<span class="read-more">' . __("Read more on","bonestheme") . ' "'.the_title('', '', false).'" &raquo;</span>'); ?>
+				<?php wp_link_pages(
+					array(
+						'before' => '<div class="page-link"><span>' . __( 'Pages:', 'brew' ) . '</span>',
+						'after' => '</div>'
+					) 
+				); ?>
+			</section>
+			
+			<?php if ( (has_category()) || (has_tag()) ) {?>
+			<footer class="article-footer excerpt-footer clearfix">
+				<span><?php the_time('m/d/y') ?> | </span>
+				<span class="tags"><?php printf( '<span class="">' . __( '%1$s&nbsp;&nbsp;', 'bonestheme' ) . '</span>', get_the_category_list(', ') ); ?> <?php the_tags( '<span class="tags-title">' . __( '<i class="fa fa-tags"></i>', 'bonestheme' ) . '</span> ', ', ', '' ); ?></span>
+			</footer> <?php // end article footer ?>
+			<?php } ?>
+			
+		</div><!-- /col -->
 
+	</div><!-- /row -->
 </article>

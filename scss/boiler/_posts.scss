@@ -29,9 +29,18 @@ Stylesheet: Posts
 }
 
 
+// Excerpts
+// -------------------------
+.post-excerpt-row {
+  border-bottom: 1px solid $hr-border-color;
+  font-size: $font-size-sm;
+  margin-bottom: ($paragraph-margin-bottom * 2);
+  padding-bottom: ($paragraph-margin-bottom * 2);
+}
+
 /* Featured Image
 ================================================== */
-.entry-featured-img {
+.entry-image {
   margin-bottom: $paragraph-margin-bottom;
   height: 180px;
   @include media-breakpoint-up(md) {
@@ -42,13 +51,22 @@ Stylesheet: Posts
   }
 }
 
-.excerpt-img {
-
+.excerpt-image {
+  position: relative;
+  margin-bottom: 20px;
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 0;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
-.excerpt-bg-img {
-  @extend .bg-img;
-  height: 350px;
+.excerpt-bg-image {
+  @extend .bg-image;
+  height: 250px;
   margin-bottom: $spacer;
 }
 
@@ -80,6 +98,10 @@ Stylesheet: Posts
       text-decoration: none;
     }
   }
+}
+
+.excerpt-footer {
+  border-top: none;
 }
 
 /* Pagination & Pager
