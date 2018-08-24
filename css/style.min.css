@@ -71,7 +71,7 @@ h6,.h6,.comment-content cite.fn,.comment-content cite.fn a,.comment-content time
 hr{margin-top:1rem;margin-bottom:1rem;border:0;border-top:1px solid rgba(0,0,0,0.1)}
 small,.small{font-size:80%;font-weight:400}
 mark,.mark{padding:.2em;background-color:#fcf8e3}
-.list-unstyled,.commentlist,.comment-nav ul,.footer-contact,#footer-nav,.checkmark-list>ul,ul.checkmark-list{padding-left:0;list-style:none}
+.list-unstyled,.commentlist,.comment-nav ul,.footer-contact,#footer-nav,.checkmark-list>ul,ul.checkmark-list,.card-stack{padding-left:0;list-style:none}
 .list-inline{padding-left:0;list-style:none}
 .list-inline-item{display:inline-block}
 .list-inline-item:not(:last-child){margin-right:.5rem}
@@ -1109,9 +1109,9 @@ legend{font-size:20px}
 .row-outer{position:relative;padding:4rem 0}
 .row-outer-sm{position:relative;padding:1rem 0}
 .row-outer-lg{position:relative;padding:6rem 0}
-.content-block{margin-bottom:2rem}
+.content-block{margin-bottom:4rem}
 .content-block>*:last-child{margin-bottom:0}
-.content-block-sm{margin-bottom:1rem}
+.content-block-sm{margin-bottom:2rem}
 .content-block-sm>*:last-child{margin-bottom:0}
 .byline,.entry-meta{color:#6c757d;margin:0;font-size:.875rem}
 .byline a,.entry-meta a{color:inherit}
@@ -1256,7 +1256,19 @@ img{max-width:100%;height:auto}
 .pbottom-80{padding-bottom:80px}
 .pbottom-90{padding-bottom:90px}
 .pbottom-100{padding-bottom:100px}
-.card blockquote,.card .lead{color:inherit;border:0}
+.card{-webkit-transition:all .2s ease;transition:all .2s ease}
+.card-body{padding:1.6rem}
+.card-body>*:last-child{margin-bottom:0}
+.card-text{font-size:.875rem;margin-bottom:.5rem}
+.card-text>*:last-child{margin-bottom:0}
+.card-img{-webkit-transition:all .2s ease;transition:all .2s ease}
+.card-body{-webkit-transition:all .2s ease;transition:all .2s ease}
+.card-stack{margin:0;display:-ms-grid;display:grid;-ms-grid-columns:1fr 1fr 1fr 1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;grid-column-gap:30px;grid-row-gap:30px}
+.card-stack.card-stack-ones .card{-ms-grid-column-span:6;grid-column-end:span 6}
+.card-stack.card-stack-twos .card{-ms-grid-column-span:6;grid-column-end:span 6}
+.card-stack.card-stack-threes .card{-ms-grid-column-span:6;grid-column-end:span 6}
+.card-stack.card-stack-fours{-ms-grid-columns:1fr 1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr}
+.card-stack.card-stack-fours .card{-ms-grid-column-span:6;grid-column-end:span 6}
 .owl-carousel{display:none;width:100%;-webkit-tap-highlight-color:transparent;position:relative;z-index:1}
 .owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}
 .owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
@@ -1327,6 +1339,9 @@ a,a:visited{-webkit-transition:none;transition:none}
 .btn,.post-edit-link,.commentlist .comment-reply-link,#cancel-comment-reply-link,.pager li>a,.pager li>span>a{-webkit-transition:none;transition:none}
 .symple-toggle .symple-toggle-trigger{-webkit-transition:none;transition:none}
 .symple-toggle-trigger>.toggle_icon .fa,.symple-toggle-trigger>.toggle_icon .checkmark-list>ul>li::before,.symple-toggle-trigger>.toggle_icon ul.checkmark-list>li::before{-webkit-transition:none;transition:none}
+.card{-webkit-transition:none;transition:none}
+.card-img{-webkit-transition:none;transition:none}
+.card-body{-webkit-transition:none;transition:none}
 .owl-carousel-centered-nav .owl-nav .owl-prev,.owl-carousel-centered-nav .owl-nav .owl-next{-webkit-transition:none;transition:none}
 .owl-carousel .owl-item{-webkit-transition:none;transition:none}
 }@media(min-width:576px){.container{max-width:540px}
@@ -1862,6 +1877,9 @@ a,a:visited{-webkit-transition:none;transition:none}
 #menu-primary>li>a{position:relative}
 #menu-primary>li>a::before{background-color:rgba(255,255,255,0.3);content:"";position:absolute;top:-2px;left:.5rem;right:.5rem;height:2px;opacity:0;-webkit-transition:all .2s ease;transition:all .2s ease}
 #menu-primary>li>a:hover::before{opacity:1}
+.card-stack.card-stack-twos .card{-ms-grid-column-span:3;grid-column-end:span 3}
+.card-stack.card-stack-threes .card{-ms-grid-column-span:2;grid-column-end:span 2}
+.card-stack.card-stack-fours .card{-ms-grid-column-span:1;grid-column-end:span 1}
 }@media screen and (min-width:992px) and (prefers-reduced-motion:reduce){#menu-primary>li>a::before{-webkit-transition:none;transition:none}
 }@media(min-width:1200px){.container{max-width:1140px}
 .col-xl{-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}

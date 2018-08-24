@@ -5,19 +5,89 @@ Stylesheet: Card Overrides and Extra Styles
 
 
 .card {
-	blockquote, .lead {
-		color: inherit;
-		border: none;
-	}
+	@include transition(all .2s ease);
 }
 
 .card-body {
+  padding: 1.6rem;
+  > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .card-text {
- 
+  font-size: $font-size-sm;
+  margin-bottom: ($paragraph-margin-bottom / 2);
+
+  > *:last-child {
+  	margin-bottom: 0;
+  }
 }
 
 .card-img {
-	
+	@include transition(all .2s ease);
+}
+
+.card-body {
+	@include transition(all .2s ease);
+}
+
+
+/* Card Stack 
+================================================== */
+.card-stack {
+  @extend .list-unstyled;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: $grid-gutter-width;
+  grid-row-gap: $grid-gutter-width;
+  
+  @include media-breakpoint-up(lg) {
+  }
+}
+
+/* Cards - Full
+================================================== */
+.card-stack.card-stack-ones {
+	.card {
+    grid-column-end: span 6;
+  }
+}
+
+/* Cards - Halves
+================================================== */
+.card-stack.card-stack-twos {
+	.card {
+		grid-column-end: span 6;
+
+		@include media-breakpoint-up(lg) {
+			grid-column-end: span 3;
+		}
+	}
+}
+
+/* Card Deck - Thirds
+================================================== */
+.card-stack.card-stack-threes {
+	.card {
+		grid-column-end: span 6;
+
+		@include media-breakpoint-up(lg) {
+			grid-column-end: span 2;
+		}
+	}
+}
+
+/* Cards - Fourths
+================================================== */
+.card-stack.card-stack-fours {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+  .card {
+		grid-column-end: span 6;
+
+		@include media-breakpoint-up(lg) {
+			grid-column-end: span 1;
+		}
+	}
 }

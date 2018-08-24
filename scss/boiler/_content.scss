@@ -77,7 +77,7 @@ These are the styles for general content
 }
 
 .content-block {
-  margin-bottom: ($paragraph-margin-bottom * 2);
+  margin-bottom: ($paragraph-margin-bottom * 4);
   
   > *:last-child {
     margin-bottom: 0;
@@ -85,7 +85,7 @@ These are the styles for general content
 }
 
 .content-block-sm {
-  margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: ($paragraph-margin-bottom * 2);
   
   > *:last-child {
     margin-bottom: 0;
