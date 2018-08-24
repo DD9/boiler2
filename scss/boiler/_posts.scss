@@ -65,7 +65,7 @@ Stylesheet: Posts
 }
 
 .excerpt-bg-image {
-  @extend .bg-image;
+  @extend .bg-img;
   height: 250px;
   margin-bottom: $spacer;
 }

@@ -219,21 +219,55 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
                             "choices": {
                                 "white": "White",
                                 "light": "Light",
-                                "dark": "Dark"
+                                "dark": "Dark",
+                                "brand_color": "Brand Color",
+                                "image": "Image"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
                             "default_value": "",
-                            "layout": "horizontal",
+                            "layout": "vertical",
                             "return_format": "value",
                             "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5b8052b8a7b1f",
+                            "label": "Background Image",
+                            "name": "background_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5b74749c0e137",
+                                        "operator": "==",
+                                        "value": "image"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "34",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         },
                         {
                             "key": "field_5b7474eeb3752",
@@ -244,7 +278,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33",
                                 "class": "",
                                 "id": ""
                             },
@@ -257,7 +291,7 @@
                             "allow_null": 0,
                             "other_choice": 0,
                             "default_value": "",
-                            "layout": "horizontal",
+                            "layout": "vertical",
                             "return_format": "value",
                             "save_other_choice": 0
                         }
@@ -288,5 +322,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1534360363
+    "modified": 1535136734
 }

@@ -25,7 +25,12 @@ Stylesheet: Card Overrides and Extra Styles
 }
 
 .card-img {
+	border-radius: 0;
 	@include transition(all .2s ease);
+}
+
+.card-img.bg-img {
+	height: 150px;
 }
 
 .card-body {
@@ -33,61 +38,74 @@ Stylesheet: Card Overrides and Extra Styles
 }
 
 
-/* Card Stack 
+/* Card Decks 
 ================================================== */
-.card-stack {
-  @extend .list-unstyled;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-column-gap: $grid-gutter-width;
-  grid-row-gap: $grid-gutter-width;
-  
-  @include media-breakpoint-up(lg) {
+.card-deck.card-deck-ones,
+.card-deck.card-deck-twos,
+.card-deck.card-deck-threes,
+.card-deck.card-deck-fours {
+	@extend .list-unstyled;
+	margin-bottom: 0;
+  .card {
+  	margin-bottom: $grid-gutter-width !important;
+
+  	//Handle the breakpoint-XL overrides for individual cards later
+  	@include media-breakpoint-up(md) {
+	  	flex: 0 0 45.7%;
+	  }
+	  @include media-breakpoint-up(lg) {
+	  	flex: 0 0 46.7%;
+	  }
   }
 }
 
 /* Cards - Full
 ================================================== */
-.card-stack.card-stack-ones {
+.card-deck.card-deck-ones {
 	.card {
-    grid-column-end: span 6;
+  	flex: 0 0 96.3%;
+
+  	@include media-breakpoint-up(md) {
+	  	flex: 0 0 96.3%;
+	  }
+	  @include media-breakpoint-up(lg) {
+	  	flex: 0 0 96.3%;
+	  }
   }
 }
 
 /* Cards - Halves
 ================================================== */
-.card-stack.card-stack-twos {
+.card-deck.card-deck-twos {
 	.card {
-		grid-column-end: span 6;
+    flex: 0 0 96.3%;
 
-		@include media-breakpoint-up(lg) {
-			grid-column-end: span 3;
-		}
-	}
+    @include media-breakpoint-up(xl) {
+    	flex: 0 0 47.2%;
+    }
+  }
 }
 
-/* Card Deck - Thirds
+/* Cards - Thirds
 ================================================== */
-.card-stack.card-stack-threes {
+.card-deck.card-deck-threes {
 	.card {
-		grid-column-end: span 6;
+    flex: 0 0 96.3%;
 
-		@include media-breakpoint-up(lg) {
-			grid-column-end: span 2;
-		}
-	}
+    @include media-breakpoint-up(xl) {
+    	flex: 0 0 30.6%;
+    }
+  }
 }
 
 /* Cards - Fourths
 ================================================== */
-.card-stack.card-stack-fours {
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-  .card {
-		grid-column-end: span 6;
+.card-deck.card-deck-fours {
+	.card {
+    flex: 0 0 96.3%;
 
-		@include media-breakpoint-up(lg) {
-			grid-column-end: span 1;
-		}
-	}
+    @include media-breakpoint-up(xl) {
+    	flex: 0 0 22.35%;
+    }
+  }	
 }
