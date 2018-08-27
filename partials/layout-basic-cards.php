@@ -43,7 +43,7 @@ $intro = get_sub_field('intro');
 						<div class="card-img bg-img" style="background-image: url('<?php if ($card_image): ?><?= $card_image ?><?php else: ?><?= get_bloginfo('template_directory'); ?>/images/default_thumbnail.jpg<?php endif; ?>');">
 						</div>
 						
-						<?php if ($title || $content || $link_url) { ?>
+						<?php if ($title || $content) { ?>
 							<div class="card-body">
 								<?php if ($title) { ?><h4 class="card-title"><?= $title ?></h4><?php } ?>
 
@@ -53,15 +53,14 @@ $intro = get_sub_field('intro');
 									</div><!-- /card-text -->
 								<?php } ?>
 
-								<?php if ($link_url) { ?>
-									<a href="<?= $link_url ?>" class="btn btn-sm btn-primary"><?php if ($link_url): ?><?= $link_text ?><?php else: ?> Link Text<?php endif; ?></a>
-								<?php } ?>
 							</div><!-- /card-body -->
 						<?php } ?>
 						
-						<?php /*?><div class="card-footer">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</div><?php */?>
+						<div class="card-footer">
+							<?php if ($link_url) { ?>
+								<a href="<?= $link_url ?>" class="btn btn-sm btn-primary"><?php if ($link_url): ?><?= $link_text ?><?php else: ?> Link Text<?php endif; ?></a>
+							<?php } ?>
+						</div>
 					
 					</li><!-- /card-one-fourth -->
 				

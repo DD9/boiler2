@@ -1264,6 +1264,7 @@ img{max-width:100%;height:auto}
 .card-img{border-radius:0;-webkit-transition:all .2s ease;transition:all .2s ease}
 .card-img.bg-img,.card-img.excerpt-bg-image{height:150px}
 .card-body{-webkit-transition:all .2s ease;transition:all .2s ease}
+.card-footer{padding-top:0;border-top:0;background-color:transparent}
 .card-deck.card-deck-ones,.card-deck.card-deck-twos,.card-deck.card-deck-threes,.card-deck.card-deck-fours{margin-bottom:0}
 .card-deck.card-deck-ones .card,.card-deck.card-deck-twos .card,.card-deck.card-deck-threes .card,.card-deck.card-deck-fours .card{margin-bottom:30px !important}
 .card-deck.card-deck-ones .card{-webkit-box-flex:0;-webkit-flex:0 0 96.3%;-ms-flex:0 0 96.3%;flex:0 0 96.3%}

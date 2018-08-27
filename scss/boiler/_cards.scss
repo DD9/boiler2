@@ -37,6 +37,12 @@ Stylesheet: Card Overrides and Extra Styles
 	@include transition(all .2s ease);
 }
 
+.card-footer {
+	padding-top: 0;
+	border-top: none;
+	background-color: transparent;
+}
+
 /* Card Decks 
 ================================================== */
 .card-deck.card-deck-ones,
