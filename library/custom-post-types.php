@@ -10,6 +10,9 @@
 // PostTypes Class
 use PostTypes\PostType;
 
+// Taxonomies Class
+use PostTypes\Taxonomy;
+
 // Flush rewrite rules for custom post types
 function boiler_flush_rewrite_rules() {
   flush_rewrite_rules();
@@ -20,7 +23,6 @@ add_action( 'after_switch_theme', 'boiler_flush_rewrite_rules' );
 /********************* DEFINE PROJECT CPT HERE **************************/
 
 //$books = new PostType('book');
-
 //$books->register();
 
 
