@@ -1884,7 +1884,7 @@ a,a:visited{-webkit-transition:none;transition:none}
 .card-deck.card-deck-ones .card,.card-deck.card-deck-twos .card,.card-deck.card-deck-threes .card,.card-deck.card-deck-fours .card{-webkit-box-flex:0;-webkit-flex:0 0 46.7%;-ms-flex:0 0 46.7%;flex:0 0 46.7%}
 .card-deck.card-deck-ones .card{-webkit-box-flex:0;-webkit-flex:0 0 96.3%;-ms-flex:0 0 96.3%;flex:0 0 96.3%}
 }@media screen and (min-width:992px) and (prefers-reduced-motion:reduce){#menu-primary>li>a::before{-webkit-transition:none;transition:none}
-}@media(min-width:1200px){.container{max-width:1140px}
+}@media(min-width:1200px){.container{max-width:1340px}
 .col-xl{-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}
 .col-xl-auto{-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}
 .col-xl-1{-webkit-box-flex:0;-webkit-flex:0 0 8.3333333333%;-ms-flex:0 0 8.3333333333%;flex:0 0 8.3333333333%;max-width:8.3333333333%}
