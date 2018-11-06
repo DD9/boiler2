@@ -19,25 +19,24 @@ Stylesheet: Header & Navigation
 
 /* Dropdown menus */
 // Fix non-wrapping menu items
-.navbar-light #menu-primary,
-.navbar-dark #menu-primary {
-   .dropdown-menu {
-    font-size: 14px;
-  	line-height: 18px;
-  	> li {
-  		margin-bottom: 3px;
-  	}
-  	> li > a {
-  		white-space: normal;
-  		line-height: inherit;
-      color: $primary;
-      padding: .4rem .65rem;
+.navbar-light #menu-primary .dropdown-menu,
+.navbar-dark #menu-primary .dropdown-menu,
+.dropdown-menu {
+  font-size: 14px;
+	line-height: 18px;
+	> li {
+		margin-bottom: 3px;
+	}
+	> li > a {
+		white-space: normal;
+		line-height: inherit;
+    color: $primary;
+    padding: .4rem .65rem;
 
-      &:hover {
-        color: $secondary;
-      }
-  	}
-  }
+    &:hover {
+      color: $secondary;
+    }
+	}
 }
 
 /* Primary Menu

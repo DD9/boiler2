@@ -2,3 +2,9 @@
 Author: DD9
 Stylesheet: Tables
 ******************************************************************/
+
+
+table {
+	@extend .table;
+	@extend .table-bordered;
+}

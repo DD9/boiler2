@@ -26,20 +26,20 @@ as well as Bootstrap components
 Basic styling used in footer and the #author-info box
 ================================================== */
 .social-links {
-  float: left;
-  padding: 0;
+  @extend .list-unstyled;
   margin: 0;
   li {
     float:left;
-    text-decoration: none;
-    list-style: none;
   }
   a {
-    padding-right: 15px;
-    //.transition(color .4s ease);
+    padding-right: 10px;
     font-size: 1.4em;
   }
   a:hover { 
+    color: $link-hover-color;
+  }
+  > li:last-child > a {
+    padding-right: 0;
   }
 }
 

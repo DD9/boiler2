@@ -29,7 +29,7 @@ Stylesheet: Footer
 #footer-nav {
   @extend .list-unstyled;
   position: relative;
-  margin-bottom: ($line-height-base / 1.5);
+  margin: 0;
  
   > li {
     display: inline;
