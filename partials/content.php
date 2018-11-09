@@ -4,7 +4,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 	<?php /*?><?php if ($image) : ?>
-		<section class="entry-image bg-image" style="background-image: url('<?php echo $image[0]; ?>')">
+		<section class="entry-img bg-img" style="background-image: url('<?php echo $image[0]; ?>')">
 		</section>
 	<?php else: ?>
 		<hr />

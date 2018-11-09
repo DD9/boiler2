@@ -6,18 +6,24 @@ Stylesheet: Footer
 #footer {
   background: $gray-200;
   clear: both;
-  padding: $paragraph-margin-bottom 0;
+  padding: ($spacer * 3) 0 0;
 
   //Hide site credit
-  .site-credit{
+  .site-credit, .site-credit:hover {
     opacity: 0;
     cursor: default;
+  }
+  .site-credit {
+    width: 1px;
+    overflow: hidden;
+    display: inline-block;
+    height: 1px;
   }
 }
 
 #sub-floor {
   font-size: 70%;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .footer-contact {

@@ -5,7 +5,7 @@ Stylesheet: Sidebars
 
 #sidebar {
   .widget {
-    margin-bottom: $paragraph-margin-bottom;
+    margin-bottom: ($spacer * 2);
   }
 }
 

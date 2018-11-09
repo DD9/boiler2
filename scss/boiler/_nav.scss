@@ -9,15 +9,33 @@ Stylesheet: Header & Navigation
 	.navbar {
 		border: none;
 		margin-bottom: 0;
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
+      padding-right: 0
+    }
 	}
 	.navbar-brand{
 		padding-top: 5px;
 		padding-bottom: 5px;
 		width: 95px;
+    @include media-breakpoint-up(md) {
+      width: 150px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
 	}
 }
 
-/* Dropdown menus */
+.navbar-light, .navbar-dark {
+  .navbar-toggler {
+    background-color: $secondary;
+  }
+}
+
+/* Dropdown menus
+================================================== */
 // Fix non-wrapping menu items
 .navbar-light #menu-primary .dropdown-menu,
 .navbar-dark #menu-primary .dropdown-menu,
@@ -37,6 +55,49 @@ Stylesheet: Header & Navigation
       color: $secondary;
     }
 	}
+}
+
+.dropdown-menu,
+.text-white .dropdown-menu {
+  width: 200px;
+  
+  > li > a {
+    white-space: normal;
+    line-height: inherit;
+    color: $body-color !important;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 5px 15px;
+    white-space: normal;
+    &:hover {
+      background-color: transparent;
+      color: $link-color;
+    }
+  }
+  > li > .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    display: block;
+    left: auto;
+    margin: 0 0 10px 10px;
+    padding: 0;
+    position: relative;
+    top: auto;
+    width: auto;
+  }
+
+  > li:last-of-type > .dropdown-menu {
+    margin-bottom: 0;
+  }
+
+  // Active State
+  > .active > a, 
+  > .active > a:hover, 
+  > .active > a:focus {
+    background-color: transparent;
+    color: $link-color;
+  }
 }
 
 /* Primary Menu
@@ -59,19 +120,8 @@ Stylesheet: Header & Navigation
 
     > li > a {
     	position: relative;
-
-    	&::before {
-    		background-color: rgba($white, .3);
-    		content: "";
-    		position: absolute;
-    		top: -2px;
-    		left: $navbar-nav-link-padding-x;
-    		right: $navbar-nav-link-padding-x;
-    		height: 2px;
-    		opacity: 0;
-    		@include transition(all .2s ease);
-    	}
     }
+
     > li > a:hover {
     	&::before {
     		opacity: 1;
@@ -96,8 +146,8 @@ Stylesheet: Header & Navigation
   > li.current-menu-ancestor,
   > li.current_page_parent {
   	
-  	> a::before {
-      opacity: 1;
+  	> a {
+      color: $secondary;
     }
 
   }  

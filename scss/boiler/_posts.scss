@@ -17,7 +17,7 @@ Stylesheet: Posts
 }
 
 .entry-meta {
-  margin: -15px 0 0;
+  
 }
 
 .entry-content {
@@ -40,7 +40,7 @@ Stylesheet: Posts
 
 /* Featured Image
 ================================================== */
-.entry-image {
+.entry-img {
   margin-bottom: $paragraph-margin-bottom;
   height: 180px;
   @include media-breakpoint-up(md) {
@@ -51,7 +51,7 @@ Stylesheet: Posts
   }
 }
 
-.excerpt-image {
+.excerpt-img {
   position: relative;
   margin-bottom: 20px;
   @include media-breakpoint-up(sm) {
@@ -64,7 +64,7 @@ Stylesheet: Posts
   }
 }
 
-.excerpt-bg-image {
+.excerpt-bg-img {
   @extend .bg-img;
   height: 250px;
   margin-bottom: $spacer;

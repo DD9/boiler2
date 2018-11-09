@@ -18,8 +18,6 @@ Stylesheet: Shortcodes, commented out in /style.less by default
   height: 0;
 }
 
-
-
 /* Spacing
 ================================================== */
 .symple-spacing {
@@ -259,7 +257,6 @@ Stylesheet: Shortcodes, commented out in /style.less by default
   line-height: 0;
   height: 0;
 }
-
 
 @include media-breakpoint-down(sm) {
   .symple-one-half, 
