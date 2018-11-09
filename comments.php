@@ -79,14 +79,14 @@ The comments page for Bones
   
     <?php else : ?>
   
-    	<div class="form-group">
+    	<div class="form-group row">
         <label class="col-sm-2 control-label" for="author"><?php _e( 'Name', 'bonestheme' ); ?> <?php if ($req) _e( '*'); ?></label>
         <div class="col-sm-10">
         	<input type="text" name="author" id="author" class="form-control" value="<?php echo esc_attr($comment_author); ?>" placeholder="<?php _e( 'Your name*', 'bonestheme' ); ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
         </div><!-- /col -->
       </div><!-- /form-group -->
   
-      <div class="form-group">
+      <div class="form-group row">
         <label class="col-sm-2 control-label" for="email"><?php _e( 'Email', 'bonestheme' ); ?> <?php if ($req) _e( '*'); ?></label>
         <div class="col-sm-10">
         	<input type="email" name="email" id="email" class="form-control" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="<?php _e( 'Your email*', 'bonestheme' ); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
@@ -95,7 +95,7 @@ The comments page for Bones
         
       </div><!-- /form-group -->
   
-      <div class="form-group">
+      <div class="form-group row">
         <label class="col-sm-2 control-label" for="url"><?php _e( 'Website', 'bonestheme' ); ?></label>
         <div class="col-sm-10">
         	<input type="url" name="url" id="url" class="form-control" value="<?php echo esc_attr($comment_author_url); ?>" placeholder="<?php _e( 'Got a website?', 'bonestheme' ); ?>" tabindex="3" />
@@ -104,14 +104,14 @@ The comments page for Bones
   
     <?php endif; ?>
   	
-    <div class="form-group">
+    <div class="form-group row">
       <label class="col-sm-2 control-label" for="comment"><?php _e( 'Your Comment', 'bonestheme' ); ?></label>
       <div class="col-sm-10">
         <textarea name="comment" id="comment" class="form-control" placeholder="<?php _e( 'Your comment here...', 'bonestheme' ); ?>" tabindex="4"></textarea>
       </div><!-- /col -->
     </div><!-- /form-group -->
   
-    <div class="form-group">
+    <div class="form-group row">
     	<div class="col-sm-offset-2 col-sm-10">
         <p class="required-items">Fields marked with * are required</p>
         <input name="submit" type="submit" id="submit" class="btn btn-primary" tabindex="5" value="<?php _e( 'Submit', 'bonestheme' ); ?>" />

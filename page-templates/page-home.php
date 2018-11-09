@@ -6,7 +6,7 @@ Template Name: Home Page Template
 
 <?php get_header(); ?>
 
-<div class="homebanner row-outer-lg">
+<div id="page-hero" class="row-outer-lg text-center bg-primary text-white">
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-md-8">
@@ -17,7 +17,7 @@ Template Name: Home Page Template
       </div>
     </div><!-- end .row-->
   </div> <!-- end .container-->
-</div> <!-- end #banner-->
+</div> <!-- end #page-hero-->
 
 
 <div class="row-outer">

@@ -1,6 +1,6 @@
 <?php get_header(); the_post(); ?>
 
-<div id="page-header-outer" class="row-outer">
+<div id="page-hero" class="row-outer-lg">
   <div class="container">
     <div class="row">
 			<div class="col-md-12">
@@ -10,9 +10,9 @@
 			</div> <!-- /col -->
     </div> <!-- /row -->
   </div> <!-- /container -->
-</div> <!-- /page-header-outer -->
+</div> <!-- /page-hero -->
 
-<div id="page-content-outer" class="row-outer">
+<div class="row-outer">
 	<div class="container">
 		<div class="row justify-content-center">
 

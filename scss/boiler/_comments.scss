@@ -6,7 +6,7 @@ Stylesheet: Comments
 
 #comments, .respond-form {
   font-size: $font-size-sm;
-  margin: 0 0 $line-height-base 0;
+  margin: 0 0 $paragraph-margin-bottom 0;
 
   .required-items {
     color: $warning;
@@ -16,8 +16,8 @@ Stylesheet: Comments
 }
 
 #comments {
-  margin-bottom: $line-height-base;
-  padding-bottom: $line-height-base;
+  margin-bottom: $paragraph-margin-bottom;
+  padding-bottom: $paragraph-margin-bottom;
   border-bottom: 1px solid $hr-border-color;
 
   > *:last-child {
@@ -42,7 +42,7 @@ Stylesheet: Comments
   margin-left: 2%;
   float: left;
   p {
-    margin: 0 0 ($line-height-base / 2);
+    margin: 0 0 ($paragraph-margin-bottom / 2);
     line-height: 1.4em;
   }
   cite.fn, cite.fn a {

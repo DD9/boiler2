@@ -7,6 +7,8 @@ Stylesheet: WP author box
 ================================================== */
 .author-img {
   float: left;
+  margin-right: $spacer;
+	margin-bottom: $spacer;
 }
 
 .author-desc {

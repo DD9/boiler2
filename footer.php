@@ -16,7 +16,7 @@ $instagram = get_field('instagram_url', 'option');
       <div class="row">
       
         <div class="col-sm-6 col-md-3">
-          <?php wp_nav_menu( array( 'theme_location' => 'footer-nav', 'container' => false, 'menu_id' => 'footer-nav', 'depth' => 1 ) ); ?>
+          <?php wp_nav_menu( array( 'theme_location' => 'footer-nav', 'container' => false, 'menu_id' => 'footer-nav', 'menu_class' => 'menu clearfix', 'depth' => 1 ) ); ?>
           
           <?php // ACF global options: Contact Info ?>
           <ul class="footer-contact">

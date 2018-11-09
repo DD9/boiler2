@@ -46,9 +46,8 @@ Basic styling used in footer and the #author-info box
 /* Buttons
 ================================================== */
 .btn {
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  margin-bottom: 6px;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
   white-space: normal;
   text-transform: uppercase;
   @include transition(all .2s ease);
@@ -85,11 +84,26 @@ Basic styling used in footer and the #author-info box
   }
 }
 
+p > .btn + .btn {
+  margin-left: 5px;
+}
+
 /* Wells, Alerts
 ================================================== */
 .well, .alert {
   > *:last-child {
     margin-bottom: 0;
+  }
+}
+
+/* Breadcrumbs
+================================================== */
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 10px !important;
+  .breadcrumb-item.active {
+    display: none;
   }
 }
 
