@@ -40,8 +40,7 @@ These are the styles for general content
 }
 
 // Divider between matching white rows
-.bg-white + .bg-white,
-.bg-white + .anchor + .bg-white {
+.bg-white + .bg-white {
   border-top: 1px solid $hr-border-color;
 }
 
@@ -60,6 +59,10 @@ These are the styles for general content
   > *:last-child {
     margin-bottom: 0 !important;
   }
+}
+
+.page-header-actions .dropdown {
+  display: inline-block;
 }
 
 /* Entry Content

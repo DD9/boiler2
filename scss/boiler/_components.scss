@@ -99,9 +99,14 @@ p > .btn + .btn {
 /* Breadcrumbs
 ================================================== */
 .breadcrumb {
+  @extend .h6;
   background-color: transparent;
+  font-size: $font-size-sm;
   padding: 0;
-  margin-bottom: 10px !important;
+  margin-bottom: 10px;
+  .breadcrumb-item {
+    display: inline-block;
+  }
   .breadcrumb-item.active {
     display: none;
   }

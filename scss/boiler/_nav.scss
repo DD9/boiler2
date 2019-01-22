@@ -36,68 +36,72 @@ Stylesheet: Header & Navigation
 
 /* Dropdown menus
 ================================================== */
-// Fix non-wrapping menu items
 .navbar-light #menu-primary .dropdown-menu,
 .navbar-dark #menu-primary .dropdown-menu,
-.dropdown-menu {
-  font-size: 14px;
-	line-height: 18px;
-	> li {
-		margin-bottom: 3px;
-	}
-	> li > a {
-		white-space: normal;
-		line-height: inherit;
-    color: $primary;
-    padding: .4rem .65rem;
-
-    &:hover {
-      color: $secondary;
-    }
-	}
-}
-
 .dropdown-menu,
 .text-white .dropdown-menu {
-  width: 200px;
-  
+  font-size: 16px;
+  line-height: 1.2;
+  @include transition(all .2s ease);
+  > li {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
   > li > a {
+    color: $body-color;
     white-space: normal;
-    line-height: inherit;
-    color: $body-color !important;
-    font-size: 15px;
-    line-height: 20px;
-    padding: 5px 15px;
-    white-space: normal;
+    display: block;
+    padding: 0 .65rem;
+  
+    @media (min-width: 1500px) {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
     &:hover {
       background-color: transparent;
-      color: $link-color;
+      color: $blue;
+      text-decoration: none;
+    }
+
+    > li > .dropdown-menu {
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+      display: block;
+      left: auto;
+      margin: 0 0 10px 10px;
+      padding: 0;
+      position: relative;
+      top: auto;
+      width: auto;
+    }
+
+    > li:last-of-type > .dropdown-menu {
+      margin-bottom: 0;
+    }
+
+    // Active State
+    > .active > a, 
+    > .active > a:hover, 
+    > .active > a:focus {
+      background-color: transparent;
+      color: $primary;
     }
   }
-  > li > .dropdown-menu {
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-    display: block;
-    left: auto;
-    margin: 0 0 10px 10px;
-    padding: 0;
-    position: relative;
-    top: auto;
-    width: auto;
-  }
 
-  > li:last-of-type > .dropdown-menu {
-    margin-bottom: 0;
-  }
+}
 
-  // Active State
-  > .active > a, 
-  > .active > a:hover, 
-  > .active > a:focus {
-    background-color: transparent;
-    color: $link-color;
-  }
+.dropdown-toggle::after {
+  @extend .fa;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-left: .255em;
+  vertical-align: 0.06em;
+  content: "\f107";
+  border: none;
 }
 
 /* Primary Menu
@@ -109,11 +113,17 @@ Stylesheet: Header & Navigation
   	display: none;
   }
   > li > a {
-    font-size: 13px;
+    font-size: $font-size-sm;
     font-weight: $font-weight-bold;
     letter-spacing: 0.05em;
     text-transform: uppercase;
   } 
+
+  > li:last-child {
+    > .dropdown-menu {
+      @extend .dropdown-menu-right;
+    }
+  }
 
   @include media-breakpoint-up(lg) {
   	margin-top: 0;

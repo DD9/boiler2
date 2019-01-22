@@ -4,7 +4,7 @@ $blog['title'] = get_the_title( $blog['id'] );
 $blog['permalink'] = get_the_permalink( $blog['id'] );
 ?>
 
-<div id="page-header-outer" class="row-outer">
+<div id="page-hero" class="row-outer">
   <div class="container">
     <div class="row">
 			<div class="col-md-12">
@@ -35,9 +35,9 @@ $blog['permalink'] = get_the_permalink( $blog['id'] );
 			</div> <!-- /col -->
     </div> <!-- /row -->
   </div> <!-- /container -->
-</div> <!-- /page-header-outer -->
+</div> <!-- /page-hero -->
 
-<div id="page-content-outer"  class="row-outer">						
+<div class="row-outer">						
 	<div class="container">	
 		<div class="row justify-content-center">
 			<div class="col-md-10">

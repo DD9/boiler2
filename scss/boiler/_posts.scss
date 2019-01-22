@@ -16,8 +16,27 @@ Stylesheet: Posts
   }
 }
 
+/* Entry Meta
+================================================== */
 .entry-meta {
-  
+  > li::after {
+    content: "|";
+    display: inline;
+    margin: 0 5px;
+  }
+  > li:last-child::after {
+    display: none;
+  }
+}
+
+
+/* Excerpts & Content
+================================================== */
+.post-excerpt-row {
+  border-bottom: 1px solid $hr-border-color;
+  font-size: $font-size-sm;
+  margin-bottom: ($paragraph-margin-bottom * 2);
+  padding-bottom: ($paragraph-margin-bottom * 2);
 }
 
 .entry-content {
@@ -26,16 +45,6 @@ Stylesheet: Posts
   > *:last-child {
     margin-bottom: 0;
   }
-}
-
-
-// Excerpts
-// -------------------------
-.post-excerpt-row {
-  border-bottom: 1px solid $hr-border-color;
-  font-size: $font-size-sm;
-  margin-bottom: ($paragraph-margin-bottom * 2);
-  padding-bottom: ($paragraph-margin-bottom * 2);
 }
 
 /* Featured Image

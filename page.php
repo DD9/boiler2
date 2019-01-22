@@ -1,17 +1,9 @@
 <?php get_header(); the_post(); ?>
 
-<div id="page-hero" class="row-outer-lg">
-  <div class="container">
-    <div class="row">
-			<div class="col-md-12">
-				<header class="entry-header text-center">
-					<h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
-				</header> 
-			</div> <!-- /col -->
-    </div> <!-- /row -->
-  </div> <!-- /container -->
-</div> <!-- /page-hero -->
+<?php get_template_part( 'partials/page-header' ); ?>
 
+
+<?php if ( !empty( get_the_content() ) ){ ?>
 <div class="row-outer">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -29,7 +21,7 @@
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 </div> <!-- /page-content-outer -->
-
+<?php } ?>
 
 
 <?php // Start flexible content rows 

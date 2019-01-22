@@ -33,9 +33,10 @@ This stylesheet contains CSS needed for WP Core
     width: 100%;
   }
   p.wp-caption-text {
-    font-size: 0.85em;
-    margin: 2px 0 7px;
-    text-align: center;
+    color: $text-muted;
+    font-size: 0.75em;
+    line-height: 1.1;
+    margin: 5px 0 0;
   }
 } 
 
@@ -45,9 +46,9 @@ This stylesheet contains CSS needed for WP Core
 
 .wp-caption.alignright {
   margin-left: 20px;
-}
-
-.wp-caption.alignnone img{
+  p.wp-caption-text {
+    text-align: right;
+  }
 }
 
 /* image gallery styles */

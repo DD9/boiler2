@@ -35,17 +35,5 @@ legend {
 	font-size: 20px;
 }
 
-.input-group, 
-.input-group-sm,
-.input-group-lg {
-	> input.form-control {
-		border-radius: 0;
-	}
-}
 
-.input-group-btn {
-	.btn {
-		white-space: nowrap;
-	}
-}
 

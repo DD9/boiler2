@@ -39,6 +39,15 @@ h5, .h5 {}
   padding-bottom: 1rem;
 }
 
+h1 + .divider-bar,
+h2 + .divider-bar {
+	margin-bottom: 2.6rem;
+}
+h3 + .divider-bar,
+h4 + .divider-bar {
+	margin-bottom: $headings-margin-bottom;
+}
+
 /* Body text
 ================================================== */
 p {
@@ -62,16 +71,17 @@ cite {
   }
 }
 
-.row-outer ul,
-.row-outer ol {
-	margin-bottom: $paragraph-margin-bottom;
-	> *:last-child {
+.row-outer ul:not([class]), 
+.row-outer ol:not([class]) {
+  margin-bottom: $paragraph-margin-bottom;
+  padding-left: 16px;
+  > *:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
   }
   > li {
-  	line-height:1.2;
-  	margin-bottom: 10px;
+    line-height:1.3;
+    margin-bottom: 17px;
   }
 }
 
@@ -97,13 +107,6 @@ a, a:visited {
 		so it basically works like the :hover selector
 		for mobile devices.
 		*/
-	}
-}
-
-a.link-inverted {
-	color: $body-color;
-	&:hover {
-		color: $link-color;
 	}
 }
 

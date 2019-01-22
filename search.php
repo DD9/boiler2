@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="page-header-outer" class="row-outer">
+<div id="page-hero" class="row-outer bg-gray-light">
   <div class="container">
     <div class="row">
 			<div class="col-md-12">
@@ -11,9 +11,9 @@
     	</div><!-- /col -->    
     </div> <!-- /row -->
   </div> <!-- /container -->
-</div> <!-- /page-header-outer -->
+</div> <!-- /page-hero -->
 
-<div id="page-content-outer" class="row-outer">
+<div class="row-outer">
 	<div class="container">
 		<div class="row justify-content-md-center">
 
