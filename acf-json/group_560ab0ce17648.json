@@ -41,7 +41,7 @@
             "key": "field_58c3150026c4f",
             "label": "Global Alert",
             "name": "global_alert",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -59,10 +59,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_560ab0d7a60cf",
@@ -297,27 +297,6 @@
             "disabled": 0
         },
         {
-            "key": "field_560ab12da60d6",
-            "label": "Google Plus URL",
-            "name": "googleplus_url",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
             "key": "field_58c30e0fa4c4b",
             "label": "Instagram URL",
             "name": "instagram_url",
@@ -354,5 +333,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1489180706
+    "modified": 1548271206
 }

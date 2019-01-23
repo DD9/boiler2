@@ -5,7 +5,6 @@ $facebook = get_field('facebook_url', 'option');
 $twitter = get_field('twitter_url', 'option');
 $youtube = get_field('youtube_url', 'option');
 $linkedin = get_field('linkedin_url', 'option');
-$googleplus = get_field('googleplus_url', 'option');
 $instagram = get_field('instagram_url', 'option');
 ?>
 
@@ -45,10 +44,6 @@ $instagram = get_field('instagram_url', 'option');
             
             <?php if ($linkedin) { ?>
               <li class="linkedin"> <a href="<?= $linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-            <?php } ?>
-            
-            <?php if ($googleplus) { ?>
-              <li class="googleplus"><a href="<?= $googleplus ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
             <?php } ?>
 
             <?php if ($instagram) { ?>

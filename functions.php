@@ -109,20 +109,9 @@ function bones_register_sidebars() {
 		'description' => __( 'Blog Sidebar - does not appear on mobile devices', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
+		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	));
-	
-	register_sidebar(array(
-		'id' => 'sidebar_blog_mobile',
-		'name' => __( 'Blog Sidebar(mobile)', 'bonestheme' ),
-		'description' => __( 'Blog Sidebar - only appears on mobile devices', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
 
 // add footer widgets
 
@@ -132,7 +121,7 @@ function bones_register_sidebars() {
     'description' => __( 'The first footer widget.', 'bonestheme' ),
     'before_widget' => '<div id="%1$s" class="widget widgetFooter %2$s">',
     'after_widget' => '</div>',
-    'before_title' => '<h4 class="widgettitle">',
+    'before_title' => '<h4 class="widget-title">',
     'after_title' => '</h4>',
   ));
 
@@ -142,7 +131,7 @@ function bones_register_sidebars() {
     'description' => __( 'The second footer widget.', 'bonestheme' ),
     'before_widget' => '<div id="%1$s" class="widget widgetFooter %2$s">',
     'after_widget' => '</div>',
-    'before_title' => '<h4 class="widgettitle">',
+    'before_title' => '<h4 class="widget-title">',
     'after_title' => '</h4>',
   ));
 
@@ -152,7 +141,7 @@ function bones_register_sidebars() {
     'description' => __( 'The third footer widget.', 'bonestheme' ),
     'before_widget' => '<div id="%1$s" class="widget widgetFooter %2$s">',
     'after_widget' => '</div>',
-    'before_title' => '<h4 class="widgettitle">',
+    'before_title' => '<h4 class="widget-title">',
     'after_title' => '</h4>',
   ));
 
@@ -162,7 +151,7 @@ function bones_register_sidebars() {
     'description' => __( 'The fourth footer widget.', 'bonestheme' ),
     'before_widget' => '<div id="%1$s" class="widget widgetFooter %2$s">',
     'after_widget' => '</div>',
-    'before_title' => '<h4 class="widgettitle">',
+    'before_title' => '<h4 class="widget-title">',
     'after_title' => '</h4>',
   ));
 

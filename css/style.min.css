@@ -1091,7 +1091,7 @@ blockquote.text-right{border-left:0;border-right:2px solid #cce5ff}
 .form-horizontal .control-label{text-align:left}
 legend{font-size:20px}
 #sidebar .widget{margin-bottom:2rem}
-.widgettitle{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,0.1)}
+.widget-title{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,0.1)}
 .widget ul{padding:0;margin:0}
 .widget ul li{list-style:none}
 .widget select{margin-bottom:10px}

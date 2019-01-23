@@ -1,10 +1,4 @@
 
-<?php if ( is_active_sidebar( 'sidebar_blog_mobile' ) ) { ?>
-<div id="sidebar-mobile" class="col-md-4">
-  <?php dynamic_sidebar( 'sidebar_blog_mobile' ); ?>
-</div><!-- /sidebar.col -->
-<?php } ?>
-
 <div id="sidebar" class="sidebar-blog col-md-4">
 
   <?php if ( is_active_sidebar( 'sidebar_blog' ) ) : ?>
