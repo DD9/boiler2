@@ -3,7 +3,6 @@ Author: DD9
 Stylesheet: Ninja Forms, commented out in /style.less by default
 ******************************************************************/
 
-
 .field-wrap .ninja-forms-field {
 	@extend .form-control;
 	padding: 8px 14px;
@@ -11,21 +10,24 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 	color: $body-color;
 	height: auto;
 	width: auto;
-	background-color: $gray-100;
-	border: 1px solid $gray-200;
+	background-color: $gray-200;
+	border: 1px solid $gray-300;
 	width: 100%;
 }
 
 .field-wrap.submit-wrap input[type=button] {
 	@extend .btn;
-	@extend .btn-primary;
+	@extend .btn-secondary;
 	display: inline;
 	width: auto;
 }
 
 .ninja-forms-form-wrap label {
   font-weight: normal;
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-sans-serif-alt;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+	letter-spacing: 0.03rem;
 }
 
 .text-center-wrap {
@@ -81,11 +83,11 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 	background: none repeat scroll 0 0 #ffe9e9;
   border: 1px solid #fbc4c4;
   color: #de5959;
-  font-family: $font-family-sans-serif;
+  font-size: 65%;
   padding: 20px;
 }
 
 .nf-error-msg.nf-error-required-error {
 	color: #de5959;
-	font-family: $font-family-sans-serif;
+	font-size: 65%;
 }
