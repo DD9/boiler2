@@ -29,7 +29,7 @@ Basic styling used in footer and the #author-info box
   @extend .list-unstyled;
   margin: 0;
   li {
-    float:left;
+    display: inline-block;
   }
   a {
     padding-right: 10px;
@@ -99,8 +99,7 @@ p > .btn + .btn {
 /* Breadcrumbs
 ================================================== */
 .breadcrumb {
-  @extend .h6;
-  background-color: transparent;
+   background-color: transparent;
   font-size: $font-size-sm;
   padding: 0;
   margin-bottom: 10px;
@@ -109,6 +108,9 @@ p > .btn + .btn {
   }
   .breadcrumb-item.active {
     display: none;
+  }
+  a {
+    text-decoration: none;
   }
 }
 

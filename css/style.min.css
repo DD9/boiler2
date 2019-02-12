@@ -54,13 +54,13 @@ output{display:inline-block}
 summary{display:list-item;cursor:pointer}
 template{display:none}
 [hidden]{display:none !important}
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.comment-content cite.fn,.comment-content cite.fn a,.comment-content time,.breadcrumb{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.comment-content cite.fn,.comment-content cite.fn a,.comment-content time{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}
 h1,.h1{font-size:2.5rem}
 h2,.h2{font-size:2rem}
 h3,.h3{font-size:1.75rem}
 h4,.h4{font-size:1.5rem}
 h5,.h5{font-size:1.25rem}
-h6,.h6,.comment-content cite.fn,.comment-content cite.fn a,.comment-content time,.breadcrumb{font-size:1rem}
+h6,.h6,.comment-content cite.fn,.comment-content cite.fn a,.comment-content time{font-size:1rem}
 .lead{font-size:1.25rem;font-weight:300}
 .display-1{font-size:6rem;font-weight:300;line-height:1.2}
 .display-2{font-size:5.5rem;font-weight:300;line-height:1.2}
@@ -1103,7 +1103,7 @@ a.text-dark:hover,a.text-dark:focus{color:#121416 !important}
 .gallery dl{float:left;margin-top:10px;text-align:center;width:33%}
 .gallery dl img{border:2px solid #cfcfcf}
 .screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
-h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6,.comment-content cite.fn,.comment-content cite.fn a,.comment-content time,.breadcrumb{margin:0 0 1rem}
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6,.comment-content cite.fn,.comment-content cite.fn a,.comment-content time{margin:0 0 1rem}
 .add-divider{border-bottom:1px solid rgba(0,0,0,0.1);clear:both;padding-bottom:1rem}
 h1+.divider-bar,h2+.divider-bar{margin-bottom:2.6rem}
 h3+.divider-bar,h4+.divider-bar{margin-bottom:.5rem}
@@ -1164,7 +1164,7 @@ legend{font-size:20px}
 .widget ul{padding:0;margin:0}
 .widget ul li{list-style:none}
 .widget select{margin-bottom:10px}
-#footer{background:#e9ecef;clear:both;padding:3rem 0 0}
+#footer{background-color:#e9ecef;clear:both;padding:3rem 0 0}
 #footer .site-credit,#footer .site-credit:hover{opacity:0;cursor:default}
 #footer .site-credit{width:1px;overflow:hidden;display:inline-block;height:1px}
 #sub-floor{font-size:70%;padding:20px 0}
@@ -1234,7 +1234,7 @@ legend{font-size:20px}
 #menu-primary .dropdown-menu>li.current-menu-item>a{color:#6c757d}
 .fa,.dropdown-toggle::after,.checkmark-list>ul>li::before,ul.checkmark-list>li::before{-moz-font-feature-settings:normal;-moz-font-language-override:normal;-moz-osx-font-smoothing:grayscale;font-family:FontAwesome;font-size-adjust:none;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1;text-rendering:auto}
 .social-links{margin:0}
-.social-links li{float:left}
+.social-links li{display:inline-block}
 .social-links a{padding-right:10px;font-size:1.4em}
 .social-links a:hover{color:#0056b3}
 .social-links>li:last-child>a{padding-right:0}
@@ -1249,6 +1249,7 @@ p>.btn+.btn,p>.post-edit-link+.btn,.commentlist p>.comment-reply-link+.btn,p>#ca
 .breadcrumb{background-color:transparent;font-size:.875rem;padding:0;margin-bottom:10px}
 .breadcrumb .breadcrumb-item{display:inline-block}
 .breadcrumb .breadcrumb-item.active{display:none}
+.breadcrumb a{text-decoration:none}
 .checkmark-list>ul>li,ul.checkmark-list>li{padding:0 0 10px 25px;position:relative}
 .checkmark-list>ul>li::before,ul.checkmark-list>li::before{content:"\f00c";color:#28a745;height:10px;left:0;position:absolute;top:4px;width:15px}
 .author-img{float:left;margin-right:1rem;margin-bottom:1rem}
@@ -1293,7 +1294,7 @@ iframe{max-width:100%}
 .relative{position:relative}
 .last-child-no-bm>*:last-child{margin-bottom:0}
 .text-white{color:#fff}
-.text-white h1,.text-white .h1,.text-white h2,.text-white .h2,.text-white h3,.text-white .h3,.text-white h4,.text-white .h4,.text-white h5,.text-white .h5,.text-white h6,.text-white .h6,.text-white .comment-content cite.fn,.comment-content .text-white cite.fn,.text-white .comment-content cite.fn a,.comment-content cite.fn .text-white a,.text-white .comment-content time,.comment-content .text-white time,.text-white .breadcrumb,.text-white h6.subtitle,.text-white a:not(.btn):not(.post-edit-link):not(#cancel-comment-reply-link),.text-white .btn-link,.text-white .lead,.text-white blockquote,.text-white blockquote footer,.text-white blockquote small,.text-white blockquote .small,.text-white .pullquote-content,.text-white .pullquote-cite,.text-white .byline,.text-white .entry-meta{color:#fff}
+.text-white h1,.text-white .h1,.text-white h2,.text-white .h2,.text-white h3,.text-white .h3,.text-white h4,.text-white .h4,.text-white h5,.text-white .h5,.text-white h6,.text-white .h6,.text-white .comment-content cite.fn,.comment-content .text-white cite.fn,.text-white .comment-content cite.fn a,.comment-content cite.fn .text-white a,.text-white .comment-content time,.comment-content .text-white time,.text-white h6.subtitle,.text-white a:not(.btn):not(.post-edit-link):not(#cancel-comment-reply-link),.text-white .btn-link,.text-white .lead,.text-white blockquote,.text-white blockquote footer,.text-white blockquote small,.text-white blockquote .small,.text-white .pullquote-content,.text-white .pullquote-cite,.text-white .byline,.text-white .entry-meta{color:#fff}
 .text-white .pullquote::before{color:rgba(255,255,255,0.3)}
 .text-white a:not(.btn):not(.post-edit-link):not(#cancel-comment-reply-link):hover{text-decoration:underline}
 .text-white hr{border-top-color:rgba(255,255,255,0.5)}
@@ -2235,7 +2236,7 @@ a,a:visited{-webkit-transition:none;transition:none}
 .table-responsive-md>.table-bordered,.table-responsive-md>table{border:0}
 .navbar-expand-md>.container,.navbar-expand-md>.container-fluid{padding-right:0;padding-left:0}
 img.alignright,.wp-caption.alignright,.alignright,img.alignleft,.wp-caption.alignleft,.alignleft,img.aligncenter,.wp-caption.aligncenter,.aligncenter{display:block;float:none;margin:0 auto 1rem}
-h1>br,.h1>br,h2>br,.h2>br,h3>br,.h3>br,h4>br,.h4>br,h5>br,.h5>br,h6>br,.h6>br,.comment-content cite.fn>br,.comment-content cite.fn a>br,.comment-content time>br,.breadcrumb>br{display:none}
+h1>br,.h1>br,h2>br,.h2>br,h3>br,.h3>br,h4>br,.h4>br,h5>br,.h5>br,h6>br,.h6>br,.comment-content cite.fn>br,.comment-content cite.fn a>br,.comment-content time>br{display:none}
 h1,.h1{font-size:30px}
 h2,.h2{font-size:25px}
 .symple-one-half,.symple-one-third,.symple-two-third,.symple-two-thirds,.symple-three-fourth,.symple-three-fourths,.symple-one-fourth,.symple-one-fifth,.symple-two-fifth,.symple-two-fifths,.symple-three-fifth,.symple-three-fifths,.symple-four-fifth,.symple-four-fifths,.symple-one-sixth,.symple-five-sixth,.symple-five-sixths{float:none;margin-right:0;width:100%}

@@ -44,7 +44,7 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbar-responsive-collapse">
+			<div id="navbar-responsive-collapse" class="collapse navbar-collapse">
 				<?php bones_main_nav(); ?>
 			</div>
 		</div><!-- /container -->
