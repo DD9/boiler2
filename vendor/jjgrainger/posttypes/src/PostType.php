@@ -9,11 +9,11 @@ use PostTypes\Columns;
  *
  * Create WordPress custom post types easily
  *
- * @link http://github.com/jjgrainger/PostTypes/
+ * @link    https://github.com/jjgrainger/PostTypes/
  * @author  jjgrainger
- * @link    http://jjgrainger.co.uk
+ * @link    https://jjgrainger.co.uk
  * @version 2.0
- * @license http://www.opensource.org/licenses/mit-license.html MIT License
+ * @license https://opensource.org/licenses/mit-license.html MIT License
  */
 class PostType
 {
@@ -212,26 +212,26 @@ class PostType
     public function register()
     {
         // register the PostType
-        add_action('init', [&$this, 'registerPostType']);
+        add_action('init', [$this, 'registerPostType']);
 
         // register Taxonomies to the PostType
-        add_action('init', [&$this, 'registerTaxonomies']);
+        add_action('init', [$this, 'registerTaxonomies']);
 
         // modify filters on the admin edit screen
-        add_action('restrict_manage_posts', [&$this, 'modifyFilters']);
+        add_action('restrict_manage_posts', [$this, 'modifyFilters']);
 
         if (isset($this->columns)) {
             // modify the admin edit columns.
-            add_filter("manage_{$this->name}_posts_columns", [&$this, 'modifyColumns'], 10, 1);
+            add_filter("manage_{$this->name}_posts_columns", [$this, 'modifyColumns'], 10, 1);
 
             // populate custom columns
-            add_filter("manage_{$this->name}_posts_custom_column", [&$this, 'populateColumns'], 10, 2);
+            add_filter("manage_{$this->name}_posts_custom_column", [$this, 'populateColumns'], 10, 2);
 
             // run filter to make columns sortable.
-            add_filter('manage_edit-'.$this->name.'_sortable_columns', [&$this, 'setSortableColumns']);
+            add_filter('manage_edit-'.$this->name.'_sortable_columns', [$this, 'setSortableColumns']);
 
             // run action that sorts columns on request.
-            add_action('pre_get_posts', [&$this, 'sortSortableColumns']);
+            add_action('pre_get_posts', [$this, 'sortSortableColumns']);
         }
     }
 
