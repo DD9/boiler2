@@ -565,7 +565,7 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
 .navbar-light .navbar-nav .nav-link.disabled{color:rgba(0,0,0,0.3)}
 .navbar-light .navbar-nav .show>.nav-link,.navbar-light .navbar-nav .active>.nav-link,.navbar-light .navbar-nav .nav-link.show,.navbar-light .navbar-nav .nav-link.active{color:rgba(0,0,0,0.9)}
 .navbar-light .navbar-toggler{color:rgba(0,0,0,0.5);border-color:rgba(0,0,0,0.1)}
-.navbar-light .navbar-toggler-icon{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")}
+.navbar-light .navbar-toggler-icon{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")}
 .navbar-light .navbar-text{color:rgba(0,0,0,0.5)}
 .navbar-light .navbar-text a{color:rgba(0,0,0,0.9)}
 .navbar-light .navbar-text a:hover,.navbar-light .navbar-text a:focus{color:rgba(0,0,0,0.9)}
@@ -1222,7 +1222,8 @@ label:not(.form-check-label){font-size:.875rem;text-transform:uppercase;letter-s
 #site-header .navbar{border:0;margin-bottom:0}
 #site-header .navbar-brand{padding-top:5px;padding-bottom:5px;width:95px}
 #site-header .navbar-brand:hover{opacity:.8}
-.navbar-light .navbar-toggler,.navbar-dark .navbar-toggler{background-color:#6c757d}
+.navbar-light .navbar-toggler,.navbar-dark .navbar-toggler{background-color:#6c757d;padding:.4rem .4rem;font-size:1.2rem}
+.navbar-light .navbar-toggler-icon,.navbar-dark .navbar-toggler-icon{width:1.2em;height:1.2em}
 .navbar-light #menu-primary .dropdown-menu,.navbar-dark #menu-primary .dropdown-menu,.dropdown-menu,.text-white .dropdown-menu{font-size:16px;line-height:1.2;-webkit-transition:all .2s ease;transition:all .2s ease}
 .navbar-light #menu-primary .dropdown-menu>li,.navbar-dark #menu-primary .dropdown-menu>li,.dropdown-menu>li,.text-white .dropdown-menu>li{margin-bottom:10px;font-weight:600}
 .navbar-light #menu-primary .dropdown-menu>li>a,.navbar-dark #menu-primary .dropdown-menu>li>a,.dropdown-menu>li>a,.text-white .dropdown-menu>li>a{color:#212529;white-space:normal;display:block;padding:0 .65rem}
