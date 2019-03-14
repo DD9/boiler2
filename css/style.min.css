@@ -1163,6 +1163,7 @@ blockquote.text-right{border-left:0;border-right:2px solid #cce5ff}
 .form-control:-ms-input-placeholder,select:-ms-input-placeholder,textarea:-ms-input-placeholder,input:-ms-input-placeholder[type="text"],input:-ms-input-placeholder[type="password"],input:-ms-input-placeholder[type="datetime"],input:-ms-input-placeholder[type="datetime-local"],input:-ms-input-placeholder[type="date"],input:-ms-input-placeholder[type="month"],input:-ms-input-placeholder[type="time"],input:-ms-input-placeholder[type="week"],input:-ms-input-placeholder[type="number"],input:-ms-input-placeholder[type="email"],input:-ms-input-placeholder[type="url"],input:-ms-input-placeholder[type="search"],input:-ms-input-placeholder[type="tel"],input:-ms-input-placeholder[type="color"],.uneditable-input:-ms-input-placeholder{color:#6c757d}
 .form-horizontal .control-label{text-align:left}
 legend{font-size:20px}
+label:not(.form-check-label){font-size:.875rem;text-transform:uppercase;letter-spacing:.08em;font-weight:normal;line-height:normal;margin-bottom:.5rem}
 #sidebar .widget{margin-bottom:2rem}
 .widget-title{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,0.1)}
 .widget ul{padding:0;margin:0}
