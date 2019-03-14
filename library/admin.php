@@ -14,7 +14,7 @@ Developed by: Eddie Machado & DD9
 //BOILER defaults
 
 // Disable the Admin Bar. 
-add_filter( 'show_admin_bar', '__return_false' );
+//add_filter( 'show_admin_bar', '__return_false' );
 
 //Remove links menu on older installs
 function my_remove_menu_pages() {
