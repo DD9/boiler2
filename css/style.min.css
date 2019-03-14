@@ -889,6 +889,10 @@ a.bg-dark:hover,a.bg-dark:focus,button.bg-dark:hover,button.bg-dark:focus{backgr
 .embed-responsive-16by9::before{padding-top:56.25%}
 .embed-responsive-3by4::before{padding-top:133.333333333%}
 .embed-responsive-1by1::before{padding-top:100%}
+.embed-responsive-21by9::before{padding-top:42.8571428571%}
+.embed-responsive-16by9::before{padding-top:56.25%}
+.embed-responsive-3by4::before{padding-top:133.333333333%}
+.embed-responsive-1by1::before{padding-top:100%}
 .flex-row{-webkit-box-orient:horizontal !important;-webkit-box-direction:normal !important;-webkit-flex-direction:row !important;-ms-flex-direction:row !important;flex-direction:row !important}
 .flex-column{-webkit-box-orient:vertical !important;-webkit-box-direction:normal !important;-webkit-flex-direction:column !important;-ms-flex-direction:column !important;flex-direction:column !important}
 .flex-row-reverse{-webkit-box-orient:horizontal !important;-webkit-box-direction:reverse !important;-webkit-flex-direction:row-reverse !important;-ms-flex-direction:row-reverse !important;flex-direction:row-reverse !important}
