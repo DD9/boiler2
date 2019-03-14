@@ -662,6 +662,37 @@ table.cart td.actions .coupon {
   background-size: 40px 25px;
 }
 
+// Stripe
+#wc-stripe-cc-form {
+	.form-row {
+		padding: 0 !important;
+	}
+}
+.wc-stripe-elements-field, 
+.wc-stripe-iban-element-field {
+	@extend .form-control;
+	padding: .8rem 1.6rem !important;
+}
+
+#add_payment_method #payment ul.payment_methods .stripe-card-group, 
+.woocommerce-checkout #payment ul.payment_methods .stripe-card-group {
+  width: 100%;
+}
+
+.wc_payment_method.payment_method_stripe > label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: $font-size-sm;
+}
+
+#add_payment_method #payment ul.payment_methods li img.stripe-icon, 
+.woocommerce-checkout #payment ul.payment_methods li img.stripe-icon {
+	max-width: 25px;
+}
+
 // Select menus
 .woocommerce form .form-row .select2-container {
   line-height: 39px !important;
