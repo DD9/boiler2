@@ -181,7 +181,7 @@ function bones_comments( $comment, $args, $depth ) {
 					// create variable
 					$bgauthemail = get_comment_author_email();
 				?>
-				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=64" class="load-gravatar avatar avatar-48 photo" height="64" width="64" src="<?php echo get_template_directory_uri(); ?>/images/favicon.png" />
+				<img data-gravatar="https://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=64" class="load-gravatar avatar avatar-48 photo" height="64" width="64" src="<?php echo get_template_directory_uri(); ?>/images/favicon.png" />
 				<?php // end custom gravatar call ?>
 			</div>
       <div class="comment-content">
