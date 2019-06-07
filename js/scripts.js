@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
 				 loop: true,
 				 nav: true,
 				 dots: true,
-				 navText: ["<i class='fa fa-long-arrow-left'></i>", "<i class='fa fa-long-arrow-right'></i>"],
+				 navText: ["<i class='fas fa-long-arrow-alt-left'></i>", "<i class='fas fa-long-arrow-alt-right'></i>"],
 				 items:1,
 				 autoHeight: false,
 				 margin:0,

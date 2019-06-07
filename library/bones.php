@@ -137,7 +137,7 @@ function bones_scripts_and_styles() {
 
     //First Handle Jquery
     wp_deregister_script('jquery');
-    wp_register_script('jquery', ("https://code.jquery.com/jquery-3.3.1.min.js"), false);
+    wp_register_script('jquery', TMPL_URL . '/js/jquery-3.3.1.min.js', false);
     wp_enqueue_script('jquery');
 
 
@@ -162,11 +162,11 @@ function bones_scripts_and_styles() {
         //Register 3rd Party Hosted Libraries --------------------
         //wp_enqueue_script('bootstrap-popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array( 'jquery' ), '', true );
         //wp_enqueue_script('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array( 'jquery' ), '', true );
-        wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '', 'all' );
+        wp_register_style('font-awesome', TMPL_URL . '/css/font-awesome.min.css', array(), '', 'all' );
 
 
         //Enqueue styles  --------------------
-        wp_enqueue_style( 'font-awesome-cdn' );
+        wp_enqueue_style( 'font-awesome' );
         wp_enqueue_style( 'boiler-stylesheet' );
 
 
