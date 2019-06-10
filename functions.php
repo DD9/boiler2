@@ -39,9 +39,6 @@ add_action( 'init', 'my_theme_add_editor_styles' );
 
 
 
-
-
-
 /************* BREW & BOILER FILES ********************/
 
 $protocol = isset($_SERVER['HTTPS']) ? 'https' : 'http';
@@ -65,8 +62,6 @@ if( function_exists('acf_add_options_page') ) {
 
 
 /* library/brew.php (functions specific to BREW)
-  - navwalker
-  - Read more > Bootstrap button
   - Bootstrap style pagination
   - Bootstrap style breadcrumbs
 */
@@ -78,25 +73,15 @@ require_once( 'library/brew.php' );
 	- enqueueing scripts & styles
 	- theme support functions
 	- custom menu output & fallbacks
-	- related post function
-	- page-navi function
 	- removing <p> from around images
 	- customizing the post excerpt
-	- custom google+ integration
 	- adding custom fields to user profiles
 */
 require_once( 'library/bones.php' ); 
 
 
-
-
 /************* THUMBNAIL SIZE OPTIONS *************/
-
-
-//add_image_size( 'bones-thumb-600', 600, 150, true );
-//add_image_size( 'bones-thumb-300', 300, 100, true );
 //add_image_size( 'post-featured', 750, 300, true );
-
 
 
 /************* ACTIVE SIDEBARS ********************/

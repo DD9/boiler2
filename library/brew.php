@@ -7,16 +7,6 @@ Just pulling together all the various functions needed for BREW.
 */
 
 
-// Read more text > bootstrap button
-
-function my_more_link( $link, $link_button ) {
-            
-    return str_replace( $link_button, '<p><a href="' . get_permalink() . '" class="readmore btn btn-sm btn-primary ">' . __( 'Continue Reading...', 'bonestheme' ) . ' </a> </p>', $link );
-}
-
-add_filter( 'the_content_more_link', 'my_more_link', 10, 2 );
-
-
 // Bootstrap Style Pagination
 // http://www.ericmmartin.com/pagination-function-for-wordpress/
 
@@ -114,11 +104,8 @@ function emm_paginate_loop($start, $max, $page = 0) {
 }
 
 
-// Bootstrap Style Breadcrumbs
-// DD9 (hilary) replaced the default BREW breadcrumbs with the ones from Bootstrap WP by Rachel Baker because paent pages weren't showing in the BREW version
-
 /**
- * Display template for breadcrumbs.
+ * Bootstrap Style Breadcrumbs
  *
  */
 function custom_breadcrumb()
@@ -286,7 +273,6 @@ function brew_contact_methods( $contactmethods ) {
     $contactmethods[ 'twitter' ] = 'Twitter Profile URL';
     $contactmethods[ 'facebook' ] = 'Facebook Profile URL';
     $contactmethods[ 'linkedin' ] = 'LinkedIn Public Profile URL';
-    $contactmethods[ 'googleplus' ] = 'Google+ Profile URL';
     $contactmethods[ 'pinterest' ] = 'Pinterest Profile URL';
  
     return $contactmethods;

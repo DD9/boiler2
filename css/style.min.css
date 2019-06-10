@@ -1258,7 +1258,9 @@ p>.btn+.btn,p>.post-edit-link+.btn,.commentlist p>.comment-reply-link+.btn,p>#ca
 .breadcrumb a{text-decoration:none}
 .checkmark-list>ul>li,ul.checkmark-list>li{padding:0 0 10px 25px;position:relative}
 .checkmark-list>ul>li::before,ul.checkmark-list>li::before{content:"\f00c";color:#28a745;height:10px;left:0;position:absolute;top:4px;width:15px}
+#author-card{margin-top:1rem}
 .author-img{float:left;margin-right:1rem;margin-bottom:1rem}
+.author-description>*:last-child{margin-bottom:0}
 .symple-clear-floats{clear:both}
 .symple-clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 .symple-spacing{display:block;height:auto;margin:0 !important;padding:0 !important;background:none !important;border:none !important;outline:none !important}
@@ -1306,13 +1308,11 @@ iframe{max-width:100%}
 .text-white hr{border-top-color:rgba(255,255,255,0.5)}
 .text-white .divider-bar{background-color:rgba(255,255,255,0.5)}
 .card{-webkit-transition:all .2s ease;transition:all .2s ease}
-.card ul{padding-left:15px;list-style:disc;margin-bottom:1rem}
-.card ul ul{list-style:circle}
 .card-body{padding:1.6rem;-webkit-transition:all .2s ease;transition:all .2s ease}
 .card-body>*:last-child{margin-bottom:0 !important}
 .card-text{margin-bottom:.5rem}
 .card-text>*:last-child{margin-bottom:0}
-.card-text>ul:not([class]){list-style:disc}
+.card-text>ul:not([class]){padding-left:15px;list-style:disc;margin-bottom:1rem}
 .card-text>ul:not([class]) ul:not([class]){list-style:circle}
 .card-img{border-radius:0;-webkit-transition:all .2s ease;transition:all .2s ease}
 .card-img.bg-img,.card-img.excerpt-bg-img{height:150px}

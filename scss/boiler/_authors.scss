@@ -5,12 +5,20 @@ Stylesheet: WP author box
 
 /* Author Box
 ================================================== */
+
+#author-card {
+	margin-top: $spacer;
+}
+
 .author-img {
   float: left;
   margin-right: $spacer;
 	margin-bottom: $spacer;
 }
 
-.author-desc {
- 
+
+.author-description {
+	> *:last-child {
+		margin-bottom: 0;
+	}
 }
