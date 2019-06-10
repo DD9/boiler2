@@ -240,8 +240,8 @@ function bones_theme_support() {
     // registering wp3+ menus
     register_nav_menus(
         array(
-            'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
-            'footer-nav' => __( 'Footer Menu', 'bonestheme' ),   // secondary nav in footer
+            'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // primary header menu
+            'footer-nav' => __( 'Footer Menu', 'bonestheme' ),   // footer menu
         )
     );
 } /* end bones theme support */
@@ -319,33 +319,6 @@ function bones_related_posts() {
     echo '</ul>';
 } /* end bones related posts function */
 
-/*********************
-PAGE NAVI
- *********************/
-
-// Numeric Page Navi (built into the theme by default)
-function bones_page_navi() {
-    global $wp_query;
-    $bignum = 999999999;
-    if ( $wp_query->max_num_pages <= 1 )
-        return;
-
-    echo '<nav class="pagination">';
-
-    echo paginate_links( array(
-        'base' 			=> str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
-        'format' 		=> '',
-        'current' 		=> max( 1, get_query_var('paged') ),
-        'total' 		=> $wp_query->max_num_pages,
-        'prev_text' 	=> '&larr;',
-        'next_text' 	=> '&rarr;',
-        'type'			=> 'list',
-        'end_size'		=> 3,
-        'mid_size'		=> 3
-    ) );
-
-    echo '</nav>';
-} /* end page navi */
 
 /*********************
 RANDOM CLEANUP ITEMS
@@ -356,7 +329,7 @@ function bones_filter_ptags_on_images($content){
     return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
-// This removes the annoying […] to a Read More link
+// Customize Read More link
 function bones_excerpt_more() {
     global $post;
     // edit here if you like

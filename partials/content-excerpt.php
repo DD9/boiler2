@@ -4,7 +4,7 @@
 	<div class="row">
 
 		<div class="col-md-6">
-			<section class="excerpt-img excerpt-bg-img card-img" style="background-image: url('<?php if ($image) : ?><?php echo $image[0]; ?><?php else: ?><?= get_bloginfo('template_directory'); ?>/images/default_thumbnail.jpg<?php endif; ?>')">
+			<section class="excerpt-img excerpt-bg-img" style="background-image: url('<?php if ($image) : ?><?php echo $image[0]; ?><?php else: ?><?= get_bloginfo('template_directory'); ?>/images/default_thumbnail.jpg<?php endif; ?>')">
 				<a href="<?php the_permalink() ?>" class="full-width"></a>
 			</section>
 		</div><!-- /col -->
@@ -15,13 +15,7 @@
 			</header>
 
 			<section class="entry-excerpt clearfix">
-				<?php the_excerpt('<span class="read-more">' . __("Read more on","bonestheme") . ' "'.the_title('', '', false).'" &raquo;</span>'); ?>
-				<?php wp_link_pages(
-					array(
-						'before' => '<div class="page-link"><span>' . __( 'Pages:', 'brew' ) . '</span>',
-						'after' => '</div>'
-					) 
-				); ?>
+				<?php the_excerpt(); ?>
 			</section>
 			
 			<?php if ( (has_category()) || (has_tag()) ) {?>
