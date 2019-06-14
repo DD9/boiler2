@@ -219,13 +219,6 @@ function custom_breadcrumb()
 
 
 
-// Checking if comment navigation is enabled
-function page_has_comments_nav() {
- global $wp_query;
- return ($wp_query->max_num_comment_pages > 1);
-}
-
-
 //  Truncating Strings
 //  Function Author:  8bit (Standard Theme)
 /**

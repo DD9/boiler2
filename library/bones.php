@@ -180,9 +180,9 @@ function bones_scripts_and_styles() {
 
 
         // comment reply script for threaded comments
-        if ( is_singular() AND comments_open() AND (!is_page()) AND (get_option('thread_comments') == 1)) {
-            wp_enqueue_script( 'comment-reply' );
-        }
+        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+					wp_enqueue_script( 'comment-reply' );
+				}
 
     }
 

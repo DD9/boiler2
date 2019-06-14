@@ -8,11 +8,11 @@
 require_once( 'library/navwalker.php' );   // needed for bootstrap navigation
 require_once( 'library/utilities.php' );   // misc generic helpers
 require_once( 'library/shortcodes.php' );  // shortcodes 
+require_once( 'library/comment_walker.php' );     // 
+require_once( 'library/comment_utilities.php' );     // 
 require_once( 'vendor/autoload.php' );     // For Composer scripts
 
-
 /************* SETUP DEFAULT PAGES ***************/
-
 // require_once( 'library/site_init.php' ); // Disabled until we move it into a dedicated function
 
 
@@ -25,6 +25,22 @@ require_once( 'library/admin.php' ); // dashboard customizations
 
 
 /************* INSERT THEME FUNCTIONS HERE ********************/
+
+
+/*
+ * Switch default core markup for search form, comment form, and comments
+ * to output valid HTML5.
+ */
+add_theme_support(
+	'html5',
+	array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	)
+);
 
 
 // Disable Gutenberg
@@ -142,50 +158,3 @@ function bones_register_sidebars() {
 
 
 } 
-
-
-
-
-
-/************* COMMENT LAYOUT *********************/
-
-// Comment Layout
-function bones_comments( $comment, $args, $depth ) {
-   $GLOBALS['comment'] = $comment; ?>
-	<li <?php comment_class(); ?>>
-		<article id="comment-<?php comment_ID(); ?>" class="clearfix comment-container">
-			<div class="comment-author vcard">
-				<?php
-				/*
-					this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
-					echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-				*/
-				?>
-				<?php // custom gravatar call ?>
-				<?php
-					// create variable
-					$bgauthemail = get_comment_author_email();
-				?>
-				<img data-gravatar="https://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=64" class="load-gravatar avatar avatar-48 photo" height="64" width="64" src="<?php echo get_template_directory_uri(); ?>/images/favicon.png" />
-				<?php // end custom gravatar call ?>
-			</div>
-      <div class="comment-content">
-        <?php printf(__( '<cite class="fn">%s |</cite>', 'bonestheme' ), get_comment_author_link()) ?>
-        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'bonestheme' )); ?> </a></time>
-        <?php edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ?>
-  			<?php if ($comment->comment_approved == '0') : ?>
-  				<div class="alert alert-info">
-  					<p><?php _e( 'Your comment is awaiting moderation.', 'bonestheme' ) ?></p>
-  				</div>
-  			<?php endif; ?>
-  			<section class="comment_content clearfix">
-  				<?php comment_text() ?>
-  			</section>
-  			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-      </div> <!-- END comment-content -->
-		</article>
-	<?php // </li> is added by WordPress automatically ?>
-<?php
-} // don't remove this bracket!
-
-
