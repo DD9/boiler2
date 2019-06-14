@@ -5,12 +5,12 @@
 
 /************* INCLUDE NEEDED FILES ***************/
 
-require_once( 'library/navwalker.php' );   // needed for bootstrap navigation
-require_once( 'library/utilities.php' );   // misc generic helpers
-require_once( 'library/shortcodes.php' );  // shortcodes 
-require_once( 'library/comment_walker.php' );     // 
-require_once( 'library/comment_utilities.php' );     // 
-require_once( 'vendor/autoload.php' );     // For Composer scripts
+require_once( 'library/navwalker.php' );			   // Needed for bootstrap navigation
+require_once( 'library/utilities.php' );   			 // Misc generic helpers
+require_once( 'library/shortcodes.php' );  			 // Shortcodes 
+require_once( 'library/comment_walker.php' );    // Comments walker (from WP twentynineteen theme)
+require_once( 'library/comment_utilities.php' ); // Comments walker (from WP twentynineteen theme)
+require_once( 'vendor/autoload.php' );  				 // For Composer scripts
 
 /************* SETUP DEFAULT PAGES ***************/
 // require_once( 'library/site_init.php' ); // Disabled until we move it into a dedicated function
@@ -25,7 +25,6 @@ require_once( 'library/admin.php' ); // dashboard customizations
 
 
 /************* INSERT THEME FUNCTIONS HERE ********************/
-
 
 /*
  * Switch default core markup for search form, comment form, and comments
@@ -42,10 +41,8 @@ add_theme_support(
 	)
 );
 
-
 // Disable Gutenberg
 add_filter('use_block_editor_for_post', '__return_false');
-
 
 // Add Editor Stylesheet
 function my_theme_add_editor_styles() {

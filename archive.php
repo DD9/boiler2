@@ -42,7 +42,7 @@ $blog['permalink'] = get_the_permalink( $blog['id'] );
 								
 					<div class="page-header-actions text-center">
 						<div class="dropdown">
-							<button class="btn btn-default btn-bordered dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+							<button class="btn btn-default btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
 								Categories
 							</button>
 
@@ -66,7 +66,7 @@ $blog['permalink'] = get_the_permalink( $blog['id'] );
   </div> <!-- /container -->
 </div> <!-- /page-hero -->
 
-<div id="page-content-outer"  class="row-outer">						
+<section class="row-outer">						
 	<div class="container">	
 		<div class="row justify-content-center">
 			<div class="col-md-10">
@@ -84,6 +84,6 @@ $blog['permalink'] = get_the_permalink( $blog['id'] );
 			</div><!-- /col -->
 		</div><!-- /row -->
 	</div> <!-- /container-->
-</div><!-- /row-outer -->
+</section><!-- /row-outer -->
 
 <?php get_footer(); ?>

@@ -34,7 +34,6 @@ Stylesheet: Posts
 ================================================== */
 .post-excerpt-row {
   border-bottom: 1px solid $hr-border-color;
-  font-size: $font-size-sm;
   margin-bottom: ($paragraph-margin-bottom * 2);
   padding-bottom: ($paragraph-margin-bottom * 2);
 }
@@ -49,8 +48,12 @@ Stylesheet: Posts
 
 /* Featured Image
 ================================================== */
-.entry-img {
+.entry-featured-img {
   margin-bottom: $paragraph-margin-bottom;
+  text-align: center;
+}
+
+.entry-featured-img.bg-img {
   height: 180px;
   @include media-breakpoint-up(md) {
     height: 320px;
@@ -73,8 +76,7 @@ Stylesheet: Posts
   }
 }
 
-.excerpt-bg-img {
-  @extend .bg-img;
+.excerpt-img.bg-img {
   height: 250px;
   margin-bottom: $spacer;
 }
@@ -133,7 +135,11 @@ Stylesheet: Posts
   text-align: center;
   
   li {
-    display: inline;
+    display: block;
+    @include media-breakpoint-up(md) {
+      display: inline;
+    }
+
     > a,
     > span > a {
       display: inline-block;
@@ -156,6 +162,10 @@ Stylesheet: Posts
   }
 
   .previous {
+    margin-bottom: $paragraph-margin-bottom;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
     > a,
     > span {
       @include media-breakpoint-up(md) {

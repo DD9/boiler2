@@ -3,25 +3,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-	<?php /*?><?php if ($image) : ?>
-		<section class="entry-img bg-img" style="background-image: url('<?php echo $image[0]; ?>')">
+	<?php if ($image) : ?>
+		<section class="entry-featured-img">
+			<img src="<?php echo $image[0]; ?>" />
 		</section>
 	<?php else: ?>
-		<hr />
-	<?php endif; ?><?php */?>
-	
-			
-	<header class="entry-header">
-		<h2 class="entry-title" itemprop="headline"><?php the_title(); ?></h2>
-
-		<p class="entry-meta byline vcard">
-			<span class="entry-date"><?php echo get_the_time( 'm.d.Y') ?></span><!-- /entry-date -->
-			by <span class="author"><em><?php echo bones_get_the_author_posts_link() ?></em></span>
-		</p>
-	</header> 
-	
-	<?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
-	
+  <?php endif; ?>
 
 	<section class="entry-content clearfix">
 

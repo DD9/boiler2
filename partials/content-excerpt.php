@@ -4,7 +4,7 @@
 	<div class="row">
 
 		<div class="col-md-6">
-			<section class="excerpt-img excerpt-bg-img" style="background-image: url('<?php if ($image) : ?><?php echo $image[0]; ?><?php else: ?><?= get_bloginfo('template_directory'); ?>/images/default_thumbnail.jpg<?php endif; ?>')">
+			<section class="excerpt-img bg-img" style="background-image: url('<?php if ($image) : ?><?php echo $image[0]; ?><?php else: ?><?= get_bloginfo('template_directory'); ?>/images/default_thumbnail.jpg<?php endif; ?>')">
 				<a href="<?php the_permalink() ?>" class="full-width"></a>
 			</section>
 		</div><!-- /col -->

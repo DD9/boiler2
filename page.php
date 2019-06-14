@@ -4,7 +4,7 @@
 
 
 <?php if ( !empty( get_the_content() ) ){ ?>
-<div class="row-outer">
+<section class="row-outer">
 	<div class="container">
 		<div class="row justify-content-center">
 
@@ -20,7 +20,7 @@
 
 		</div> <!-- /row -->
 	</div> <!-- /container -->
-</div> <!-- /page-content-outer -->
+</section> <!-- /row-outer -->
 <?php } ?>
 
 
