@@ -1108,6 +1108,7 @@ a.text-dark:hover,a.text-dark:focus{color:#121416 !important}
 .gallery dl img{border:2px solid #cfcfcf}
 .screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 1rem}
+h1 sup,h1 sub,.h1 sup,.h1 sub,h2 sup,h2 sub,.h2 sup,.h2 sub,h3 sup,h3 sub,.h3 sup,.h3 sub,h4 sup,h4 sub,.h4 sup,.h4 sub,h5 sup,h5 sub,.h5 sup,.h5 sub,h6 sup,h6 sub,.h6 sup,.h6 sub{font-size:30%}
 .add-divider{border-bottom:1px solid rgba(0,0,0,0.1);clear:both;padding-bottom:1rem}
 h1+.divider-bar,h2+.divider-bar{margin-bottom:2.6rem}
 h3+.divider-bar,h4+.divider-bar{margin-bottom:.5rem}

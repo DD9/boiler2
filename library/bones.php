@@ -195,12 +195,28 @@ THEME SUPPORT
 
 // Adding WP 3+ Functions & Theme Support
 function bones_theme_support() {
+	
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
+
 
     // wp thumbnails (sizes handled in functions.php)
     add_theme_support( 'post-thumbnails' );
 
     // default thumb size
-    set_post_thumbnail_size(125, 125, true);
+    set_post_thumbnail_size(560, 300, true);
 
     // wp custom background (thx to @bransonwerner for update)
     add_theme_support( 'custom-background',

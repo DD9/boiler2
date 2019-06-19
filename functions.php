@@ -8,6 +8,8 @@
 require_once( 'library/navwalker.php' );			   // Needed for bootstrap navigation
 require_once( 'library/utilities.php' );   			 // Misc generic helpers
 require_once( 'library/shortcodes.php' );  			 // Shortcodes 
+require_once( 'library/register_sidebars.php' ); // Register Sidebars
+//require_once( 'library/custom_image_sizes.php' ); // Add custom image sizes
 require_once( 'library/comment_walker.php' );    // Comments walker (from WP twentynineteen theme)
 require_once( 'library/comment_utilities.php' ); // Comments walker (from WP twentynineteen theme)
 require_once( 'vendor/autoload.php' );  				 // For Composer scripts
@@ -26,20 +28,6 @@ require_once( 'library/admin.php' ); // dashboard customizations
 
 /************* INSERT THEME FUNCTIONS HERE ********************/
 
-/*
- * Switch default core markup for search form, comment form, and comments
- * to output valid HTML5.
- */
-add_theme_support(
-	'html5',
-	array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	)
-);
 
 // Disable Gutenberg
 add_filter('use_block_editor_for_post', '__return_false');
@@ -91,67 +79,3 @@ require_once( 'library/brew.php' );
 	- adding custom fields to user profiles
 */
 require_once( 'library/bones.php' ); 
-
-
-/************* THUMBNAIL SIZE OPTIONS *************/
-//add_image_size( 'post-featured', 750, 300, true );
-
-
-/************* ACTIVE SIDEBARS ********************/
-
-// Sidebars & Widgetizes Areas
-function bones_register_sidebars() {
-	register_sidebar(array(
-		'id' => 'sidebar_blog',
-		'name' => __( 'Blog Sidebar', 'bonestheme' ),
-		'description' => __( 'Blog Sidebar - does not appear on mobile devices', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	));
-
-// add footer widgets
-
-  register_sidebar(array(
-    'id' => 'footer-1',
-    'name' => __( 'Footer Widget 1', 'bonestheme' ),
-    'description' => __( 'The first footer widget.', 'bonestheme' ),
-    'before_widget' => '<div id="%1$s" class="widget widgetFooter %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widget-title">',
-    'after_title' => '</h4>',
-  ));
-
-  register_sidebar(array(
-    'id' => 'footer-2',
-    'name' => __( 'Footer Widget 2', 'bonestheme' ),
-    'description' => __( 'The second footer widget.', 'bonestheme' ),
-    'before_widget' => '<div id="%1$s" class="widget widgetFooter %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widget-title">',
-    'after_title' => '</h4>',
-  ));
-
-  register_sidebar(array(
-    'id' => 'footer-3',
-    'name' => __( 'Footer Widget 3', 'bonestheme' ),
-    'description' => __( 'The third footer widget.', 'bonestheme' ),
-    'before_widget' => '<div id="%1$s" class="widget widgetFooter %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widget-title">',
-    'after_title' => '</h4>',
-  ));
-
-    register_sidebar(array(
-    'id' => 'footer-4',
-    'name' => __( 'Footer Widget 4', 'bonestheme' ),
-    'description' => __( 'The fourth footer widget.', 'bonestheme' ),
-    'before_widget' => '<div id="%1$s" class="widget widgetFooter %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widget-title">',
-    'after_title' => '</h4>',
-  ));
-
-
-} 
