@@ -656,7 +656,7 @@ a.badge-light:hover,a.badge-light:focus{color:#212529;background-color:#dae0e5}
 a.badge-dark:hover,a.badge-dark:focus{color:#fff;background-color:#1d2124}
 .jumbotron{padding:2rem 1rem;margin-bottom:2rem;background-color:#e9ecef;border-radius:.3rem}
 .jumbotron-fluid{padding-right:0;padding-left:0;border-radius:0}
-.alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem}
+.alert,.comment-awaiting-moderation{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem}
 .alert-heading{color:inherit}
 .alert-link{font-weight:700}
 .alert-dismissible{padding-right:4rem}
@@ -673,9 +673,9 @@ a.badge-dark:hover,a.badge-dark:focus{color:#fff;background-color:#1d2124}
 .alert-info{color:#0c5460;background-color:#d1ecf1;border-color:#bee5eb}
 .alert-info hr{border-top-color:#abdde5}
 .alert-info .alert-link{color:#062c33}
-.alert-warning{color:#856404;background-color:#fff3cd;border-color:#ffeeba}
-.alert-warning hr{border-top-color:#ffe8a1}
-.alert-warning .alert-link{color:#533f03}
+.alert-warning,.comment-awaiting-moderation{color:#856404;background-color:#fff3cd;border-color:#ffeeba}
+.alert-warning hr,.comment-awaiting-moderation hr{border-top-color:#ffe8a1}
+.alert-warning .alert-link,.comment-awaiting-moderation .alert-link{color:#533f03}
 .alert-danger{color:#721c24;background-color:#f8d7da;border-color:#f5c6cb}
 .alert-danger hr{border-top-color:#f1b0b7}
 .alert-danger .alert-link{color:#491217}
@@ -1142,6 +1142,7 @@ blockquote.text-right{border-left:0;border-right:2px solid #cce5ff}
 .comment-form-flex .comments-title{display:none;margin:0;-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}
 .comment-form-flex #respond{-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}
 .comment-form-flex #respond+.comments-title{display:block}
+.comment-body+.comment-respond{margin-bottom:3rem}
 .comment-list{list-style:none;padding:0}
 .comment-list>li{border-bottom:1px solid rgba(0,0,0,0.1);margin-bottom:2rem}
 .comment-list .children{margin:0;padding:0 0 0 1rem}
@@ -1181,6 +1182,8 @@ blockquote.text-right{border-left:0;border-right:2px solid #cce5ff}
 .discussion-avatar-list .comment-user-avatar img{height:2rem;width:2rem}
 .comment-form .comment-notes,.comment-form label{font-size:.75rem;color:#adb5bd}
 .comment-form input[name="author"],.comment-form input[name="email"],.comment-form input[name="url"]{display:block;width:100%}
+.comment-awaiting-moderation{margin-top:1rem}
+.comment-navigation{margin-bottom:2rem}
 .form-control::-webkit-input-placeholder,select::-webkit-input-placeholder,textarea::-webkit-input-placeholder,input[type="text"]::-webkit-input-placeholder,input[type="password"]::-webkit-input-placeholder,input[type="datetime"]::-webkit-input-placeholder,input[type="datetime-local"]::-webkit-input-placeholder,input[type="date"]::-webkit-input-placeholder,input[type="month"]::-webkit-input-placeholder,input[type="time"]::-webkit-input-placeholder,input[type="week"]::-webkit-input-placeholder,input[type="number"]::-webkit-input-placeholder,input[type="email"]::-webkit-input-placeholder,input[type="url"]::-webkit-input-placeholder,input[type="search"]::-webkit-input-placeholder,input[type="tel"]::-webkit-input-placeholder,input[type="color"]::-webkit-input-placeholder,.uneditable-input::-webkit-input-placeholder{color:#6c757d}
 .form-control:-moz-placeholder,select:-moz-placeholder,textarea:-moz-placeholder,input:-moz-placeholder[type="text"],input:-moz-placeholder[type="password"],input:-moz-placeholder[type="datetime"],input:-moz-placeholder[type="datetime-local"],input:-moz-placeholder[type="date"],input:-moz-placeholder[type="month"],input:-moz-placeholder[type="time"],input:-moz-placeholder[type="week"],input:-moz-placeholder[type="number"],input:-moz-placeholder[type="email"],input:-moz-placeholder[type="url"],input:-moz-placeholder[type="search"],input:-moz-placeholder[type="tel"],input:-moz-placeholder[type="color"],.uneditable-input:-moz-placeholder{color:#6c757d}
 .form-control::-moz-placeholder,select::-moz-placeholder,textarea::-moz-placeholder,input[type="text"]::-moz-placeholder,input[type="password"]::-moz-placeholder,input[type="datetime"]::-moz-placeholder,input[type="datetime-local"]::-moz-placeholder,input[type="date"]::-moz-placeholder,input[type="month"]::-moz-placeholder,input[type="time"]::-moz-placeholder,input[type="week"]::-moz-placeholder,input[type="number"]::-moz-placeholder,input[type="email"]::-moz-placeholder,input[type="url"]::-moz-placeholder,input[type="search"]::-moz-placeholder,input[type="tel"]::-moz-placeholder,input[type="color"]::-moz-placeholder,.uneditable-input::-moz-placeholder{color:#6c757d}
@@ -1277,7 +1280,7 @@ label:not(.form-check-label){font-size:.75rem;text-transform:uppercase;letter-sp
 .btn-sm,.btn-group-sm>.btn,.btn-group-sm>.post-edit-link,.comment-form .btn-group-sm>input.submit,.pager li.btn-group-sm>a,.pager li>span.btn-group-sm>a,.post-edit-link{font-size:.75rem}
 #page-content-outer .btn+p,#page-content-outer .post-edit-link+p,#page-content-outer .comment-form input.submit+p,.comment-form #page-content-outer input.submit+p,#page-content-outer .pager li>a+p,.pager #page-content-outer li>a+p,#page-content-outer .pager li>span>a+p,.pager #page-content-outer li>span>a+p,#page-content-outer .btn+blockquote,#page-content-outer .post-edit-link+blockquote,#page-content-outer .comment-form input.submit+blockquote,.comment-form #page-content-outer input.submit+blockquote,#page-content-outer .pager li>a+blockquote,.pager #page-content-outer li>a+blockquote,#page-content-outer .pager li>span>a+blockquote,.pager #page-content-outer li>span>a+blockquote,#page-content-outer .btn+ul,#page-content-outer .post-edit-link+ul,#page-content-outer .comment-form input.submit+ul,.comment-form #page-content-outer input.submit+ul,#page-content-outer .pager li>a+ul,.pager #page-content-outer li>a+ul,#page-content-outer .pager li>span>a+ul,.pager #page-content-outer li>span>a+ul,#page-content-outer .btn+ol,#page-content-outer .post-edit-link+ol,#page-content-outer .comment-form input.submit+ol,.comment-form #page-content-outer input.submit+ol,#page-content-outer .pager li>a+ol,.pager #page-content-outer li>a+ol,#page-content-outer .pager li>span>a+ol,.pager #page-content-outer li>span>a+ol{margin-top:2rem}
 p>.btn+.btn,p>.post-edit-link+.btn,.comment-form p>input.submit+.btn,p>.btn+.post-edit-link,p>.post-edit-link+.post-edit-link,.comment-form p>input.submit+.post-edit-link,.comment-form p>.btn+input.submit,.comment-form p>.post-edit-link+input.submit,.comment-form p>input.submit+input.submit{margin-left:5px}
-.well>*:last-child,.alert>*:last-child{margin-bottom:0}
+.well>*:last-child,.alert>*:last-child,.comment-awaiting-moderation>*:last-child{margin-bottom:0}
 .breadcrumb{background-color:transparent;font-size:.75rem;padding:0;margin-bottom:10px}
 .breadcrumb .breadcrumb-item{display:inline-block}
 .breadcrumb .breadcrumb-item.active{display:none}

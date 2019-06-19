@@ -82,7 +82,6 @@ Stylesheet: Comments
   }
 }
 
-
 .comment-form-flex {
   display: flex;
   flex-direction: column;
@@ -100,6 +99,10 @@ Stylesheet: Comments
       display: block;
     }
   }
+}
+
+.comment-body + .comment-respond {
+  margin-bottom: ($spacer * 3);
 }
 
 .comment-list {
@@ -288,7 +291,6 @@ Stylesheet: Comments
   }
 }
 
-
 .comment-reply {
   margin-top: -($spacer * 1.25);
   margin-bottom: ($spacer * 2);
@@ -367,4 +369,14 @@ Stylesheet: Comments
     @extend .btn;
     @extend .btn-primary;
   }
+}
+
+.comment-awaiting-moderation {
+  @extend .alert;
+  @extend .alert-warning;
+  margin-top: $spacer;
+}
+
+.comment-navigation {
+  margin-bottom: ($spacer * 2);
 }
