@@ -1131,8 +1131,8 @@ blockquote.text-right{border-left:0;border-right:2px solid #cce5ff}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .comments-area{-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;border-top:1px solid rgba(0,0,0,0.1);padding-top:2rem;margin:1rem 0;word-wrap:break-word}
-.comments-area .comments-title-wrap .comments-title{margin:0 0 1rem}
-.comments-area .comments-title-wrap .discussion-meta{margin-bottom:2rem}
+.comments-title-wrap .comments-title{margin:0 0 1rem}
+.comments-title-wrap .discussion-meta{margin-bottom:2rem}
 #comment{max-width:100%;box-sizing:border-box}
 #respond{position:relative}
 #respond .comment-user-avatar{margin:1rem}
@@ -1175,10 +1175,10 @@ blockquote.text-right{border-left:0;border-right:2px solid #cce5ff}
 #respond+.comment-reply{display:none}
 .comment-reply .comment-reply-link{display:inline-block}
 .comment-reply-link,#cancel-comment-reply-link{font-weight:500}
-.discussion-avatar-list{display:table;table-layout:fixed;margin:0;padding:0}
-.discussion-avatar-list li{position:relative;list-style:none;margin:0 -8px 0 0;padding:0;float:left}
-.discussion-avatar-list .comment-user-avatar img{height:2rem;width:2rem}
 .discussion-meta .discussion-meta-info{margin:0;font-size:.75rem;color:#adb5bd}
+.discussion-avatar-list{margin:0 10px 0 0;padding:0}
+.discussion-avatar-list li{display:inline-block;position:relative;list-style:none;margin:0 -10px 0 0;padding:0}
+.discussion-avatar-list .comment-user-avatar img{height:2rem;width:2rem}
 .comment-form .comment-notes,.comment-form label{font-size:.75rem;color:#adb5bd}
 .comment-form input[name="author"],.comment-form input[name="email"],.comment-form input[name="url"]{display:block;width:100%}
 .form-control::-webkit-input-placeholder,select::-webkit-input-placeholder,textarea::-webkit-input-placeholder,input[type="text"]::-webkit-input-placeholder,input[type="password"]::-webkit-input-placeholder,input[type="datetime"]::-webkit-input-placeholder,input[type="datetime-local"]::-webkit-input-placeholder,input[type="date"]::-webkit-input-placeholder,input[type="month"]::-webkit-input-placeholder,input[type="time"]::-webkit-input-placeholder,input[type="week"]::-webkit-input-placeholder,input[type="number"]::-webkit-input-placeholder,input[type="email"]::-webkit-input-placeholder,input[type="url"]::-webkit-input-placeholder,input[type="search"]::-webkit-input-placeholder,input[type="tel"]::-webkit-input-placeholder,input[type="color"]::-webkit-input-placeholder,.uneditable-input::-webkit-input-placeholder{color:#6c757d}
@@ -2058,9 +2058,9 @@ a,a:visited{-webkit-transition:none;transition:none}
 .text-lg-left{text-align:left !important}
 .text-lg-right{text-align:right !important}
 .text-lg-center{text-align:center !important}
-.comments-area .comments-title-wrap{-webkit-box-align:baseline;-webkit-align-items:baseline;-ms-flex-align:baseline;align-items:baseline;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:2rem}
-.comments-area .comments-title-wrap .comments-title{-webkit-box-flex:1;-webkit-flex:1 0 calc(3 * (100vw / 12));-ms-flex:1 0 calc(3 * (100vw / 12));flex:1 0 calc(3 * (100vw / 12));margin:0}
-.comments-area .comments-title-wrap .discussion-meta{-webkit-box-flex:0;-webkit-flex:0 0 calc(2 * (100vw / 12));-ms-flex:0 0 calc(2 * (100vw / 12));flex:0 0 calc(2 * (100vw / 12));margin:0 0 0 1rem}
+.comments-title-wrap{-webkit-box-align:baseline;-webkit-align-items:baseline;-ms-flex-align:baseline;align-items:baseline;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:2rem}
+.comments-title-wrap .comments-title{-webkit-box-flex:1;-webkit-flex:1 0 calc(3 * (100vw / 12));-ms-flex:1 0 calc(3 * (100vw / 12));flex:1 0 calc(3 * (100vw / 12));margin:0}
+.comments-title-wrap .discussion-meta{-webkit-box-flex:0;-webkit-flex:0 0 calc(2 * (100vw / 12));-ms-flex:0 0 calc(2 * (100vw / 12));flex:0 0 calc(2 * (100vw / 12));margin:0 0 0 1rem;text-align:right}
 .comment .comment-content{padding-right:1rem}
 .entry-featured-img.bg-img{height:360px}
 #site-header .navbar{padding-left:0;padding-right:0}
