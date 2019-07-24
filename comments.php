@@ -91,8 +91,8 @@ $discussion = boiler_get_discussion_data();
 			$comments_text = __( 'Comments', 'boiler' );
 			the_comments_navigation(
 				array(
-					'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', '<i class="fa fa-chevron-left"></i>', __( 'Previous', 'boiler' ), __( 'Comments', 'boiler' ) ),
-					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'boiler' ), __( 'Comments', 'boiler' ), '<i class="fa fa-chevron-right"></i>' ),
+					'prev_text' => sprintf( '%s <span class="nav-prev-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span>', '<i class="fas fa-chevron-left"></i>', __( 'Previous', 'boiler' ), __( 'Comments', 'boiler' ) ),
+					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> <span class="secondary-text">%s</span></span> %s', __( 'Next', 'boiler' ), __( 'Comments', 'boiler' ), '<i class="fas fa-chevron-right"></i>' ),
 				)
 			);
 		endif;

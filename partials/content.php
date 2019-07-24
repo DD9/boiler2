@@ -23,7 +23,7 @@
 	</section> 
 
 	<footer class="article-footer single-footer clearfix">
-		<span class="tags"><?php printf( '<span class="">' . __( 'in %1$s&nbsp;&nbsp;', 'bonestheme' ) . '</span>', get_the_category_list(', ') ); ?> <?php the_tags( '<span class="tags-title">' . __( '<i class="fa fa-tags"></i>', 'bonestheme' ) . '</span> ', ', ', '' ); ?></span>
+		<span class="tags"><?php printf( '<span class="">' . __( 'in %1$s&nbsp;&nbsp;', 'bonestheme' ) . '</span>', get_the_category_list(', ') ); ?> <?php the_tags( '<span class="tags-title">' . __( '<i class="fas fa-tags"></i>', 'bonestheme' ) . '</span> ', ', ', '' ); ?></span>
 	</footer>
 
 </article>
@@ -39,13 +39,13 @@
 
 			<?php if( '' != get_next_post() ){ ?>
 				<li class="previous">
-					<?php next_post_link( '<span class="previous-page">%link</span>', __( '<i class="fa fa-caret-left"></i>', 'bones' ) . '&nbsp;' . brew_truncate_text( get_next_post()->post_title, $trunc_limit ) ); ?>
+					<?php next_post_link( '<span class="previous-page">%link</span>', __( '<i class="fas fa-caret-left"></i>', 'bones' ) . '&nbsp;' . brew_truncate_text( get_next_post()->post_title, $trunc_limit ) ); ?>
 				</li>
 			<?php } // end if ?>
 
 			<?php if( '' != get_previous_post() ) { ?>
 				<li class="next">
-					<?php previous_post_link( '<span class="no-previous-page-link next-page">%link</span>', '&nbsp;' . brew_truncate_text( get_previous_post()->post_title, $trunc_limit ) . '&nbsp;' . __( '<i class="fa fa-caret-right"></i>', 'bones' ) ); ?>
+					<?php previous_post_link( '<span class="no-previous-page-link next-page">%link</span>', '&nbsp;' . brew_truncate_text( get_previous_post()->post_title, $trunc_limit ) . '&nbsp;' . __( '<i class="fas fa-caret-right"></i>', 'bones' ) ); ?>
 				</li>
 			<?php } // end if ?>
 

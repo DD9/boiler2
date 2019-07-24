@@ -1268,7 +1268,7 @@ label:not(.form-check-label){font-size:.75rem;text-transform:uppercase;letter-sp
 #menu-primary>li.current-menu-item>a,#menu-primary>li.current-menu-parent>a,#menu-primary>li.current-menu-ancestor>a,#menu-primary>li.current_page_parent>a{color:#6c757d}
 #menu-primary>li.dropdown.open>a:hover{color:#6c757d}
 #menu-primary .dropdown-menu>li.current-menu-item>a{color:#6c757d}
-.fa,.dropdown-toggle::after,.checkmark-list>ul>li::before,ul.checkmark-list>li::before{-moz-font-feature-settings:normal;-moz-font-language-override:normal;-moz-osx-font-smoothing:grayscale;font-family:FontAwesome;font-size-adjust:none;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;line-height:1;text-rendering:auto}
+.fa,.dropdown-toggle::after,.checkmark-list>ul>li::before,ul.checkmark-list>li::before{-moz-font-feature-settings:normal;-moz-font-language-override:normal;-moz-osx-font-smoothing:grayscale;font-family:"Font Awesome 5 Free";font-size-adjust:none;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:900;letter-spacing:normal;line-height:1;text-rendering:auto}
 .social-links{margin:0}
 .social-links li{display:inline-block}
 .social-links a{padding-right:10px;font-size:1.4em}

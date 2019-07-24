@@ -396,9 +396,9 @@
 						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
 
 						<h3 class="add-divider">Links to Fonts (if available online)</h3>
-						<p><a href="#" class="btn btn-secondary btn-sm" target="_blank">Font Name One <i class="fa fa-external-link"></i></a> </p>
-						<p><a href="#" class="btn btn-secondary btn-sm" target="_blank">Font Name Two <i class="fa fa-external-link"></i></a> </p>
-						<p><a href="#" class="btn btn-secondary btn-sm" target="_blank">Font Name Three <i class="fa fa-external-link"></i></a> </p>
+						<p><a href="#" class="btn btn-secondary btn-sm" target="_blank">Font Name One <i class="fas fa-external-link-alt"></i></a> </p>
+						<p><a href="#" class="btn btn-secondary btn-sm" target="_blank">Font Name Two <i class="fas fa-external-link-alt"></i></a> </p>
+						<p><a href="#" class="btn btn-secondary btn-sm" target="_blank">Font Name Three <i class="fas fa-external-link-alt"></i></a> </p>
 					</div>
 				</div><!-- /row -->
 
@@ -1299,7 +1299,7 @@
           <div class="col-lg-12">
             <div class="page-header mb-2">
               <h1 id="flexbox">Flexbox</h1>
-							<a href="http://getbootstrap.com/docs/4.0/utilities/flex/" class="btn btn-sm btn-secondary" target="_blank">BS 4 reference <i class="fa fa-external-link"></i></a></em>
+							<a href="http://getbootstrap.com/docs/4.0/utilities/flex/" class="btn btn-sm btn-secondary" target="_blank">BS 4 reference <i class="fas fa-external-link-alt"></i></a></em>
             </div>
           </div>
         </div>
@@ -1404,10 +1404,10 @@
         <div class="row">
           <div class="col-lg-6">						
 						<ul>
-							<li><a href="http://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints" target="_blank">Responsive breakpoints <i class="fa fa-external-link"></i></a></li>
-							<li><a href="http://getbootstrap.com/docs/4.0/layout/grid/#no-gutters" target="_blank">No gutters <i class="fa fa-external-link"></i></a></li>
-							<li><a href="http://getbootstrap.com/docs/4.0/utilities/float/#responsive" target="_blank">Responsive floats <i class="fa fa-external-link"></i></a></li>
-							<li><a href="http://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">Spacing (margin and padding classes) <i class="fa fa-external-link"></i></a></li>
+							<li><a href="http://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints" target="_blank">Responsive breakpoints <i class="fas fa-external-link-alt"></i></a></li>
+							<li><a href="http://getbootstrap.com/docs/4.0/layout/grid/#no-gutters" target="_blank">No gutters <i class="fas fa-external-link-alt"></i></a></li>
+							<li><a href="http://getbootstrap.com/docs/4.0/utilities/float/#responsive" target="_blank">Responsive floats <i class="fas fa-external-link-alt"></i></a></li>
+							<li><a href="http://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">Spacing (margin and padding classes) <i class="fas fa-external-link-alt"></i></a></li>
 						</ul>
           </div>
         </div>

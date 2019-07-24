@@ -28,7 +28,7 @@ Template Name: Home Page Template
 			<div class="col-sm-4">
 				<div class="card text-white bg-dark">
 					<div class="card-body">
-						<i class="fa fa-fire fa-4x light-gray"></i>
+						<i class="fas fa-fire fa-4x light-gray"></i>
 						<h3>Card 1</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lectus est, sagittis vel massa id, ultricies malesuada dolor. Suspendisse potenti. Pellentesque molestie mauris vel nunc gravida, in ultricies tortor ultricies.</p>
 					</div>
@@ -39,7 +39,7 @@ Template Name: Home Page Template
 			<div class="col-sm-4">
 				<div class="card text-black bg-light">
 					<div class="card-body">
-						<i class="fa fa-fire fa-4x light-gray"></i>
+						<i class="fas fa-tree fa-4x light-gray"></i>
 						<h3>Card 2</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lectus est, sagittis vel massa id, ultricies malesuada dolor. Suspendisse potenti. Pellentesque molestie mauris vel nunc gravida, in ultricies tortor ultricies.</p>
 					</div>
@@ -50,7 +50,7 @@ Template Name: Home Page Template
 			<div class="col-sm-4">
 				<div class="card border-dark">
 					<div class="card-body">
-						<i class="fa fa-fire fa-4x light-gray"></i>
+						<i class="fas fa-water fa-4x light-gray"></i>
 						<h3>Card 3</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lectus est, sagittis vel massa id, ultricies malesuada dolor. Suspendisse potenti. Pellentesque molestie mauris vel nunc gravida, in ultricies tortor ultricies.</p>
 					</div>

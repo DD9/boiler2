@@ -15,23 +15,23 @@
 
 			<ul class="social-links social-links-author">
 				<?php if ( get_the_author_meta( 'user_url' ) != '' )  { ?>
-					<li><a class="author-icon" target="_blank" href="<?php echo esc_url( get_the_author_meta( 'user_url' ) ); ?>"><i class="fa fa-globe"></i> </a></li>
+					<li><a class="author-icon" target="_blank" href="<?php echo esc_url( get_the_author_meta( 'user_url' ) ); ?>"><i class="fas fa-window-maximize"></i> </a></li>
 				<?php } ?>
 
 				<?php if ( get_the_author_meta( 'twitter' ) != '' )  { ?>
-					<li><a class="author-icon" target="_blank" href="<?php echo esc_url( get_the_author_meta( 'twitter' ) ); ?>"><i class="fa fa-twitter"></i> </a></li>
+					<li><a class="author-icon" target="_blank" href="<?php echo esc_url( get_the_author_meta( 'twitter' ) ); ?>"><i class="fab fa-twitter"></i> </a></li>
 				<?php } ?>
 
 				<?php if ( get_the_author_meta( 'facebook' ) != '' )  { ?>
-					<li><a class="author-icon" target="_blank" href="<?php echo esc_url( get_the_author_meta( 'facebook' ) ); ?>"><i class="fa fa-facebook"></i> </a></li>
+					<li><a class="author-icon" target="_blank" href="<?php echo esc_url( get_the_author_meta( 'facebook' ) ); ?>"><i class="fab fa-facebook-f"></i> </a></li>
 				<?php } ?>
 
 				<?php if ( get_the_author_meta( 'linkedin' ) != '' )  { ?>
-					<li><a class="author-icon" target="_blank" href="<?php echo esc_url( get_the_author_meta( 'linkedin' ) ); ?>"><i class="fa fa-linkedin"></i> </a></li>
+					<li><a class="author-icon" target="_blank" href="<?php echo esc_url( get_the_author_meta( 'linkedin' ) ); ?>"><i class="fab fa-linkedin-in"></i> </a></li>
 				<?php } ?>
 
 				<?php if ( get_the_author_meta( 'pinterest' ) != '' )  { ?>
-					<li><a class="author-icon" target="_blank" href="<?php echo esc_url( get_the_author_meta( 'pinterest' ) ); ?>"><i class="fa fa-pinterest-square"></i> </a></li>
+					<li><a class="author-icon" target="_blank" href="<?php echo esc_url( get_the_author_meta( 'pinterest' ) ); ?>"><i class="fab fa-pinterest-p"></i> </a></li>
 				<?php } ?>
 			</ul><!-- /social-links-author -->
 

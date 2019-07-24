@@ -276,6 +276,25 @@
             "disabled": 0
         },
         {
+            "key": "field_5d38824883dc9",
+            "label": "YouTube URL",
+            "name": "youtube_url",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_560ab123a60d5",
             "label": "LinkedIn URL",
             "name": "linkedin_url",
@@ -333,5 +352,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548271206
+    "modified": 1563984477
 }

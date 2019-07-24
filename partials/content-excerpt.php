@@ -21,7 +21,7 @@
 			<?php if ( (has_category()) || (has_tag()) ) {?>
 			<footer class="article-footer excerpt-footer clearfix">
 				<span><?php the_time('m/d/y') ?> | </span>
-				<span class="tags"><?php printf( '<span class="">' . __( '%1$s&nbsp;&nbsp;', 'bonestheme' ) . '</span>', get_the_category_list(', ') ); ?> <?php the_tags( '<span class="tags-title">' . __( '<i class="fa fa-tags"></i>', 'bonestheme' ) . '</span> ', ', ', '' ); ?></span>
+				<span class="tags"><?php printf( '<span class="">' . __( '%1$s&nbsp;&nbsp;', 'bonestheme' ) . '</span>', get_the_category_list(', ') ); ?> <?php the_tags( '<span class="tags-title">' . __( '<i class="fas fa-tags"></i>', 'bonestheme' ) . '</span> ', ', ', '' ); ?></span>
 			</footer> <?php // end article footer ?>
 			<?php } ?>
 			
