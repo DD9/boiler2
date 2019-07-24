@@ -78,7 +78,11 @@ Stylesheet: Posts
 
 .excerpt-img.bg-img {
   height: 250px;
-  margin-bottom: $spacer;
+  margin-bottom: ($spacer * 2);
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
 }
 
 /* Entry Footer

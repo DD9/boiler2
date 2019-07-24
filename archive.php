@@ -16,7 +16,7 @@ $blog['permalink'] = get_the_permalink( $blog['id'] );
 
 						<?php } elseif (is_tag()) { ?>
 							<h6><?php _e( 'Posts Tagged:', 'bonestheme' ); ?></h6>
-							<h1 class="entry-title"><?php single_tag_title(); ?>
+							<h1 class="entry-title"><?php single_tag_title(); ?></h1>
 
 						<?php } elseif (is_author()) {
 							global $post;

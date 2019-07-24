@@ -47,24 +47,41 @@ Basic styling used in footer and the #author-info box
 /* Buttons
 ================================================== */
 .btn {
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
   white-space: normal;
   text-transform: uppercase;
   @include transition(all .2s ease);
 }
 
+.btn:not(.btn-lg):not(.btn-sm) {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+}
+
+
+.btn-light {
+  color: $body-color;
+}
+
+.btn-light,
+.btn-dark {
+  &:hover {
+    color: $white;
+    background-color: $primary;
+    border-color:  $primary;
+  }
+}
 .modal-footer .btn,
 .input-group-btn .btn,
 .navbar .btn {
   margin-bottom: 0;
 }
 
-.input-group-btn .btn {
+.input-group-btn .btn:not(.btn-lg):not(.btn-sm)  {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   height: 100%;
   margin-left: -1px;
+  font-size: $input-btn-font-size;
 }
 
 .btn-lg {
@@ -76,11 +93,11 @@ Basic styling used in footer and the #author-info box
   font-size: .75rem;
 }
 
-#page-content-outer {
+#row-outer {
   .btn + p,
   .btn + blockquote,
-  .btn + ul,
-  .btn + ol {
+  .btn + ul:not([class]),
+  .btn + ol:not([class]) {
     margin-top: 2rem;
   }
 }
@@ -100,7 +117,7 @@ p > .btn + .btn {
 /* Breadcrumbs
 ================================================== */
 .breadcrumb {
-   background-color: transparent;
+  background-color: transparent;
   font-size: $font-size-sm;
   padding: 0;
   margin-bottom: 10px;

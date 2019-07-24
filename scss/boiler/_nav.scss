@@ -55,6 +55,10 @@ Stylesheet: Header & Navigation
     font-weight: 600;
   }
 
+  > li:last-child {
+    margin-bottom: 0;
+  }
+
   > li > a {
     color: $body-color;
     white-space: normal;
@@ -97,18 +101,6 @@ Stylesheet: Header & Navigation
       color: $primary;
     }
   }
-
-}
-
-.dropdown-toggle::after {
-  @extend .fa;
-  display: inline-block;
-  width: auto;
-  height: auto;
-  margin-left: .255em;
-  vertical-align: 0.06em;
-  content: "\f107";
-  border: none;
 }
 
 /* Primary Menu
@@ -116,14 +108,23 @@ Stylesheet: Header & Navigation
 #menu-primary {
 	margin-top: 10px;
 
- 	br {
-  	display: none;
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
   }
+
   > li > a {
     font-size: $font-size-sm;
     font-weight: $font-weight-bold;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+
+    @include media-breakpoint-up(lg) {
+      position: relative;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-right: .55rem;
+      padding-left: .55rem;
+    }
   } 
 
   > li:last-child {
@@ -132,25 +133,19 @@ Stylesheet: Header & Navigation
     }
   }
 
-  @include media-breakpoint-up(lg) {
-  	margin-top: 0;
+  .dropdown-toggle::after {
+    display: none;
+  }
 
-    > li > a {
-    	position: relative;
-    }
-
-    > li > a:hover {
-    	&::before {
-    		opacity: 1;
-    	}
-    }
-	}
-
-  @include media-breakpoint-up(xl) {
-    > li > a {
-      padding-right: .55rem;
-      padding-left: .55rem;
-    }
+  .dropdown .caret::after {
+    @extend .fa;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    letter-spacing: normal;
+    margin-left: 0;
+    content: "\f107";
+    border: none;
   }
 }
 
