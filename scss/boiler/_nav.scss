@@ -47,12 +47,14 @@ Stylesheet: Header & Navigation
 .navbar-dark #menu-primary .dropdown-menu,
 .dropdown-menu,
 .text-white .dropdown-menu {
-  font-size: 16px;
+  border: none;
+  font-size: 1.2rem;
   line-height: 1.2;
+  margin: 0;
   @include transition(all .2s ease);
   > li {
-    margin-bottom: 10px;
-    font-weight: 600;
+    margin-bottom: .85rem;
+    font-weight: normal;
   }
 
   > li:last-child {

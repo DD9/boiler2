@@ -3,42 +3,101 @@ Author: DD9
 Stylesheet: Ninja Forms, commented out in /style.less by default
 ******************************************************************/
 
-.field-wrap .ninja-forms-field {
+.nf-form-wrap .nf-form-content {
+  max-width: 1200px;
+}
+
+.field-wrap .ninja-forms-field, 
+.nf-form-content textarea {
 	@extend .form-control;
 	padding: 8px 14px;
 	display: inline-block;
 	color: $body-color;
 	height: auto;
 	width: auto;
-	background-color: $gray-200;
+	background-color: $gray-100;
 	border: 1px solid $gray-300;
 	width: 100%;
 }
 
 .field-wrap.submit-wrap input[type=button] {
 	@extend .btn;
-	@extend .btn-secondary;
+	@extend .btn-warning;
 	display: inline;
 	width: auto;
 }
 
+
+.nf-form-content .nf-field-label {
+	line-height: 1;
+}
+
 .ninja-forms-form-wrap label {
   font-weight: normal;
-  font-family: $font-family-sans-serif-alt;
+  font-family: $font-family-sans-serif;
   font-size: $font-size-sm;
+  display: block;
   text-transform: uppercase;
 	letter-spacing: 0.03rem;
 }
 
-.text-center-wrap {
-	text-align: center;
+.nf-form-content hr.ninja-forms-field {
+	border: 3px solid $warning;
+  margin: ($spacer * 2) 0 ($spacer * 3);
 }
 
-.ninja-forms-required-items,
-.ninja-forms-field-error {
+.field-wrap.html-wrap > .nf-field-element {
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.nf-field-element {
+	h4, .h4 {
+		color: $primary;
+	}
+}
+
+// Field Description
+.nf-field-description {
+  margin-bottom: 1rem;
+}
+
+// Radio Buttons
+.nf-form-content .list-checkbox-wrap, 
+.nf-form-content .list-radio-wrap {
+	ul {
+		> li {
+			@include media-breakpoint-up(lg) {
+				display: inline-block;
+				margin: 0 15px 10px 0 !important;
+			}
+		}
+
+		> li:last-child {
+			@include media-breakpoint-up(lg) {
+				margin-right: 0 !important;
+			}
+		}
+	}
+}
+
+
+/* Errors, messages, and required fields
+================================================== */
+.nf-form-content #ninja_forms_required_items, 
+.nf-form-content .nf-field-container {
+  margin-bottom: 35px;
+}
+
+.nf-after-field {
+	position: absolute;
+	margin-top: -5px;
+}
+
+.nf-error .nf-error-msg {
   color: #DE5959;
   font-size: 12px;
-  font-style: oblique;
 }
 
 .ninja-forms-required-items {
@@ -70,8 +129,7 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 }
 
 .nf-response-msg {
-	@extend .card;
-	@extend .border-primary;
+	background-color: $gray-200;
 	padding: 1.6rem;
 
 	> *:last-child {
@@ -90,4 +148,31 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 .nf-error-msg.nf-error-required-error {
 	color: #de5959;
 	font-size: 65%;
+}
+
+/* Custom: Dual Columns
+================================================== */
+
+.nf-container-one-half {
+	@include media-breakpoint-up(lg) {
+		width: 49%;
+		float: left;
+		clear: none !important;
+		margin-right: 2%;
+	}
+}
+
+.nf-container-one-third {
+	@include media-breakpoint-up(lg) {
+		width: 32%;
+		float: left;
+		clear: none !important;
+		margin-right: 2%;
+	}
+}
+
+.nf-container-last {
+	@include media-breakpoint-up(lg) {
+		margin-right: 0;
+	}
 }

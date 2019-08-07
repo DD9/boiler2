@@ -41,6 +41,10 @@ These are the styles for general content
   opacity: 0.4;
 }
 
+.inner-shadow {
+  box-shadow: 0 0 25px rgba(0,0,0,0.25) inset;
+}
+
 .bg-gray-light {
   background-color: $gray-300;
 }

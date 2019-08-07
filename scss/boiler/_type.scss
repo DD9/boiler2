@@ -20,15 +20,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-	@include media-breakpoint-down(sm) {
-    font-size: 30px;
+	@include media-breakpoint-up(xl) {
+	}	
+	
+	@include media-breakpoint-up(xxl) {
 	}
 }
 
 h2, .h2 {
-	@include media-breakpoint-down(sm) {
-    font-size: 25px;
-  }
 }
 
 h3, .h3 {}
@@ -68,28 +67,30 @@ cite {
 
 .lead {
 	color: $primary;
-	line-height: $line-height-lg;
-	@include media-breakpoint-down(lg) {
-    font-size: 26px;
-    line-height: 30px;
-  }
+	@include media-breakpoint-up(xl) {
+    font-size: 2rem;
+	}
 }
 
-.row-outer ul:not([class]), 
-.row-outer ol:not([class]) {
-  margin-bottom: $paragraph-margin-bottom;
-  padding-left: 16px;
-  > *:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  > li {
-    line-height:1.3;
-    margin-bottom: 17px;
-  }
+.row-outer, 
+.row-outer-lg {
+	ul:not([class]), 
+	ol:not([class]) {
+	  margin-bottom: $paragraph-margin-bottom;
+	  padding-left: 25px;
+	  > *:last-child {
+	    margin-bottom: 0;
+	    padding-bottom: 0;
+	  }
+	  > li {
+	    line-height: 1.3;
+	    margin-bottom: 14px;
+	  }
+	}
 }
 
 .small {
+	font-size: 1rem;
 	line-height: normal;
 }
 
@@ -148,7 +149,8 @@ blockquote {
 	font-weight: $font-weight-light;
 	font-size: $font-size-lg;
 	line-height: $line-height-lg;
-	border-left: 2px solid lighten($primary, 40);
+	border-left: 2px solid;
+	border-color: $primary;
 	padding: 10px $spacer;
 	margin-bottom: $paragraph-margin-bottom;
 
@@ -157,7 +159,7 @@ blockquote {
 		letter-spacing: 0.2em;
 		font-size: 11px;
 		font-weight: bold;
-		line-height: 1;
+		line-height: 1.1;
 		text-transform: uppercase;
 		font-style: normal;
 		margin-top:15px;
@@ -174,5 +176,11 @@ blockquote.text-center {
 
 blockquote.text-right {
 	border-left: none;
-	border-right: 2px solid lighten($primary, 40);
+	border-right: 2px solid;
+}
+
+.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger {
+	blockquote {
+		border-color: $white;
+	}
 }

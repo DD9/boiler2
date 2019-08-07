@@ -57,7 +57,7 @@ Stylesheet: Main Stylesheet
 @import "boiler/nav";
 //@import "boiler/body";         // target specific body classes
 @import "boiler/components"; // components built for such as breadcrumbs, next/previous buttons, etc
-@import "boiler/home";       
+//@import "boiler/home";       
 @import "boiler/authors"; 
 @import "boiler/shortcodes"; // for the DD9 shortcodes plugin
 @import "boiler/boiler-utilities"; 

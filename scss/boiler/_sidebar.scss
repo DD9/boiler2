@@ -16,14 +16,20 @@ Stylesheet: Sidebars
 }
 
 .widget {
-	ul {
+  ul {
     padding: 0;
     margin: 0;
-		li {
+    li {
       list-style: none;
-		}
-	}
+    }
+  }
   select {
     margin-bottom: 10px;
+  }
+
+  .textwidget {
+    > *:last-child {
+      margin-bottom: 0 !important;
+    }
   }
 }
