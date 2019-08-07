@@ -7,6 +7,16 @@ These are the styles for general content
 
 /* General Content
 ================================================== */
+
+.container-fluid {
+  max-width: 1700px;
+}
+.container {
+  @include media-breakpoint-up(xxl) {
+   max-width: 1450px;
+  }
+}
+
 .bg-img {
   background-position: center center;
   background-repeat: no-repeat;
