@@ -16,11 +16,6 @@ Developed by: Eddie Machado & DD9
 // Disable the Admin Bar. 
 //add_filter( 'show_admin_bar', '__return_false' );
 
-//Remove links menu on older installs
-function my_remove_menu_pages() {
-  remove_menu_page('link-manager.php');  
-}
-add_action( 'admin_menu', 'my_remove_menu_pages' );
 
 
 /************* DASHBOARD WIDGETS *****************/
