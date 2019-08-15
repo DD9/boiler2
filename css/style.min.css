@@ -1107,6 +1107,7 @@ a.text-dark:hover,a.text-dark:focus{color:#121416 !important}
 .gallery dl{float:left;margin-top:10px;text-align:center;width:33%}
 .gallery dl img{border:2px solid #cfcfcf}
 .screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
+.alignfull,.alignwide{margin:3rem 0 3rem 50%;max-width:100vw;width:100vw;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 1rem}
 h1 sup,h1 sub,.h1 sup,.h1 sub,h2 sup,h2 sub,.h2 sup,.h2 sub,h3 sup,h3 sub,.h3 sup,.h3 sub,h4 sup,h4 sub,.h4 sup,.h4 sub,h5 sup,h5 sub,.h5 sup,.h5 sub,h6 sup,h6 sub,.h6 sup,.h6 sub{font-size:30%}
 .add-divider{border-bottom:1px solid rgba(0,0,0,0.1);clear:both;padding-bottom:1rem}
@@ -1218,7 +1219,7 @@ label:not(.form-check-label){font-size:.75rem;text-transform:uppercase;letter-sp
 .entry-header .entry-title{margin-bottom:1rem}
 .entry-header>*:last-child{margin-bottom:0 !important}
 .page-header-actions .dropdown{display:inline-block}
-.row-outer{position:relative;padding:4rem 0}
+.row-outer{overflow:hidden;position:relative;padding:4rem 0}
 .row-outer-sm{position:relative;padding:2rem 0}
 .row-outer-lg{position:relative;padding:4rem 0}
 .content-block{margin-bottom:4rem}
@@ -1863,6 +1864,7 @@ a,a:visited{-webkit-transition:none;transition:none}
 .text-md-left{text-align:left !important}
 .text-md-right{text-align:right !important}
 .text-md-center{text-align:center !important}
+.alignwide{margin:3rem 0 3rem 50%;max-width:70vw;width:70vw;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
 .comment .children{padding-left:4rem}
 .comment.depth-1{padding-left:4rem}
 .comment .comment-author .avatar{float:inherit;margin-right:inherit;position:absolute;top:0;right:calc(100% + 1rem)}

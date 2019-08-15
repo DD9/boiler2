@@ -82,6 +82,7 @@ These are the styles for general content
 /* Entry Content
 ================================================== */
 .row-outer {
+  overflow: hidden;
   position: relative;
   padding: ($spacer * 4) 0;
   @include media-breakpoint-up(md) {

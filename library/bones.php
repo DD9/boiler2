@@ -48,6 +48,7 @@ function bones_ahoy() {
     add_filter( 'the_content', 'bones_filter_ptags_on_images' );
     // cleaning up excerpt
     add_filter( 'excerpt_more', 'bones_excerpt_more' );
+  
 
 } /* end bones ahoy */
 
@@ -210,7 +211,9 @@ function bones_theme_support() {
 				'caption',
 			)
 		);
-
+  
+    // Add Gutenberg alignment options
+    add_theme_support( 'align-wide' );
 
     // wp thumbnails (sizes handled in functions.php)
     add_theme_support( 'post-thumbnails' );
