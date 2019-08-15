@@ -12,7 +12,7 @@ require_once( 'library/register-sidebars.php' ); // Register Sidebars
 require_once( 'library/comment-walker.php' );    // Comments walker (from WP twentynineteen theme)
 require_once( 'library/comment-utilities.php' ); // Comments utilities (from WP twentynineteen theme)
 require_once( 'vendor/autoload.php' );  				 // For Composer scripts
-//require_once( 'library/custom-image-sizes.php' ); // Add custom image sizes
+require_once( 'library/custom-image-sizes.php' ); // Add theme support, register custom image sizes
 
 /************* SETUP DEFAULT PAGES ***************/
 // require_once( 'library/site-init.php' ); // Disabled until we move it into a dedicated function

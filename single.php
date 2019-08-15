@@ -5,7 +5,7 @@
 <section class="row-outer">						
 	<div class="container">	
 		<div class="row justify-content-center">
-			<div class="col-md-9">
+			<div class="col">
 				<?php if (have_posts()) : while (have_posts()) : the_post();?>
 					<?php get_template_part( 'partials/content'); ?>
 

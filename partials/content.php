@@ -1,11 +1,23 @@
-<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );?>
+<?php  
+
+$image_id = get_post_thumbnail_id( $post->ID );
+$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+
+?>
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 	<?php if ($image) : ?>
 		<section class="entry-featured-img">
-			<img src="<?php echo $image[0]; ?>" />
+			<?php /*?><img src="<?php echo $image[0]; ?>" /><?php */?>
+            
+      <?php /*?><h5>Responsive for image ID (<?= $image_id ?>):</h5>
+      <img src="<?php echo wp_get_attachment_image_url( $image_id, 'large' ) ?>"
+       srcset="<?php echo wp_get_attachment_image_srcset( $image_id, 'large' ) ?>"
+       sizes="<?php echo wp_get_attachment_image_sizes( $image_id, 'large' ) ?>" /><?php */?>
+      
+      
 		</section>
 	<?php else: ?>
   <?php endif; ?>

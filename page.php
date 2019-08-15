@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="row justify-content-center">
 
-			<div class="col-md-9">
+			<div class="col-xl-9">
 
 				<?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
 
