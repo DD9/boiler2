@@ -214,8 +214,51 @@ function bones_theme_support() {
   
     // Add Gutenberg alignment options
     add_theme_support( 'align-wide' );
+  
     // Responsive embeds
     add_theme_support( 'responsive-embeds' );
+    
+    // Custom Colors
+    add_theme_support( 'editor-color-palette', array(
+      array(
+        'name'  => __( 'Blue', 'boiler' ),
+        'slug'  => 'primary',
+        'color'	=> '#007bff',
+      ),
+      array(
+        'name'  => __( 'Green', 'boiler' ),
+        'slug'  => 'success',
+        'color' => '#28a745',
+      ),
+      array(
+        'name'  => __( 'Cyan', 'boiler' ),
+        'slug'  => 'info',
+        'color' => '#17a2b8',
+      ),
+      array(
+        'name'  => __( 'Yellow', 'boiler' ),
+        'slug'  => 'warning',
+        'color'	=> '#ffc107',
+      ),
+      array(
+        'name'	=> __( 'Red', 'boiler' ),
+        'slug'	=> 'danger',
+        'color'	=> '#dc3545',
+      ),
+      array(
+        'name'  => __( 'Gray', 'boiler' ),
+        'slug'  => 'secondary',
+        'color'	=> '#343a40',
+      ),
+      array(
+        'name'  => __( 'White', 'boiler' ),
+        'slug'  => 'white',
+        'color'	=> '#ffffff',
+      )
+    ));
+  
+    // Disable Custom Colors
+    add_theme_support( 'disable-custom-colors' );
 
     // wp thumbnails (sizes handled in functions.php)
     add_theme_support( 'post-thumbnails' );
@@ -255,6 +298,8 @@ function bones_theme_support() {
           )
       );
     */
+  
+  
     // wp menus
     add_theme_support( 'menus' );
 

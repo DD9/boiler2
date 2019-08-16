@@ -87,6 +87,11 @@ This stylesheet contains CSS needed for WP Core
 
 /* Gutenberg
 ================================================== */
+
+.wp-block-cover__inner-container {
+  @extend .container;
+}
+
 .alignfull,
 .alignwide {
   margin: ($spacer * 3) 0 ($spacer * 3) 50%;
