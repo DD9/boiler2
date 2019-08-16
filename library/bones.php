@@ -214,6 +214,8 @@ function bones_theme_support() {
   
     // Add Gutenberg alignment options
     add_theme_support( 'align-wide' );
+    // Responsive embeds
+    add_theme_support( 'responsive-embeds' );
 
     // wp thumbnails (sizes handled in functions.php)
     add_theme_support( 'post-thumbnails' );

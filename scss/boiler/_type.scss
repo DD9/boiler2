@@ -205,8 +205,8 @@ blockquote.text-right {
 
 .wp-block-pullquote {
 	border-left: 0;
-	border-top: 2px solid $primary;
-	border-bottom: 2px solid $primary;
+	border-top: 4px solid $primary;
+	border-bottom: 4px solid $primary;
 	text-align: center;
 
 	&:not(.alignfull) {

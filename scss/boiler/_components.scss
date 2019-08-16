@@ -121,8 +121,7 @@ p > .btn + .btn {
 
 /* Dividers
 ================================================== */
-.wp-block-separator,
-hr {
+.wp-block-separator {
 
   &:not(.is-style-dots) {
     background-color: $hr-border-color;
@@ -131,24 +130,14 @@ hr {
   }
 
   &:not(.is-style-wide):not(.is-style-dots) {
-    width: 100%;
+    background: $primary;
+    border: none;
     height: 4px;
-    background: transparent;
-
-    &::before {
-      content: '';
-      display: block;
-      height: 4px;
-      width: 40px;
-      background-color: $primary;
-    }
+    width: 50px;
+    margin: $hr-margin-y auto;
   }
 
   &.is-style-dots:before {
-    color: $gray-600;
-    font-size: 18px;
-    letter-spacing: 12px;
-    padding-left: 12px;
   }
 }
 
