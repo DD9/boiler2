@@ -1125,12 +1125,18 @@ a,a:visited{-webkit-transition:all .2s ease;transition:all .2s ease}
 a:hover,a:focus,a:visited:hover,a:visited:focus{text-decoration:none;outline:0 none}
 .post-edit-link{position:fixed;right:5px;bottom:5px;z-index:2000;padding:3px 6px;font-size:10px !important}
 a.full-width{bottom:0;display:block;left:0;position:absolute;right:0;top:0;z-index:10}
-blockquote{color:#007bff;font-weight:300;font-size:1.25rem;line-height:1.5;border-left:2px solid;border-color:#007bff;padding:10px 1rem;margin-bottom:1rem}
-blockquote footer,blockquote small,blockquote .small,blockquote cite{display:block;letter-spacing:.2em;font-size:11px;font-weight:bold;line-height:1.1;text-transform:uppercase;font-style:normal;margin-top:15px}
-blockquote>*:last-child{margin-bottom:0}
+blockquote,blockquote.wp-block-quote{background-color:transparent;color:#007bff;font-weight:300;font-size:1.25rem;line-height:1.5;border-left:2px solid;border-color:#007bff;padding:10px 1rem;margin-bottom:1rem}
+blockquote p,blockquote.wp-block-quote p{font-size:24px;font-style:normal;font-weight:400}
+blockquote footer,blockquote small,blockquote .small,blockquote cite,blockquote .wp-block-quote__citation,blockquote.wp-block-quote footer,blockquote.wp-block-quote small,blockquote.wp-block-quote .small,blockquote.wp-block-quote cite,blockquote.wp-block-quote .wp-block-quote__citation{display:block;letter-spacing:.2em;font-size:11px;font-weight:bold;line-height:1.1;text-transform:uppercase;font-style:normal;margin-top:15px}
+blockquote>*:last-child,blockquote.wp-block-quote>*:last-child{margin-bottom:0}
+blockquote.is-large,blockquote.is-style-large,blockquote.wp-block-quote.is-large,blockquote.wp-block-quote.is-style-large{margin:2rem auto}
 blockquote.text-center{border:0}
 blockquote.text-right{border-left:0;border-right:2px solid}
 .bg-primary blockquote,.bg-success blockquote,.bg-info blockquote,.bg-warning blockquote,.bg-danger blockquote{border-color:#fff}
+.wp-block-pullquote{border-left:0;border-top:2px solid #007bff;border-bottom:2px solid #007bff;text-align:center}
+.wp-block-pullquote:not(.alignfull){margin:2rem 0}
+.wp-block-pullquote blockquote{border:0;padding:0}
+.wp-block-pullquote.alignleft blockquote,.wp-block-pullquote.alignright blockquote{max-width:100%}
 .avatar{border-radius:100%;display:block;height:3rem;min-height:inherit;width:3rem}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
@@ -1215,11 +1221,12 @@ label:not(.form-check-label){font-size:.75rem;text-transform:uppercase;letter-sp
 .bg-gray-light{background-color:#dee2e6}
 .bg-gray-dark{background-color:#343a40}
 .bg-white+.bg-white{border-top:1px solid rgba(0,0,0,0.1)}
+.overflow-hidden{overflow:hidden}
 #page-hero{background-color:#dee2e6;position:relative}
 .entry-header .entry-title{margin-bottom:1rem}
 .entry-header>*:last-child{margin-bottom:0 !important}
 .page-header-actions .dropdown{display:inline-block}
-.row-outer{overflow:hidden;position:relative;padding:4rem 0}
+.row-outer{position:relative;padding:4rem 0}
 .row-outer-sm{position:relative;padding:2rem 0}
 .row-outer-lg{position:relative;padding:4rem 0}
 .content-block{margin-bottom:4rem}
@@ -1281,6 +1288,7 @@ label:not(.form-check-label){font-size:.75rem;text-transform:uppercase;letter-sp
 .social-links a{padding-right:10px;font-size:1.4em}
 .social-links a:hover{color:#0056b3}
 .social-links>li:last-child>a{padding-right:0}
+.wp-block-button .wp-block-button__link{border-radius:.25rem;font-weight:400;font-size:1rem;line-height:1.5;padding:.375rem .75rem}
 .btn,.post-edit-link,.comment-form input.submit,.pager li>a,.pager li>span>a{white-space:normal;text-transform:uppercase;-webkit-transition:all .2s ease;transition:all .2s ease}
 .btn:not(.btn-lg):not(.btn-sm):not(.post-edit-link),.post-edit-link:not(.btn-lg):not(.btn-sm):not(.post-edit-link),.comment-form input.submit:not(.btn-lg):not(.btn-sm):not(.post-edit-link),.pager li>a:not(.btn-lg):not(.btn-sm):not(.post-edit-link),.pager li>span>a:not(.btn-lg):not(.btn-sm):not(.post-edit-link){font-size:.8rem;letter-spacing:.15em}
 .btn-light{color:#212529}
@@ -1291,6 +1299,10 @@ label:not(.form-check-label){font-size:.75rem;text-transform:uppercase;letter-sp
 .btn-sm,.btn-group-sm>.btn,.btn-group-sm>.post-edit-link,.comment-form .btn-group-sm>input.submit,.pager li.btn-group-sm>a,.pager li>span.btn-group-sm>a,.post-edit-link{font-size:.75rem}
 #row-outer .btn+p,#row-outer .post-edit-link+p,#row-outer .comment-form input.submit+p,.comment-form #row-outer input.submit+p,#row-outer .pager li>a+p,.pager #row-outer li>a+p,#row-outer .pager li>span>a+p,.pager #row-outer li>span>a+p,#row-outer .btn+blockquote,#row-outer .post-edit-link+blockquote,#row-outer .comment-form input.submit+blockquote,.comment-form #row-outer input.submit+blockquote,#row-outer .pager li>a+blockquote,.pager #row-outer li>a+blockquote,#row-outer .pager li>span>a+blockquote,.pager #row-outer li>span>a+blockquote,#row-outer .btn+ul:not([class]),#row-outer .post-edit-link+ul:not([class]),#row-outer .comment-form input.submit+ul:not([class]),.comment-form #row-outer input.submit+ul:not([class]),#row-outer .pager li>a+ul:not([class]),.pager #row-outer li>a+ul:not([class]),#row-outer .pager li>span>a+ul:not([class]),.pager #row-outer li>span>a+ul:not([class]),#row-outer .btn+ol:not([class]),#row-outer .post-edit-link+ol:not([class]),#row-outer .comment-form input.submit+ol:not([class]),.comment-form #row-outer input.submit+ol:not([class]),#row-outer .pager li>a+ol:not([class]),.pager #row-outer li>a+ol:not([class]),#row-outer .pager li>span>a+ol:not([class]),.pager #row-outer li>span>a+ol:not([class]){margin-top:2rem}
 p>.btn+.btn,p>.post-edit-link+.btn,.comment-form p>input.submit+.btn,p>.btn+.post-edit-link,p>.post-edit-link+.post-edit-link,.comment-form p>input.submit+.post-edit-link,.comment-form p>.btn+input.submit,.comment-form p>.post-edit-link+input.submit,.comment-form p>input.submit+input.submit{margin-left:5px}
+.wp-block-separator:not(.is-style-dots),hr:not(.is-style-dots){background-color:rgba(0,0,0,0.1);border:0;height:1px}
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots),hr:not(.is-style-wide):not(.is-style-dots){width:100%;height:4px;background:transparent}
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots)::before,hr:not(.is-style-wide):not(.is-style-dots)::before{content:'';display:block;height:4px;width:40px;background-color:#007bff}
+.wp-block-separator.is-style-dots:before,hr.is-style-dots:before{color:#6c757d;font-size:18px;letter-spacing:12px;padding-left:12px}
 .well>*:last-child,.alert>*:last-child,.comment-awaiting-moderation>*:last-child{margin-bottom:0}
 .breadcrumb{background-color:transparent;font-size:.75rem;padding:0;margin-bottom:10px}
 .breadcrumb .breadcrumb-item{display:inline-block}

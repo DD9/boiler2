@@ -144,7 +144,9 @@ a.full-width {
 
 /* Blockquote
 ================================================== */
-blockquote {
+blockquote,
+blockquote.wp-block-quote {
+	background-color: transparent;
 	color: $primary;
 	font-weight: $font-weight-light;
 	font-size: $font-size-lg;
@@ -154,7 +156,14 @@ blockquote {
 	padding: 10px $spacer;
 	margin-bottom: $paragraph-margin-bottom;
 
-	footer, small, .small, cite {
+	p {
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	footer, small, .small, cite,
+	.wp-block-quote__citation {
 		display: block;
 		letter-spacing: 0.2em;
 		font-size: 11px;
@@ -162,11 +171,16 @@ blockquote {
 		line-height: 1.1;
 		text-transform: uppercase;
 		font-style: normal;
-		margin-top:15px;
+		margin-top: 15px;
 	}
 
 	> *:last-child {
 		margin-bottom: 0;
+	}
+
+	&.is-large,
+	&.is-style-large {
+		margin: ($spacer * 2 ) auto;
 	}
 }
 
@@ -182,5 +196,33 @@ blockquote.text-right {
 .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger {
 	blockquote {
 		border-color: $white;
+	}
+}
+
+
+/* Pull Quote
+================================================== */
+
+.wp-block-pullquote {
+	border-left: 0;
+	border-top: 2px solid $primary;
+	border-bottom: 2px solid $primary;
+	text-align: center;
+
+	&:not(.alignfull) {
+		margin: ($spacer * 2) 0;
+	}
+
+	blockquote {
+		border: none;
+		padding: 0;
+	}
+
+	&.alignleft,
+	&.alignright {
+
+		blockquote {
+			max-width: 100%;
+		}
 	}
 }

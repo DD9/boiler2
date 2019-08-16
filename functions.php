@@ -9,6 +9,7 @@ require_once( 'library/navwalker.php' );			   // Needed for bootstrap navigation
 require_once( 'library/utilities.php' );   			 // Misc generic helpers
 require_once( 'library/shortcodes.php' );  			 // Shortcodes 
 require_once( 'library/register-sidebars.php' ); // Register Sidebars
+require_once( 'library/gutenberg.php' );         // Gutenberg customizations
 require_once( 'library/comment-walker.php' );    // Comments walker (from WP twentynineteen theme)
 require_once( 'library/comment-utilities.php' ); // Comments utilities (from WP twentynineteen theme)
 require_once( 'vendor/autoload.php' );  				 // For Composer scripts

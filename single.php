@@ -2,7 +2,7 @@
 
 <?php get_template_part( 'partials/page-header' ); ?>
 
-<section class="row-outer">						
+<section class="row-outer overflow-hidden">						
 	<div class="container">	
 		<div class="row justify-content-center">
 			<div class="col-md-9">
