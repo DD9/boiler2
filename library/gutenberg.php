@@ -49,3 +49,55 @@ function ea_disable_gutenberg( $can_edit, $post_type ) {
 add_filter( 'gutenberg_can_edit_post_type', 'ea_disable_gutenberg', 10, 2 );
 add_filter( 'use_block_editor_for_post_type', 'ea_disable_gutenberg', 10, 2 );
 
+
+
+
+/**
+ * Only enable specific Gutenberg blocks
+ * https://rudrastyh.com/gutenberg/remove-default-blocks.html
+ */
+
+add_filter( 'allowed_block_types', 'boiler_allowed_block_types' );
+ 
+function boiler_allowed_block_types( $allowed_blocks ) {
+ 
+	return array(
+		// Common Blocks
+		'core/paragraph',
+    'core/image',
+		'core/heading',
+    'core/gallery',
+		'core/list',
+    'core/quote',
+    'core/cover',
+    'core/file',
+    'core/video',
+    
+    //Formatting
+    'core/table',
+		'core/code',
+    'core/freeform',
+		'core/html',
+    'core/preformatted',
+    'core/pullquote',
+    
+    //Layout
+    'core/text-columns',
+    'core/media-text',
+		'core/separator',
+    'core/spacer',
+    
+    // Widgets
+		'core/shortcode',
+    
+    // Embeds
+		'core/embed',
+    'core-embed/twitter',
+		'core-embed/youtube',
+    'core-embed/facebook',
+		'core-embed/instagram',
+    'core-embed/vimeo'
+	);
+ 
+}
+
