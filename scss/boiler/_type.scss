@@ -6,7 +6,7 @@ Stylesheet: Typography
 /* Headings
 ================================================== */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	margin: 0 0 $paragraph-margin-bottom;
+	margin: 0 0 $headings-margin-bottom;
 	a {}
 	@include media-breakpoint-down(sm) {
 		> br {
@@ -20,6 +20,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
+	margin-bottom: ($headings-margin-bottom * 2);
 	@include media-breakpoint-up(xl) {
 	}	
 	
@@ -28,6 +29,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
+	margin-bottom: ($headings-margin-bottom * 2);
 }
 
 h3, .h3 {}
@@ -209,13 +211,13 @@ blockquote.text-right {
 	border-bottom: 4px solid $primary;
 	text-align: center;
 
-	&:not(.alignfull) {
-		margin: ($spacer * 2) 0;
+	> *:last-child {
+		margin-bottom: 0;
 	}
 
 	blockquote {
 		border: none;
-		padding: 0;
+		padding: 0 $grid-gutter-width;
 	}
 
 	&.alignleft,
@@ -224,5 +226,10 @@ blockquote.text-right {
 		blockquote {
 			max-width: 100%;
 		}
+	}
+
+	&.alignwide,
+	&.alignfull {
+		padding: 3em 0;
 	}
 }

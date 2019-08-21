@@ -5,7 +5,7 @@ article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:bl
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}
 [tabindex="-1"]:focus{outline:0 !important}
 hr{box-sizing:content-box;height:0;overflow:visible}
-h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem}
+h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:1rem}
 p{margin-top:0;margin-bottom:1rem}
 abbr[title],abbr[data-original-title]{text-decoration:underline;text-decoration:underline dotted;cursor:help;border-bottom:0;text-decoration-skip-ink:none}
 address{margin-bottom:1rem;font-style:normal;line-height:inherit}
@@ -54,7 +54,7 @@ output{display:inline-block}
 summary{display:list-item;cursor:pointer}
 template{display:none}
 [hidden]{display:none !important}
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{margin-bottom:1rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}
 h1,.h1{font-size:2.5rem}
 h2,.h2{font-size:2rem}
 h3,.h3{font-size:1.75rem}
@@ -1107,12 +1107,33 @@ a.text-dark:hover,a.text-dark:focus{color:#121416 !important}
 .gallery dl{float:left;margin-top:10px;text-align:center;width:33%}
 .gallery dl img{border:2px solid #cfcfcf}
 .screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
-.alignfull,.alignwide{margin:3rem 0 3rem 50%;max-width:100vw;width:100vw;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
+.alignfull,.alignwide{padding:0 30px;margin:3rem 0 3rem 50%;max-width:100vw;width:100vw;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
+.wp-block-image.alignfull,.wp-block-image.alignwide,.wp-block-gallery.alignfull,.wp-block-gallery.alignwide,.wp-block-cover.alignfull,.wp-block-cover.alignwide,.wp-block-media-text.alignfull,.wp-block-media-text.alignwide,.wp-block-embed-youtube.alignfull,.wp-block-embed-youtube.alignwide,.wp-block-embed-vimeo.alignfull,.wp-block-embed-vimeo.alignwide{padding:0}
+.has-primary-color{color:#007bff}
+.has-secondary-color{color:#6c757d}
+.has-success-color{color:#28a745}
+.has-info-color{color:#17a2b8}
+.has-warning-color{color:#ffc107}
+.has-danger-color{color:#dc3545}
+.has-gray-700-color{color:#495057}
+.has-white-color{color:#fff}
+.has-primary-background-color{background-color:#007bff}
+.has-secondary-background-color{background-color:#6c757d}
+.has-success-background-color{background-color:#28a745}
+.has-info-background-color{background-color:#17a2b8}
+.has-warning-background-color{background-color:#ffc107}
+.has-danger-background-color{background-color:#dc3545}
+.has-gray-700-background-color{background-color:#495057}
+.has-white-background-color{color:#fff}
+.wp-block-embed .wp-block-embed__wrapper{margin:0 auto;text-align:center}
+.wp-block-embed .fb_iframe_widget,.wp-block-embed .twitter-tweet,.wp-block-embed .instagram-media{margin:0 auto !important}
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{margin:0 0 1rem}
 h1 sup,h1 sub,.h1 sup,.h1 sub,h2 sup,h2 sub,.h2 sup,.h2 sub,h3 sup,h3 sub,.h3 sup,.h3 sub,h4 sup,h4 sub,.h4 sup,.h4 sub,h5 sup,h5 sub,.h5 sup,.h5 sub,h6 sup,h6 sub,.h6 sup,.h6 sub{font-size:30%}
+h1,.h1{margin-bottom:2rem}
+h2,.h2{margin-bottom:2rem}
 .add-divider{border-bottom:1px solid rgba(0,0,0,0.1);clear:both;padding-bottom:1rem}
 h1+.divider-bar,h2+.divider-bar{margin-bottom:2.6rem}
-h3+.divider-bar,h4+.divider-bar{margin-bottom:.5rem}
+h3+.divider-bar,h4+.divider-bar{margin-bottom:1rem}
 p{margin:0 0 1rem}
 p:empty{display:none}
 cite{font-style:italic}
@@ -1134,9 +1155,10 @@ blockquote.text-center{border:0}
 blockquote.text-right{border-left:0;border-right:2px solid}
 .bg-primary blockquote,.bg-success blockquote,.bg-info blockquote,.bg-warning blockquote,.bg-danger blockquote{border-color:#fff}
 .wp-block-pullquote{border-left:0;border-top:4px solid #007bff;border-bottom:4px solid #007bff;text-align:center}
-.wp-block-pullquote:not(.alignfull){margin:2rem 0}
-.wp-block-pullquote blockquote{border:0;padding:0}
+.wp-block-pullquote>*:last-child{margin-bottom:0}
+.wp-block-pullquote blockquote{border:0;padding:0 30px}
 .wp-block-pullquote.alignleft blockquote,.wp-block-pullquote.alignright blockquote{max-width:100%}
+.wp-block-pullquote.alignwide,.wp-block-pullquote.alignfull{padding:3em 0}
 .avatar{border-radius:100%;display:block;height:3rem;min-height:inherit;width:3rem}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
@@ -1874,7 +1896,6 @@ a,a:visited{-webkit-transition:none;transition:none}
 .text-md-left{text-align:left !important}
 .text-md-right{text-align:right !important}
 .text-md-center{text-align:center !important}
-.alignwide{margin:3rem 0 3rem 50%;max-width:70vw;width:70vw;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
 .comment .children{padding-left:4rem}
 .comment.depth-1{padding-left:4rem}
 .comment .comment-author .avatar{float:inherit;margin-right:inherit;position:absolute;top:0;right:calc(100% + 1rem)}
@@ -2084,6 +2105,7 @@ a,a:visited{-webkit-transition:none;transition:none}
 .text-lg-left{text-align:left !important}
 .text-lg-right{text-align:right !important}
 .text-lg-center{text-align:center !important}
+.alignwide{margin:3rem 0 3rem 50%;max-width:80vw;width:80vw;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
 .comments-title-wrap{-webkit-box-align:baseline;-webkit-align-items:baseline;-ms-flex-align:baseline;align-items:baseline;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:2rem}
 .comments-title-wrap .comments-title{-webkit-box-flex:1;-webkit-flex:1 0 calc(3 * (100vw / 12));-ms-flex:1 0 calc(3 * (100vw / 12));flex:1 0 calc(3 * (100vw / 12));margin:0}
 .comments-title-wrap .discussion-meta{-webkit-box-flex:0;-webkit-flex:0 0 calc(2 * (100vw / 12));-ms-flex:0 0 calc(2 * (100vw / 12));flex:0 0 calc(2 * (100vw / 12));margin:0 0 0 1rem;text-align:right}

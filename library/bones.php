@@ -247,8 +247,8 @@ function bones_theme_support() {
       ),
       array(
         'name'  => __( 'Gray', 'boiler' ),
-        'slug'  => 'secondary',
-        'color'	=> '#343a40',
+        'slug'  => 'gray-700',
+        'color'	=> '#495057',
       ),
       array(
         'name'  => __( 'White', 'boiler' ),
