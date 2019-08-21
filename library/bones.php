@@ -218,7 +218,7 @@ function bones_theme_support() {
     // Responsive embeds
     add_theme_support( 'responsive-embeds' );
     
-    // Custom Colors
+    // Theme Colors
     add_theme_support( 'editor-color-palette', array(
       array(
         'name'  => __( 'Blue', 'boiler' ),
@@ -257,10 +257,14 @@ function bones_theme_support() {
       )
     ));
   
-    // Disable Custom Colors
+    // Disable Custom Color-picker
     add_theme_support( 'disable-custom-colors' );
+  
+    // Editor Styles
+    add_theme_support( 'editor-styles' );
+    add_editor_style( '/css/editor-styles.css' );
 
-    // wp thumbnails (sizes handled in functions.php)
+    // wp thumbnails (sizes handled in /library/custom-image-sizes.php)
     add_theme_support( 'post-thumbnails' );
 
     // default thumb size

@@ -26,15 +26,7 @@ require_once( 'library/admin.php' ); // dashboard customizations
 // require_once( 'library/custom-post-types.php' );  // project-specific CPTs
 
 
-
 /************* INSERT THEME FUNCTIONS HERE ********************/
-
-
-// Add Editor Stylesheet
-function my_theme_add_editor_styles() {
-    add_editor_style( '/css/editor-styles.css' );
-}
-add_action( 'init', 'my_theme_add_editor_styles' );
 
 
 
