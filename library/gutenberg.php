@@ -82,7 +82,8 @@ function boiler_allowed_block_types( $allowed_blocks ) {
     'core/pullquote',
     
     //Layout
-    'core/text-columns',
+    'core/button',
+    'core/columns',
     'core/media-text',
 		'core/separator',
     'core/spacer',
