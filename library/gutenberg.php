@@ -62,6 +62,9 @@ add_filter( 'allowed_block_types', 'boiler_allowed_block_types' );
 function boiler_allowed_block_types( $allowed_blocks ) {
  
 	return array(
+    // Resusable Blocks
+    'core/block',
+    
 		// Common Blocks
 		'core/paragraph',
     'core/image',
