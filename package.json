@@ -13,7 +13,7 @@
     "browser-sync": "^2.26.3",
     "hoek": "^5.0.4",
     "jquery.easing": "^1.4.1",
-    "npm": "^6.7.0",
+    "npm": "^6.13.4",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.14.6"
   },
