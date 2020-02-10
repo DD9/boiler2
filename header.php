@@ -28,9 +28,8 @@
 <?php edit_post_link('Edit'); ?>  
 
 <header id="site-header">
-	
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container">
+	<div class="container">
+	  <nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage">
 				<img src="<?= get_bloginfo('template_directory'); ?>/images/logo_dd9.png" alt="<?php bloginfo( 'name' ) ?> Logo" />
 			</a>
@@ -42,7 +41,6 @@
 			<div id="navbar-responsive-collapse" class="collapse navbar-collapse">
 				<?php bones_main_nav(); ?>
 			</div>
-		</div><!-- /container -->
-	</nav><!-- /navbar --> 
-
+	  </nav><!-- /navbar --> 
+  </div><!-- /container -->
 </header> <?php // end site-header ?>
