@@ -4,10 +4,10 @@ $blog['title'] = get_the_title( $blog['id'] );
 $blog['permalink'] = get_the_permalink( $blog['id'] );
 ?>
 
-<div id="page-hero" class="row-outer">
+<div class="page-hero row-outer">
   <div class="container">
     <div class="row">
-			<div class="col-md-12">
+			<div class="col-xl-9">
 				
 				<header class="entry-header text-center">
 					<h1 class="entry-title" itemprop="headline"><?= $blog['title']; ?></h1>
@@ -40,7 +40,7 @@ $blog['permalink'] = get_the_permalink( $blog['id'] );
 <div class="row-outer">						
 	<div class="container">	
 		<div class="row justify-content-center">
-			<div class="col-md-10">
+			<div class="col-xl-9">
 				<?php if (have_posts()) : while (have_posts()) : the_post();?>
 					<?php get_template_part( 'partials/content', 'excerpt' ); ?>
 

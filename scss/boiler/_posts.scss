@@ -32,10 +32,16 @@ Stylesheet: Posts
 
 /* Excerpts & Content
 ================================================== */
-.post-excerpt-row {
+.row-post-excerpt {
   border-bottom: 1px solid $hr-border-color;
   margin-bottom: ($paragraph-margin-bottom * 2);
   padding-bottom: ($paragraph-margin-bottom * 2);
+}
+
+.entry-excerpt {
+  > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .entry-content {

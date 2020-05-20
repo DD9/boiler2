@@ -144,17 +144,23 @@ a.full-width {
 
 /* Blockquote
 ================================================== */
-blockquote {
-	color: $primary;
-	font-weight: $font-weight-light;
-	font-size: $font-size-lg;
-	line-height: $line-height-lg;
-	border-left: 2px solid;
+blockquote,
+.blockquote {
+	border-left: 2px solid ;
 	border-color: $primary;
-	padding: 10px $spacer;
-	margin-bottom: $paragraph-margin-bottom;
+	color: $primary;
+	font-size: $font-size-lg;
+	font-weight: $font-weight-normal;
+	line-height: $line-height-lg;
+	margin: 0 0 ($spacer * 2);
+	padding: 0 0 0 $spacer;
 
-	footer, small, .small, cite {
+	@include media-breakpoint-up(lg) {
+		font-size: 2rem ;
+	}	
+
+	footer, small, .small, cite,
+	.blockquote-footer {
 		display: block;
 		letter-spacing: 0.2em;
 		font-size: 11px;
@@ -162,7 +168,7 @@ blockquote {
 		line-height: 1.1;
 		text-transform: uppercase;
 		font-style: normal;
-		margin-top:15px;
+		margin-top: 5px;
 	}
 
 	> *:last-child {
@@ -177,6 +183,11 @@ blockquote.text-center {
 blockquote.text-right {
 	border-left: none;
 	border-right: 2px solid;
+	padding: 0 $spacer 0 0;
+
+	@include media-breakpoint-up(lg) {
+		padding: 0 $spacer 0 0;
+	}	
 }
 
 .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger {

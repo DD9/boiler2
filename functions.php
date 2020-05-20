@@ -38,7 +38,9 @@ function my_theme_add_editor_styles() {
 }
 add_action( 'init', 'my_theme_add_editor_styles' );
 
-
+function trim_excerpt($limit) {
+  return wp_trim_words(get_the_excerpt(), $limit);
+}
 
 /************* BREW & BOILER FILES ********************/
 

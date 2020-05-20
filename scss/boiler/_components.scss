@@ -134,7 +134,9 @@ p > .btn + .btn {
 /* Lists
 ================================================== */
 .checkmark-list > ul, ul.checkmark-list {
-  @extend .list-unstyled;
+  list-style: none;
+  margin-bottom: $paragraph-margin-bottom;
+  padding-left: 0 !important;
 
   > li {
     padding: 0 0 10px 25px;

@@ -26,13 +26,13 @@ This stylesheet contains CSS needed for WP Core
 
 .wp-caption {
   max-width: 100%;
-  background: #eee;
+  background: transparent;
   img {
     max-width: 100%;
     margin-bottom: 0;
     width: 100%;
   }
-  p.wp-caption-text {
+  .wp-caption-text {
     color: $text-muted;
     font-size: 0.75em;
     line-height: 1.1;
