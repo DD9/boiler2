@@ -1279,7 +1279,7 @@ label:not(.form-check-label){font-size:.75rem;text-transform:uppercase;letter-sp
 #site-header .navbar-brand:hover{opacity:.8}
 .navbar-light .navbar-toggler,.navbar-dark .navbar-toggler{background-color:#6c757d;padding:.4rem .4rem;font-size:1.2rem}
 .navbar-light .navbar-toggler-icon,.navbar-dark .navbar-toggler-icon{width:1.2em;height:1.2em}
-.navbar-light #menu-primary .dropdown-menu,.navbar-dark #menu-primary .dropdown-menu,.dropdown-menu,.text-white .dropdown-menu{border:0;font-size:1.2rem;line-height:1.2;margin:0;-webkit-transition:all .2s ease;transition:all .2s ease}
+.navbar-light #menu-primary .dropdown-menu,.navbar-dark #menu-primary .dropdown-menu,.dropdown-menu,.text-white .dropdown-menu{border:0;line-height:1.2;margin:0;-webkit-transition:all .2s ease;transition:all .2s ease}
 .navbar-light #menu-primary .dropdown-menu>li,.navbar-dark #menu-primary .dropdown-menu>li,.dropdown-menu>li,.text-white .dropdown-menu>li{margin-bottom:.85rem;font-weight:normal}
 .navbar-light #menu-primary .dropdown-menu>li:last-child,.navbar-dark #menu-primary .dropdown-menu>li:last-child,.dropdown-menu>li:last-child,.text-white .dropdown-menu>li:last-child{margin-bottom:0}
 .navbar-light #menu-primary .dropdown-menu>li>a,.navbar-dark #menu-primary .dropdown-menu>li>a,.dropdown-menu>li>a,.text-white .dropdown-menu>li>a{color:#212529;white-space:normal;display:block;padding:0 .65rem}
