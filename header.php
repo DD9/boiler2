@@ -29,7 +29,7 @@
 
 <header id="site-header">
 	<div class="container">
-	  <nav class="navbar navbar-expand-lg navbar-light">
+	  <nav class="navbar navbar-expand-xl navbar-light">
 			<a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage">
 				<img src="<?= get_bloginfo('template_directory'); ?>/images/logo_dd9.png" alt="<?php bloginfo( 'name' ) ?> Logo" />
 			</a>
