@@ -833,6 +833,10 @@ a.close.disabled{pointer-events:none}
 .carousel-indicators li{box-sizing:content-box;-webkit-box-flex:0;-webkit-flex:0 1 auto;-ms-flex:0 1 auto;flex:0 1 auto;width:30px;height:3px;margin-right:3px;margin-left:3px;text-indent:-999px;cursor:pointer;background-color:#fff;background-clip:padding-box;border-top:10px solid transparent;border-bottom:10px solid transparent;opacity:.5;-webkit-transition:opacity .6s ease;transition:opacity .6s ease}
 .carousel-indicators .active{opacity:1}
 .carousel-caption{position:absolute;right:15%;bottom:20px;left:15%;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center}
+.spinner-border{display:inline-block;width:2rem;height:2rem;vertical-align:text-bottom;border:.25em solid currentColor;border-right-color:transparent;border-radius:50%;-webkit-animation:spinner-border .75s linear infinite;animation:spinner-border .75s linear infinite}
+.spinner-border-sm{width:1rem;height:1rem;border-width:.2em}
+.spinner-grow{display:inline-block;width:2rem;height:2rem;vertical-align:text-bottom;background-color:currentColor;border-radius:50%;opacity:0;-webkit-animation:spinner-grow .75s linear infinite;animation:spinner-grow .75s linear infinite}
+.spinner-grow-sm{width:1rem;height:1rem}
 .align-baseline{vertical-align:baseline !important}
 .align-top{vertical-align:top !important}
 .align-middle{vertical-align:middle !important}
@@ -2609,6 +2613,12 @@ body{min-width:992px !important}
 to{background-position:0 0}
 }@keyframes progress-bar-stripes{from{background-position:1rem 0}
 to{background-position:0 0}
+}@-webkit-keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}@keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}@-webkit-keyframes spinner-grow{0%{-webkit-transform:scale(0);transform:scale(0)}
+50%{opacity:1;-webkit-transform:none;transform:none}
+}@keyframes spinner-grow{0%{-webkit-transform:scale(0);transform:scale(0)}
+50%{opacity:1;-webkit-transform:none;transform:none}
 }@-webkit-keyframes fadeOut{0%{opacity:1}
 100%{opacity:0}
 }@keyframes fadeOut{0%{opacity:1}
