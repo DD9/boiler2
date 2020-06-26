@@ -92,7 +92,7 @@ Basic styling used in footer and the #author-info box
   font-size: .75rem;
 }
 
-#row-outer {
+.row-outer {
   .btn + p,
   .btn + blockquote,
   .btn + ul:not([class]),
@@ -110,6 +110,36 @@ p > .btn + .btn {
 .well, .alert {
   > *:last-child {
     margin-bottom: 0;
+  }
+  .alert-heading {
+    margin-bottom: 5px;
+  }
+  p {
+    line-height: 1.2;
+  }
+}
+
+#header-alert {
+  font-size: 1rem;
+  margin-bottom: 0;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.alert-dismissible {
+  padding-right: 1.25rem;
+  
+  .alert-heading {
+    padding-right: 3rem;
+  }
+
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    padding: 0;
   }
 }
 
@@ -150,7 +180,7 @@ p > .btn + .btn {
     height: 10px;
     left: 0;
     position: absolute;
-    top: 4px;
+    top: 2px;
     width: 15px;
   }
 }
