@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<div id="page-hero" class="row-outer bg-gray-light">
+<div class="page-hero row-outer">
   <div class="container">
-    <div class="row">
-			<div class="col-md-12">
-				<header class="entry-header text-center">
+    <div class="row text-center justify-content-center">
+			<div class="col-xl-9">
+				<header class="entry-header">
 					<h5><?php _e("Search Results for","bonestheme"); ?>: </h5>
 					<h1 class="entry-title"> <?php echo esc_attr(get_search_query()); ?></h1>
 				</header> 
@@ -15,9 +15,9 @@
 
 <div class="row-outer">
 	<div class="container">
-		<div class="row justify-content-md-center">
+		<div class="row justify-content-center">
 
-			<div class="col-md-8">
+			<div class="col-xl-9">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -37,6 +37,6 @@
 
 		</div><!-- /row -->
 	</div><!-- /container -->
-</div> <!-- /page-content-outer -->
+</div> <!-- /row-outer -->
 
 <?php get_footer(); ?>

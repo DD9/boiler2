@@ -101,7 +101,7 @@ var concat       = require('gulp-concat'); // Concatenates JS files
 var uglify       = require('gulp-uglify'); // Minifies JS files
 
 // Image realted plugins.
-var imagemin     = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG images with imagemin.
+//var imagemin     = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG images with imagemin.
 
 // Utility related plugins.
 var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css

@@ -1,6 +1,6 @@
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('post-excerpt-row'); ?> role="article">
+<article id="post-<?php the_ID(); ?>" <?php post_class('row-post-excerpt'); ?> role="article">
 	<div class="row">
 
 		<div class="col-md-6">

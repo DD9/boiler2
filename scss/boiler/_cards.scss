@@ -39,7 +39,19 @@ Stylesheet: Card Overrides and Extra Styles
 }
 
 .card-img.bg-img {
-	height: 150px;
+  height: 300px;
+  
+  @include media-breakpoint-up(md) {
+    height: 240px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 350px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 370px;
+  }
 }
 
 .card-img-contained {
@@ -65,35 +77,29 @@ Stylesheet: Card Overrides and Extra Styles
 .card-deck.card-deck-twos,
 .card-deck.card-deck-threes,
 .card-deck.card-deck-fours {
-	@extend .list-unstyled;
-	margin-bottom: 0;
+  @extend .list-unstyled;
+  margin-bottom: -$grid-gutter-width;
   .card {
-  	margin-bottom: $grid-gutter-width !important;
+    margin-bottom: $grid-gutter-width !important;
     flex: unset;
     width: 100%;
 
-  	//Handle the breakpoint-XL overrides for individual cards later
-  	@include media-breakpoint-up(md) {
-	  	flex: 0 0 45.7%;
-	  }
-	  @include media-breakpoint-up(lg) {
-	  	flex: 0 0 46.7%;
-	  }
+    //Handle the breakpoint-XL overrides for individual cards later
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(50% - #{$grid-gutter-width});
+    }
   }
 }
 
 /* Cards - Full
 ================================================== */
 .card-deck.card-deck-ones {
-	.card {
-  	flex: 0 0 96.3%;
+  .card {
+    flex: 0 0 calc(100% - #{$grid-gutter-width});
 
-  	@include media-breakpoint-up(md) {
-	  	flex: 0 0 96.3%;
-	  }
-	  @include media-breakpoint-up(lg) {
-	  	flex: 0 0 96.3%;
-	  }
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(100% - #{$grid-gutter-width});
+    }
   }
 }
 
@@ -101,17 +107,10 @@ Stylesheet: Card Overrides and Extra Styles
 ================================================== */
 .card-deck.card-deck-twos {
   .card {
-    flex: 0 0 96.3%;
+    flex: 0 0 calc(100% - #{$grid-gutter-width});
 
     @include media-breakpoint-up(xl) {
-      flex: 0 0 47.2%;
-    }
-  }
-
-  .card-img.bg-img, .card-img.excerpt-bg-img {
-    height: 180px;
-    @include media-breakpoint-up(md) {
-      height: 250px;
+      flex: 0 0 calc(50% - #{$grid-gutter-width});
     }
   }
 }
@@ -120,10 +119,10 @@ Stylesheet: Card Overrides and Extra Styles
 ================================================== */
 .card-deck.card-deck-threes {
   .card {
-    flex: 0 0 96.3%;
+    flex: 0 0 calc(100% - #{$grid-gutter-width});
 
     @include media-breakpoint-up(xl) {
-      flex: 0 0 30.6%;
+      flex: 0 0 calc(33% - #{$grid-gutter-width});
     }
   }
 }
@@ -132,10 +131,10 @@ Stylesheet: Card Overrides and Extra Styles
 ================================================== */
 .card-deck.card-deck-fours {
   .card {
-    flex: 0 0 96.3%;
+    flex: 0 0 calc(100% - #{$grid-gutter-width});
 
     @include media-breakpoint-up(xl) {
-      flex: 0 0 22.35%;
+      flex: 0 0 calc(25% - #{$grid-gutter-width});
     }
   } 
 }

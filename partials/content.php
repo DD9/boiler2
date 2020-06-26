@@ -31,7 +31,7 @@
 <?php get_template_part( 'partials/author-info' ); ?>
 
 
-<?php if ( is_single() ) {?>
+<?php if ( is_singular('post') ) {?>
 	<div id="single-post-nav">
 		<ul class="pager clearfix">
 

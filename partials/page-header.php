@@ -2,7 +2,7 @@
 $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
 ?>
 
-<div id="page-hero" class="row-outer">
+<div class="page-hero row-outer">
 	<div class="container">
 		<div class="row text-center justify-content-center">   
 			<div class="col-xl-9">

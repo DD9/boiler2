@@ -26,7 +26,7 @@ $intro = get_sub_field('intro');
     <?php } ?>
     
     <div class="row">        	
-      <div class="col-lg-12">
+      <div class="col">
 
 				<ul class="card-deck justify-content-center text-center<?php if ($cards_per_row == "one"): ?> card-deck-ones<?php elseif ($cards_per_row == "two"): ?> card-deck-twos<?php elseif ($cards_per_row == "three"): ?> card-deck-threes<?php elseif ($cards_per_row == "four"): ?> card-deck-fours<?php endif; ?>">
 				<?php while ( have_rows('cards') ) : the_row(); 
@@ -62,7 +62,7 @@ $intro = get_sub_field('intro');
 							<?php } ?>
 						</div>
 					
-					</li><!-- /card-one-fourth -->
+					</li><!-- /card -->
 				
 					<?php endwhile; ?>
 				</ul><!-- /card-group -->

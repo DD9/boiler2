@@ -121,7 +121,7 @@ a, a:visited {
 	}
 }
 
-.post-edit-link{
+.post-edit-link {
 	@extend .btn;
 	@extend .btn-sm;
 	@extend .btn-warning;
@@ -193,6 +193,11 @@ blockquote.text-center {
 blockquote.text-right {
 	border-left: none;
 	border-right: 2px solid;
+	padding: 0 $spacer 0 0;
+
+	@include media-breakpoint-up(lg) {
+		padding: 0 $spacer 0 0;
+	}	
 }
 
 .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger {

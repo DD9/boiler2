@@ -30,6 +30,20 @@ require_once( 'library/admin.php' ); // dashboard customizations
 
 
 
+// Disable Gutenberg
+//add_filter('use_block_editor_for_post', '__return_false');
+
+// Add Editor Stylesheet
+function my_theme_add_editor_styles() {
+    add_editor_style( '/css/editor-styles.css' );
+}
+add_action( 'init', 'my_theme_add_editor_styles' );
+
+function trim_excerpt($limit) {
+  return wp_trim_words(get_the_excerpt(), $limit);
+}
+
+
 /************* BREW & BOILER FILES ********************/
 
 $protocol = isset($_SERVER['HTTPS']) ? 'https' : 'http';
