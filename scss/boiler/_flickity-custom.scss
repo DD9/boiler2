@@ -4,20 +4,47 @@ Stylesheet: Custom Flickity styles
 ******************************************************************/
 
 
+.loading-icon {
+  position: absolute;
+  height: 80px;
+  left: 50% !important;
+  margin-left: -40px;
+  margin-top: -40px;
+  top: 50% !important;
+  width: 80px;
+  
+}
+
+
+
 .flickity-carousel {
-  background: #FAFAFA;
+  background: #fff;
+  position: relative;
   opacity: 0;
   transition: all 0.4s;
+
+  &::before {
+    content: "";
+
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' id='L9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 100 100' enable-background='new 0 0 0 0' xml:space='preserve'%3e%3cpath fill='%23000' d='M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50'%3e%3canimateTransform attributeName='transform' attributeType='XML' type='rotate' dur='1s' from='0 50 50' to='360 50 50' repeatCount='indefinite' /%3e%3c/path%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 80px;
+    left: 50% !important;
+    margin-left: -50px;
+    top: 10px !important;
+    width: 80px;
+  }
 }
 
 .flickity-carousel.load-hidden {
-  
+  display: none;
 }
 
 .flickity-carousel.flickity-enabled {
   opacity: 1;
 }
-
 
 
 .carousel-cell {
@@ -26,5 +53,14 @@ Stylesheet: Custom Flickity styles
   display: flex;
   height: 360px;
   width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
 }
 
+.flickity-carousel.flickity-enabled .flickity-slider > div:first-child {
+  opacity: 1;
+}
+
+.carousel-cell.flickity-bg-lazyloaded {
+  opacity: 1;
+}

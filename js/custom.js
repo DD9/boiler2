@@ -95,7 +95,9 @@ jQuery(document).ready(function($) {
     // options
     cellAlign: 'left',
     contain: true,
-    setGallerySize: false
+    setGallerySize: false,
+    bgLazyLoad: true,
+    cellSelector: '.carousel-cell'
   });
   
 
