@@ -41,7 +41,33 @@
 
 	<div class="container">
 			
+		  <!-- Flickity
+      ================================================== -->
 		
+		
+			<div class="bs-docs-section clearfix">
+				<div class="row">
+					<div class="col-lg-12">
+
+						<div class="flickity-carousel load-hidden" data-flickity='{ "autoPlay": true }'>
+
+							<div class="carousel-cell bg-img" style="background-image:url('https://source.unsplash.com/rbJB0x5VBok');">
+								<h1 class="entry-title" itemprop="headline">Slide One</h1>
+							</div> <!-- /carousel-cell -->
+
+							<div class="carousel-cell bg-img" style="background-image:url('https://source.unsplash.com/728DGN-qqnA');">
+								<h1 class="entry-title" itemprop="headline">Slide Two</h1>
+							</div> <!-- /carousel-cell -->
+
+							<div class="carousel-cell bg-img" style="background-image:url('https://source.unsplash.com/uKmRGSTsafg');">
+								<h1 class="entry-title" itemprop="headline">Slide Three</h1>
+							</div> <!-- /carousel-cell -->
+
+						</div><!-- /flickity-carousel -->
+		
+					</div><!-- /col -->
+        </div><!-- /row -->
+      </div><!-- /bs-docs-section -->
 		
 		
 		
@@ -49,7 +75,7 @@
       ================================================== -->
 		
 		
-			<div class="bs-docs-section clearfix">
+			<?php /*?><div class="bs-docs-section clearfix">
 				<div class="row">
 					<div class="col-lg-12">
 
@@ -77,7 +103,7 @@
 		
 					</div><!-- /col -->
         </div><!-- /row -->
-      </div><!-- /bs-docs-section -->
+      </div><!-- /bs-docs-section --><?php */?>
 			
           
 

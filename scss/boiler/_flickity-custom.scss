@@ -1,0 +1,30 @@
+/******************************************************************
+Author: DD9
+Stylesheet: Custom Flickity styles
+******************************************************************/
+
+
+.flickity-carousel {
+  background: #FAFAFA;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.flickity-carousel.load-hidden {
+  
+}
+
+.flickity-carousel.flickity-enabled {
+  opacity: 1;
+}
+
+
+
+.carousel-cell {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 360px;
+  width: 100%;
+}
+

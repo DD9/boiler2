@@ -52,6 +52,7 @@ jQuery(document).ready(function($) {
 	
 	// add all your scripts here
 	// Initialize owl carousel(s)
+  /*
 	$(".owl-carousel-standard").each(function(){
 		// If there is more than one slide
 		 if( $(this).find(".owl-carousel-item").length > 1 ) {
@@ -79,6 +80,24 @@ jQuery(document).ready(function($) {
 			 });
 		};
 	});	
+  */
+  
+  
+  // Flickity
+  // hide then show on load
+  var $carousel = $('.flickity-carousel').removeClass('load-hidden');
+  // trigger redraw for transition
+  $carousel[0].offsetHeight;
+  // init Flickity
+  $carousel.flickity();
+  
+  $('.flickity-carousel').flickity({
+    // options
+    cellAlign: 'left',
+    contain: true,
+    setGallerySize: false
+  });
+  
 
 	
 	$(".toggle-trigger").click(function(){
