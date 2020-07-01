@@ -48,29 +48,6 @@
 				<div class="row">
 					<div class="col-lg-12">
             
-          
-
-
-            
-            
-            <?php /*?><div class="flickity-carousel load-hidden" data-flickity='{ "autoPlay": true }'><?php */?>
-						<?php /*?><div class="flickity-carousel">
-
-							<div class="carousel-cell bg-img" data-flickity-bg-lazyload="https://source.unsplash.com/rbJB0x5VBok">
-								<h1 class="entry-title" itemprop="headline">Slide One</h1>
-							</div> <!-- /carousel-cell -->
-
-							<div class="carousel-cell bg-img" data-flickity-bg-lazyload="https://source.unsplash.com/728DGN-qqnA">
-								<h1 class="entry-title" itemprop="headline">Slide Two</h1>
-							</div> <!-- /carousel-cell -->
-
-							<div class="carousel-cell bg-img" data-flickity-bg-lazyload="https://source.unsplash.com/uKmRGSTsafg">
-								<h1 class="entry-title" itemprop="headline">Slide Three</h1>
-							</div> <!-- /carousel-cell -->
-            
-						</div><!-- /flickity-carousel --><?php */?>
-            
-            
             <div class="flickity-carousel is-hidden text-white">
               <img class="preload-image" src="<?= get_bloginfo('template_directory'); ?>/images/rbJB0x5VBok_tiny.jpg" alt="Preload image">
 
@@ -86,7 +63,6 @@
 							<div class="carousel-cell bg-img" style="background-image:url('https://source.unsplash.com/uKmRGSTsafg');">
 								<h1 class="entry-title" itemprop="headline">Slide Three</h1>
 							</div> <!-- /carousel-cell -->
-              
               
 
 						</div><!-- /flickity-carousel -->

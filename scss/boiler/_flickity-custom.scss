@@ -17,7 +17,7 @@ Stylesheet: Custom Flickity styles
 
 
 .flickity-carousel {
-  background: #fff;
+  background: $gray-600;
   height: 400px;
   position: relative;
   opacity: 0;
@@ -41,10 +41,6 @@ Stylesheet: Custom Flickity styles
   }
 }
 
-.flickity-carousel.is-hidden {
-  display: none;
-}
-
 .flickity-carousel.flickity-enabled {
   opacity: 1;
 }
@@ -61,7 +57,7 @@ Stylesheet: Custom Flickity styles
 
 
 .preload-image {
-  filter: blur(8px);
+  filter: blur(4px);
   height: 110%;
   left: -5%;
   max-width: 110%;
