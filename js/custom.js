@@ -91,16 +91,15 @@ jQuery(document).ready(function($) {
   // init Flickity
   $carousel.flickity({
     // options
+    //bgLazyLoad: 1,
     cellSelector: '.carousel-cell',
-    //bgLazyLoad: true
     cellAlign: 'left',
     contain: true,
     setGallerySize: false,
     
   });
   
-  
-  
+  //Transision in the first slide opacity after imagesLoaded
   $('.flickity-carousel .carousel-cell-first').imagesLoaded( { background: true }, function() {    
     $('.flickity-carousel .carousel-cell-first').addClass('bg-image-loaded');
   });
