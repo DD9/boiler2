@@ -85,21 +85,26 @@ jQuery(document).ready(function($) {
   
   // Flickity
   // hide then show on load
-  var $carousel = $('.flickity-carousel').removeClass('load-hidden');
+  var $carousel = $('.flickity-carousel').removeClass('is-hidden');
   // trigger redraw for transition
   $carousel[0].offsetHeight;
   // init Flickity
-  $carousel.flickity();
-  
-  $('.flickity-carousel').flickity({
+  $carousel.flickity({
     // options
+    cellSelector: '.carousel-cell',
+    //bgLazyLoad: true
     cellAlign: 'left',
     contain: true,
     setGallerySize: false,
-    bgLazyLoad: true,
-    cellSelector: '.carousel-cell'
+    
   });
   
+  
+  
+  $('.flickity-carousel .carousel-cell-first').imagesLoaded( { background: true }, function() {    
+    $('.flickity-carousel .carousel-cell-first').addClass('bg-image-loaded');
+  });
+
 
 	
 	$(".toggle-trigger").click(function(){

@@ -41,7 +41,7 @@ var styleSassDestination    = './css/'; // Path to place the compiled CSS file.
 var jsVendorSRC = {
     vendorPaths: [
         './node_modules/flickity/dist/flickity.pkgd.min.js',
-        './node_modules/flickity-bg-lazyload/bg-lazyload.js',
+        //'./node_modules/flickity-bg-lazyload/bg-lazyload.js',
 			  './node_modules/jquery.easing/bower_components/jquery-easing-original/jquery.easing.min.js',
         './node_modules/popper.js/dist/umd/popper.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js'
