@@ -20,8 +20,11 @@ $className = 'testimonial';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
+
 if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
+}else {
+  $className .= ' alignfull';
 }
 
 // Load values and assign defaults.

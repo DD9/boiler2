@@ -10,6 +10,30 @@
 
 
 /**
+ * Block category for "Get With Gutenberg" if it doesn't exist already.
+ *
+ * @param array $categories Array of block categories.
+ *
+ * @return array
+ */
+function boiler_block_categories( $categories ) {
+    $category_slugs = wp_list_pluck( $categories, 'slug' );
+    return in_array( 'boiler-blocks', $category_slugs, true ) ? $categories : array_merge(
+        $categories,
+        array(
+            array(
+                'slug'  => 'boiler-blocks',
+                'title' => __( 'Boiler Blocks', 'boiler-blocks' ),
+                'icon'  => null,
+            ),
+        )
+    );
+}
+add_filter( 'block_categories', 'boiler_block_categories' );
+
+
+
+/**
  * ACF blocks
  *
  */
@@ -25,7 +49,7 @@ function my_acf_init_block_types() {
             'title'             => __('Testimonial'),
             'description'       => __('A custom testimonial block.'),
             'render_template'   => 'partials/blocks/testimonial.php',
-            'category'          => 'custom',
+            'category'          => 'boiler-blocks',
             'icon'              => 'admin-comments',
             'mode'			        => 'preview',
             'keywords'          => array( 'testimonial', 'quote' ),
@@ -37,9 +61,13 @@ function my_acf_init_block_types() {
           'name'			=> 'team-member',
           'title'			=> __( 'Team Member', 'clientname' ),
           'render_template'	=> 'partials/blocks/team-member.php',
-          'category'		=> 'formatting',
+          'category'		=> 'boiler-blocks',
           'icon'			=> 'admin-users',
           'mode'			=> 'preview',
+          'align'		=> 'wide',
+          'supports'	=> array(
+            'align'		=> array('wide'),
+          ),
           'keywords'		=> array( 'profile', 'user', 'author' )
         ));
 
@@ -96,7 +124,7 @@ add_filter( 'use_block_editor_for_post_type', 'ea_disable_gutenberg', 10, 2 );
 /**
  * Only enable specific Gutenberg blocks
  * https://rudrastyh.com/gutenberg/remove-default-blocks.html
-
+ 
 
 add_filter( 'allowed_block_types', 'boiler_allowed_block_types' );
  
@@ -124,8 +152,6 @@ function boiler_allowed_block_types( $allowed_blocks ) {
 		'core/html',
     'core/preformatted',
     'core/pullquote',
-    'acf/testimonial',
-    'acf/team-member',
     
     //Layout
     'core/button',
@@ -143,9 +169,12 @@ function boiler_allowed_block_types( $allowed_blocks ) {
 		'core-embed/youtube',
     'core-embed/facebook',
 		'core-embed/instagram',
-    'core-embed/vimeo'
+    'core-embed/vimeo',
+    
+    //Boiler
+    'acf/testimonial',
+    'acf/team-member',
 	);
  
 }
-
- */
+*/
