@@ -8,6 +8,47 @@
  * @license      GPL-2.0+
 **/
 
+
+/**
+ * ACF blocks
+ *
+ */
+add_action('acf/init', 'my_acf_init_block_types');
+function my_acf_init_block_types() {
+
+    // Check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+        // Testimonial
+        acf_register_block_type(array(
+            'name'              => 'testimonial',
+            'title'             => __('Testimonial'),
+            'description'       => __('A custom testimonial block.'),
+            'render_template'   => 'partials/blocks/testimonial.php',
+            'category'          => 'custom',
+            'icon'              => 'admin-comments',
+            'mode'			        => 'preview',
+            'keywords'          => array( 'testimonial', 'quote' ),
+        ));
+      
+      
+        // Team Member
+        acf_register_block_type( array(
+          'name'			=> 'team-member',
+          'title'			=> __( 'Team Member', 'clientname' ),
+          'render_template'	=> 'partials/blocks/team-member.php',
+          'category'		=> 'formatting',
+          'icon'			=> 'admin-users',
+          'mode'			=> 'preview',
+          'keywords'		=> array( 'profile', 'user', 'author' )
+        ));
+
+      
+    }
+}
+
+
+
 /**
  * Templates and Page IDs without editor
  *
@@ -55,7 +96,7 @@ add_filter( 'use_block_editor_for_post_type', 'ea_disable_gutenberg', 10, 2 );
 /**
  * Only enable specific Gutenberg blocks
  * https://rudrastyh.com/gutenberg/remove-default-blocks.html
- */
+
 
 add_filter( 'allowed_block_types', 'boiler_allowed_block_types' );
  
@@ -83,6 +124,8 @@ function boiler_allowed_block_types( $allowed_blocks ) {
 		'core/html',
     'core/preformatted',
     'core/pullquote',
+    'acf/testimonial',
+    'acf/team-member',
     
     //Layout
     'core/button',
@@ -105,3 +148,4 @@ function boiler_allowed_block_types( $allowed_blocks ) {
  
 }
 
+ */

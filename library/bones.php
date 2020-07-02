@@ -262,7 +262,7 @@ function bones_theme_support() {
   
     // Editor Styles
     add_theme_support( 'editor-styles' );
-    add_editor_style( '/css/editor-styles.css' );
+    add_editor_style( '/css/editor-style.css' );
 
     // wp thumbnails (sizes handled in /library/custom-image-sizes.php)
     add_theme_support( 'post-thumbnails' );
