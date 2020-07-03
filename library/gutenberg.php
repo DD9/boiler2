@@ -1,8 +1,8 @@
 <?php
 
 /************* INCLUDE NEEDED FILES ***************/
-require_once( 'library/register-block-categories.php' );
-require_once( 'library/register-blocks.php' );
+require_once( 'register-block-categories.php' );
+require_once( 'register-blocks.php' );
 
 
 

@@ -1,12 +1,12 @@
 {
     "key": "group_5efe3c2322695",
-    "title": "Block: Team Member",
+    "title": "Block: Cards",
     "fields": [
         {
-            "key": "field_5efe3c3038f7a",
-            "label": "Name",
-            "name": "name",
-            "type": "text",
+            "key": "field_5eff657f47f04",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,17 +15,14 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "key": "field_5efe3c3638f7b",
-            "label": "Title",
-            "name": "title",
-            "type": "text",
+            "key": "field_5eff5ac22753c",
+            "label": "Cards",
+            "name": "cards",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,17 +31,81 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Card",
+            "sub_fields": [
+                {
+                    "key": "field_5eff5b102753f",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5eff5adf2753d",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5eff5afc2753e",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "wpautop"
+                }
+            ]
         },
         {
-            "key": "field_5efe3c3c38f7c",
-            "label": "Photo",
-            "name": "photo",
-            "type": "image",
+            "key": "field_5eff658b47f05",
+            "label": "Appearance",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -53,22 +114,14 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "key": "field_5efe3c4438f7d",
-            "label": "Description",
-            "name": "description",
-            "type": "textarea",
+            "key": "field_5eff659547f06",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -77,11 +130,22 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "default_value": ""
+        },
+        {
+            "key": "field_5eff65e337fdf",
+            "label": "Text Color",
+            "name": "text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
         }
     ],
     "location": [
@@ -89,7 +153,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/team-member"
+                "value": "acf\/card"
             }
         ]
     ],
@@ -101,5 +165,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593720020
+    "modified": 1593796078
 }

@@ -26,14 +26,14 @@ function my_acf_init_block_types() {
         ));
       
       
-        // Team Member
+        // Card
         acf_register_block_type( array(
-          'name'			=> 'team-member',
-          'title'			=> __( 'Team Member', 'clientname' ),
-          'render_template'	=> 'partials/blocks/team-member.php',
+          'name'			=> 'card',
+          'title'			=> __( 'Card'),
+          'render_template'	=> 'partials/blocks/cards.php',
           'category'		=> 'boiler-blocks',
           'icon'			=> 'admin-users',
-          'mode'			=> 'preview',
+          'mode'			=> 'edit',
           'keywords'		=> array( 'profile', 'user', 'author' ),
           'align'		=> 'full',
           'supports'	=> array(
