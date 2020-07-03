@@ -1,4 +1,14 @@
 <?php
+
+/************* INCLUDE NEEDED FILES ***************/
+require_once( 'library/register-block-categories.php' );
+require_once( 'library/register-blocks.php' );
+
+
+
+
+
+
 /**
  * Disable Editor
  *
@@ -7,74 +17,6 @@
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
-
-
-/**
- * Block category for "Get With Gutenberg" if it doesn't exist already.
- *
- * @param array $categories Array of block categories.
- *
- * @return array
- */
-function boiler_block_categories( $categories ) {
-    $category_slugs = wp_list_pluck( $categories, 'slug' );
-    return in_array( 'boiler-blocks', $category_slugs, true ) ? $categories : array_merge(
-        $categories,
-        array(
-            array(
-                'slug'  => 'boiler-blocks',
-                'title' => __( 'Boiler Blocks', 'boiler-blocks' ),
-                'icon'  => null,
-            ),
-        )
-    );
-}
-add_filter( 'block_categories', 'boiler_block_categories' );
-
-
-
-/**
- * ACF blocks
- *
- */
-add_action('acf/init', 'my_acf_init_block_types');
-function my_acf_init_block_types() {
-
-    // Check function exists.
-    if( function_exists('acf_register_block_type') ) {
-
-        // Testimonial
-        acf_register_block_type(array(
-            'name'              => 'testimonial',
-            'title'             => __('Testimonial'),
-            'description'       => __('A custom testimonial block.'),
-            'render_template'   => 'partials/blocks/testimonial.php',
-            'category'          => 'boiler-blocks',
-            'icon'              => 'admin-comments',
-            'mode'			        => 'preview',
-            'keywords'          => array( 'testimonial', 'quote' ),
-        ));
-      
-      
-        // Team Member
-        acf_register_block_type( array(
-          'name'			=> 'team-member',
-          'title'			=> __( 'Team Member', 'clientname' ),
-          'render_template'	=> 'partials/blocks/team-member.php',
-          'category'		=> 'boiler-blocks',
-          'icon'			=> 'admin-users',
-          'mode'			=> 'preview',
-          'align'		=> 'wide',
-          'supports'	=> array(
-            'align'		=> array('wide'),
-          ),
-          'keywords'		=> array( 'profile', 'user', 'author' )
-        ));
-
-      
-    }
-}
-
 
 
 /**
