@@ -33,7 +33,7 @@ function my_acf_init_block_types() {
           'render_template'	=> 'partials/blocks/cards.php',
           'category'		=> 'boiler-blocks',
           'icon'			=> 'admin-users',
-          'mode'			=> 'edit',
+          'mode'			=> 'preview',
           'keywords'		=> array( 'profile', 'user', 'author' ),
           'align'		=> 'full',
           'supports'	=> array(
