@@ -6,7 +6,23 @@ require_once( 'register-blocks.php' );
 
 
 
+/**
+ * Gutenberg scripts and styles
+ *
+ */
+function gutenberg_scripts() {
+	wp_enqueue_style( 'theme-fonts', theme_fonts_url() );
+	wp_enqueue_script( 'theme-editor', get_template_directory_uri() . '/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_template_directory() . '/js/editor.js' ), true );
+}
+add_action( 'enqueue_block_editor_assets', 'gutenberg_scripts' );
 
+/**
+ * Theme Fonts URL
+ *
+ */
+function theme_fonts_url() {
+	return 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap';
+}
 
 
 /**
