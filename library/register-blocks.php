@@ -17,7 +17,7 @@ function my_acf_init_block_types() {
             'render_template'   => 'partials/blocks/testimonial.php',
             'category'          => 'boiler-blocks',
             'icon'              => 'admin-comments',
-            'mode'			        => 'preview',
+            'mode'			        => 'auto',
             'keywords'          => array( 'testimonial', 'quote' ),
             'align'		=> 'full',
             'supports'	=> array(
@@ -33,7 +33,7 @@ function my_acf_init_block_types() {
           'render_template'	=> 'partials/blocks/cards.php',
           'category'		=> 'boiler-blocks',
           'icon'			=> 'admin-users',
-          'mode'			=> 'preview',
+          'mode'			=> 'auto',
           'keywords'		=> array( 'profile', 'user', 'author' ),
           'align'		=> 'full',
           'supports'	=> array(
