@@ -16,6 +16,13 @@ body.woocommerce-page {
 		padding: 0;
 	}
 
+	.col-1 + .col-2 {
+		margin-top: 2rem;
+		@include media-breakpoint-up(md) {
+			margin-top: 0;
+		}
+	}
+
 	//Resetting
 	.qty.text {
 	  display: inline;
@@ -384,6 +391,27 @@ ul.product-meta {
 /* Form Elements
 -------------------------------- 
 */ 
+
+// Select menus
+.woocommerce form .form-row .select2-container,
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	font-size: 1.05rem;
+  line-height: 39px !important;
+  height: 39px !important;
+}
+
+.select2-container--default .select2-selection--single {
+	border-color: $input-border-color;
+	border-radius: 0;
+}
+
+.woocommerce form .form-row.woocommerce-validated .select2-container, 
+.woocommerce form .form-row.woocommerce-validated input.input-text, 
+.woocommerce form .form-row.woocommerce-validated select {
+	border-color: $input-border-color;
+}
 .woocommerce-page .row-outer {
 	input[type=text],
 	input[type=password],
@@ -435,9 +463,11 @@ ul.product-meta {
 	border-collapse: collapse;
 }
 
-.woocommerce table th {
+.woocommerce table th,
+.woocommerce table.shop_table th {
   background-color: $gray-200;
   color: $body-color;
+  font-family: $font-family-sans-serif;
   font-size: $font-size-sm;
   font-weight: normal;
   text-transform: uppercase;
@@ -445,9 +475,9 @@ ul.product-meta {
 
 .woocommerce-page .row-outer table th, 
 .woocommerce-page .row-outer table td {
-	vertical-align: middle;
+	vertical-align: middle !important;
 	@include media-breakpoint-up(lg) {
-		padding: .857em 1.387em;
+		padding: .857em 1.387em !important;
 	}
 }
 
@@ -691,24 +721,6 @@ table.cart td.actions .coupon {
 #add_payment_method #payment ul.payment_methods li img.stripe-icon, 
 .woocommerce-checkout #payment ul.payment_methods li img.stripe-icon {
 	max-width: 25px;
-}
-
-// Select menus
-.woocommerce form .form-row .select2-container {
-  line-height: 39px !important;
-  height: 39px !important;
-}
-.select2-container--default .select2-selection--single {
-  height: 39px !important;
-  line-height: 39px !important;
-}
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: 39px !important;
-}
-
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-	height: 39px !important;
-  line-height: 39px !important;
 }
 
 // Place Order, Terms & Conditions, GDPR/Privacy
