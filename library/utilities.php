@@ -32,3 +32,28 @@ function array_listing( $ranges, $glue = ', ', $last = ' or ') {
   array_splice( $ranges, -2, 2, implode( $last, array_slice( $ranges, -2, 2 ) ) );
   return implode( $glue , $ranges );
 }
+
+
+
+
+
+/**
+ * Only show ACF menu to Admins who have toggled true/false to show it.
+ */
+
+add_filter('acf/settings/show_admin', 'my_acf_show_admin');
+
+function my_acf_show_admin( $show ) {
+  
+    // get the current user's ID
+    $user_id = get_current_user_id();
+    $show_acf_menu = get_field('show_acf_menu', 'user_'. $user_id);
+  
+    if ( $show_acf_menu ){
+      return true; // show it
+    }
+    else {
+      return false; // hide it
+    }
+    
+}
