@@ -3,19 +3,6 @@ Author: DD9
 Stylesheet: Custom Flickity styles
 ******************************************************************/
 
-
-.loading-icon {
-  position: absolute;
-  height: 80px;
-  left: 50% !important;
-  margin-left: -40px;
-  margin-top: -40px;
-  top: 50% !important;
-  width: 80px;
-}
-
-
-
 .flickity-carousel {
   background: $gray-600;
   height: 400px;
@@ -26,10 +13,8 @@ Stylesheet: Custom Flickity styles
 
   &::before {
     content: "";
-
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' id='L9' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 100 100' enable-background='new 0 0 0 0' xml:space='preserve'%3e%3cpath fill='%23fff' d='M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50'%3e%3canimateTransform attributeName='transform' attributeType='XML' type='rotate' dur='1s' from='0 50 50' to='360 50 50' repeatCount='indefinite' /%3e%3c/path%3e%3c/svg%3e");
     background-repeat: no-repeat;
-
     position: absolute;
     height: 80px;
     left: 50% !important;
@@ -55,19 +40,6 @@ Stylesheet: Custom Flickity styles
   transition: all 0.4s;
 }
 
-
-.preload-image {
-  filter: blur(4px);
-  height: 110%;
-  left: -5%;
-  max-width: 110%;
-  position: absolute;
-  right: -5%;
-  top: -5%;
-  width: 110%;
-  z-index: 1;
-}
-
 .flickity-viewport {
   z-index: 3;
 }
@@ -75,7 +47,6 @@ Stylesheet: Custom Flickity styles
 .flickity-button {
   z-index: 4;
 }
-
 
 .flickity-carousel .carousel-cell-first {
   opacity: 0;

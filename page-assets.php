@@ -49,8 +49,6 @@
 					<div class="col-lg-12">
             
             <div class="flickity-carousel is-hidden text-white">
-              <img class="preload-image" src="<?= get_bloginfo('template_directory'); ?>/images/rbJB0x5VBok_tiny.jpg" alt="Preload image">
-
 
 							<div class="carousel-cell bg-img carousel-cell-first" style="background-image:url('https://source.unsplash.com/rbJB0x5VBok');">
                 <h1 class="entry-title" itemprop="headline">Slide One</h1>
