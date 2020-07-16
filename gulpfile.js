@@ -35,6 +35,7 @@ var browsersyncConfig = require('./browser-sync-config.json');
 // Style related.
 var styleSassSRC            = './scss/style.scss'; // Path to main .scss file.
 var styleSassDestination    = './css/'; // Path to place the compiled CSS file.
+var editorstyleSassSRC            = './scss/editor-style.scss'; // Path to WordPress editor-style.scss file.
 // Default set to root folder.
 
 // JS Vendor related.
@@ -134,7 +135,7 @@ gulp.task( 'browser-sync', function() {
 
 
 /**
- * Task: `compile-sass`.
+ * Task: `compile-sass-main`.
  *
  * Compiles Sass, Autoprefixes it and Minifies CSS.
  *
@@ -147,7 +148,7 @@ gulp.task( 'browser-sync', function() {
  *    6. Minifies the CSS file and generates style.min.css
  *    7. Injects CSS or reloads the browser via browserSync
  */
-gulp.task('compile-sass', function () {
+gulp.task('compile-sass-main', function () {
     gulp.src( styleSassSRC )
         .pipe( sourcemaps.init() )
         .pipe( sass( {
@@ -185,7 +186,7 @@ gulp.task('compile-sass', function () {
 });
 
 /**
- * Task: `compile-sass-lite`.
+ * Task: `compile-sass-main-lite`.
  *
  * Compiles Sass.
  *
@@ -194,11 +195,62 @@ gulp.task('compile-sass', function () {
  *    2. Compiles Sass to CSS
  */
 /* Task to compile sass unminified & unmapped */
-gulp.task('compile-sass-lite', function() {
+gulp.task('compile-sass-main-lite', function() {
     gulp.src(styleSassSRC)
         .pipe(sass())
         .pipe(gulp.dest(styleSassDestination))
-        .pipe( notify( { message: 'TASK: "compile-sass" Completed! 💯', onLast: true } ) )
+        .pipe( notify( { message: 'TASK: "compile-sass-main" Completed! 💯', onLast: true } ) )
+});
+
+/**
+ * Task: `compile-sass-editor`.
+ *
+ * Compiles Sass, Autoprefixes it and Minifies CSS.
+ *
+ * This task does the following:
+ *    1. Gets the source scss file
+ *    2. Compiles Sass to CSS
+ *    3. Writes Sourcemaps for it
+ *    4. Autoprefixes it and generates style.css
+ *    5. Renames the CSS file with suffix .min.css
+ *    6. Minifies the CSS file and generates style.min.css
+ *    7. Injects CSS or reloads the browser via browserSync
+ */
+gulp.task('compile-sass-editor', function () {
+    gulp.src( editorstyleSassSRC )
+        .pipe( sourcemaps.init() )
+        .pipe( sass( {
+            errLogToConsole: true,
+            outputStyle: 'compact',
+            //outputStyle: 'compressed',
+            // outputStyle: 'nested',
+            // outputStyle: 'expanded',
+            precision: 10
+        } ) )
+        .on('error', console.error.bind(console))
+        .pipe( sourcemaps.write( { includeContent: false } ) )
+        .pipe( sourcemaps.init( { loadMaps: true } ) )
+        .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
+
+        .pipe( sourcemaps.write ( styleSassDestination ) )
+        .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+        .pipe( gulp.dest( styleSassDestination ) )
+
+        .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
+        .pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
+
+        .pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
+
+        .pipe( rename( { suffix: '.min' } ) )
+        .pipe( minifycss( {
+            maxLineLen: 10
+        }))
+        .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+        .pipe( gulp.dest( styleSassDestination ) )
+
+        .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
+        .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
+        .pipe( notify( { message: 'TASK: "editor-style" Completed! 💯', onLast: true } ) )
 });
 
 /**
@@ -262,10 +314,11 @@ gulp.task( 'customJS', function() {
  * Runs Gulp and watches for specified file changes.
  * Reruns tasks and reloads browserSync on change.
  */
-gulp.task( 'default', ['vendorsJs', 'customJS', 'compile-sass', 'browser-sync'], function () {
+gulp.task( 'default', ['vendorsJs', 'customJS', 'compile-sass-main', 'compile-sass-editor', 'browser-sync'], function () {
     gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
     gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
     gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
-    gulp.watch( sassWatchFiles, ['compile-sass', reload]); // Reload on CSS file on SASS changes.
+    gulp.watch( sassWatchFiles, ['compile-sass-main', reload]); // Reload on CSS file on SASS changes.
+    gulp.watch( sassWatchFiles, ['compile-sass-editor', reload]); // Reload on CSS file on SASS changes.
 });
 
