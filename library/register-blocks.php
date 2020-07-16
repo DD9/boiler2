@@ -32,9 +32,8 @@ function my_acf_init_block_types() {
           'title'			=> __( 'Card'),
           'render_template'	=> 'partials/blocks/cards.php',
           'category'		=> 'boiler-blocks',
-          'icon'			=> 'admin-users',
           'mode'			=> 'auto',
-          'keywords'		=> array( 'profile', 'user', 'author' ),
+          'keywords'		=> array( 'cards', 'columns', 'row' ),
           'align'		=> 'full',
           'supports'	=> array(
             'align'		=> array('full'),

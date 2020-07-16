@@ -1,6 +1,6 @@
 <?php
 /**
- * Block category for "Get With Gutenberg" if it doesn't exist already.
+ * Block category for "Boiler Blocks" if it doesn't exist already.
  *
  * @param array $categories Array of block categories.
  *

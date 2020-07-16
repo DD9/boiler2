@@ -5,6 +5,7 @@ Stylesheet: Card Overrides and Extra Styles
 
 .card {
 	@include transition(all .2s ease);
+  padding: 0;
 }
 
 .card-body {
