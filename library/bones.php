@@ -85,6 +85,12 @@ function bones_head_cleanup() {
     remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
     // WP version
     remove_action( 'wp_head', 'wp_generator' );
+  
+    //Disable oEmbed Discovery Links and wp-embed.min.js
+    remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+    remove_action( 'wp_head', 'wp_oembed_add_host_js' );
+    remove_action('rest_api_init', 'wp_oembed_register_route');
+    remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
 
     /*
      * Uncomment to enable CSS & JS caching.
