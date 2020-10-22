@@ -173,7 +173,6 @@ function bones_scripts_and_styles() {
 
 
         //Enqueue scripts --------------------
-        wp_enqueue_script( 'jquery' );
         wp_enqueue_script( 'vendors-min' );
         wp_enqueue_script( 'custom-js' );
 			
