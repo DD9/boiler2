@@ -141,11 +141,6 @@ function bones_scripts_and_styles() {
 
     global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
-    //First Handle Jquery
-    wp_deregister_script('jquery');
-    wp_register_script('jquery', TMPL_URL . '/js/jquery-3.5.1.min.js', false);
-    wp_enqueue_script('jquery');
-
 
     if (!is_admin()) {
 
