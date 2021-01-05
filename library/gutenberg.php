@@ -3,7 +3,7 @@
 /************* INCLUDE NEEDED FILES ***************/
 require_once( 'register-block-categories.php' );
 require_once( 'register-blocks.php' );
-
+require_once( 'register-block-patterns.php' );
 
 
 /**
@@ -82,7 +82,7 @@ add_filter( 'use_block_editor_for_post_type', 'ea_disable_gutenberg', 10, 2 );
 /**
  * Only enable specific Gutenberg blocks
  * https://rudrastyh.com/gutenberg/remove-default-blocks.html
- 
+*/ 
 
 add_filter( 'allowed_block_types', 'boiler_allowed_block_types' );
  
@@ -131,8 +131,7 @@ function boiler_allowed_block_types( $allowed_blocks ) {
     
     //Boiler
     'acf/testimonial',
-    'acf/team-member',
+    'acf/cards',
 	);
  
 }
-*/

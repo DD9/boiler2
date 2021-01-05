@@ -26,10 +26,10 @@ function my_acf_init_block_types() {
         ));
       
       
-        // Card
+        // Cards
         acf_register_block_type( array(
-          'name'			=> 'card',
-          'title'			=> __( 'Card'),
+          'name'			=> 'cards',
+          'title'			=> __( 'Cards'),
           'render_template'	=> 'partials/blocks/cards.php',
           'category'		=> 'boiler-blocks',
           'mode'			=> 'auto',
@@ -39,7 +39,23 @@ function my_acf_init_block_types() {
             'align'		=> array('full'),
           )
         ));
-
+      
+        // About
+        /*
+        acf_register_block_type( array(
+          'title'			=> __( 'About', 'client_textdomain' ),
+          'name'			=> 'about',
+          'render_template'	=> 'partials/blocks/about.php',
+          'category'		=> 'boiler-blocks',
+          'mode'			=> 'preview',
+          'supports'		=> [
+            'align'			=> false,
+            'anchor'		=> true,
+            'customClassName'	=> true,
+            'jsx' 			=> true,
+          ]
+        ));
+        */
       
     }
 }
