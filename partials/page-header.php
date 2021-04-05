@@ -2,10 +2,10 @@
 $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
 ?>
 
-<div class="page-hero row-outer">
+<section class="page-hero row-outer">
 	<div class="container">
 		<div class="row text-center justify-content-center">   
-			<div class="col-xl-9">
+			<div class="col-xl-10 col-xxl-8">
 				<header class="entry-header">					
 					
 					<?php if ( is_singular('post') ) { ?>
@@ -17,6 +17,6 @@ $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID 
 			</div> <!-- /col -->
 		</div> <!-- /row -->
 	</div> <!-- /container -->
-</div> <!-- /page-hero -->
+</section> <!-- /page-hero -->
 
 

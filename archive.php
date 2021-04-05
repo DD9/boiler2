@@ -4,10 +4,10 @@ $blog['title'] = get_the_title( $blog['id'] );
 $blog['permalink'] = get_the_permalink( $blog['id'] );
 ?>
 
-<div class="page-hero row-outer">
+<section class="page-hero row-outer">
   <div class="container">
     <div class="row">
-			<div class="col-xl-9">
+			<div class="col-xl-10 col-xxl-8">
 				
 				<header class="entry-header text-center">
 					<?php if (is_category()) { ?>
@@ -64,12 +64,12 @@ $blog['permalink'] = get_the_permalink( $blog['id'] );
     	</div> <!-- /col --> 	   
     </div> <!-- /row -->
   </div> <!-- /container -->
-</div> <!-- /page-hero -->
+</section> <!-- /page-hero -->
 
 <section class="row-outer">						
 	<div class="container">	
 		<div class="row justify-content-center">
-			<div class="col-xl-9">
+			<div class="col-xl-10 col-xxl-8">
 				<?php if (have_posts()) : while (have_posts()) : the_post();?>
 					<?php get_template_part( 'partials/content', 'excerpt' ); ?>
 

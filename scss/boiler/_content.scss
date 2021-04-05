@@ -134,3 +134,105 @@ These are the styles for general content
     margin-bottom: 0;
   }
 }
+
+
+
+/* ACF Toggle Panels
+================================================== */
+.layout-panels {
+  .toggle-panel {
+    background-color: $white;
+    padding: 0;
+  }
+}
+
+.layout-panels.bg-white,
+.layout-panels.bg-none {
+  .toggle-panel {
+    background-color: $gray-200;
+  }
+}
+
+.layout-panels .toggle-panel + .toggle-panel {
+  margin-top: ($grid-gutter-width / 2);
+}
+
+.bg-white .toggle-panel {
+  border-color: $hr-border-color;
+}
+
+.toggle-panel .toggle-trigger {
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: 1.25rem 3rem 1.25rem 1.25rem;
+  position: relative;
+  @include transition(all .2s ease);
+
+  @include media-breakpoint-up(xl) {
+    font-size: $font-size-base * 1.2;
+  }
+
+  &:hover,
+  &.active {
+    .toggle-icon {
+      color: $primary;
+    }
+  }
+}
+
+.toggle-icon {
+  color: $primary;
+  display: block;
+  position: absolute;
+  height: 30px;
+  width: 20px;
+  right: 1.5rem;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.toggle-trigger > .toggle-icon .fa {
+  display: block;
+  margin: 0 auto;
+  width: 24px;
+  font-size: 1.1em;
+}
+
+.toggle-trigger > .toggle-icon .fa-minus {
+  display: none;
+}
+
+.toggle-panel .toggle-trigger.active,
+.toggle-panel .toggle-trigger.active:hover {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.toggle-panel .toggle-trigger.active > .toggle-icon .fa-minus,
+.toggle-panel .toggle-trigger.active:hover  > .toggle-icon .fa-minus {
+  display: block;
+}
+
+.toggle-panel .toggle-trigger.active > .toggle-icon .fa-plus,
+.toggle-panel .toggle-trigger.active:hover > .toggle-icon .fa-plus {
+  display: none;
+}
+
+.toggle-panel-content {
+  border-top: none;
+  display: none;
+  padding: 0 1.25rem 1.25rem;
+  margin: 0;
+  
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.bg-primary,
+.bg-geo-red {
+  .toggle-panel .toggle-trigger,
+  .toggle-panel .toggle-panel-content {
+    border: none;
+  }
+}

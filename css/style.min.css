@@ -1251,6 +1251,21 @@ label:not(.form-check-label){font-size:.875rem;text-transform:uppercase;letter-s
 .col-content{position:relative}
 .col-content>*:last-child{margin-bottom:0}
 .col-content.col-content-last{margin-bottom:0}
+.layout-panels .toggle-panel{background-color:#fff;padding:0}
+.layout-panels.bg-white .toggle-panel,.layout-panels.bg-none .toggle-panel{background-color:#e9ecef}
+.layout-panels .toggle-panel+.toggle-panel{margin-top:15px}
+.bg-white .toggle-panel{border-color:rgba(0,0,0,0.1)}
+.toggle-panel .toggle-trigger{cursor:pointer;margin-bottom:0;padding:1.25rem 3rem 1.25rem 1.25rem;position:relative;-webkit-transition:all .2s ease;transition:all .2s ease}
+.toggle-panel .toggle-trigger:hover .toggle-icon,.toggle-panel .toggle-trigger.active .toggle-icon{color:#007bff}
+.toggle-icon{color:#007bff;display:block;position:absolute;height:30px;width:20px;right:1.5rem;top:50%;margin-top:-12px}
+.toggle-trigger>.toggle-icon .fa,.toggle-trigger>.toggle-icon #menu-primary .dropdown .caret::after,#menu-primary .dropdown .toggle-trigger>.toggle-icon .caret::after,.toggle-trigger>.toggle-icon .checkmark-list>ul>li::before,.toggle-trigger>.toggle-icon ul.checkmark-list>li::before{display:block;margin:0 auto;width:24px;font-size:1.1em}
+.toggle-trigger>.toggle-icon .fa-minus{display:none}
+.toggle-panel .toggle-trigger.active,.toggle-panel .toggle-trigger.active:hover{text-decoration:none;border-bottom:0}
+.toggle-panel .toggle-trigger.active>.toggle-icon .fa-minus,.toggle-panel .toggle-trigger.active:hover>.toggle-icon .fa-minus{display:block}
+.toggle-panel .toggle-trigger.active>.toggle-icon .fa-plus,.toggle-panel .toggle-trigger.active:hover>.toggle-icon .fa-plus{display:none}
+.toggle-panel-content{border-top:0;display:none;padding:0 1.25rem 1.25rem;margin:0}
+.toggle-panel-content>*:last-child{margin-bottom:0}
+.bg-primary .toggle-panel .toggle-trigger,.bg-primary .toggle-panel .toggle-panel-content,.bg-geo-red .toggle-panel .toggle-trigger,.bg-geo-red .toggle-panel .toggle-panel-content{border:0}
 .byline,.entry-meta{color:#6c757d;margin:0;font-size:.875rem}
 .byline a,.entry-meta a{color:inherit}
 .entry-meta>li::after{content:"|";display:inline;margin:0 5px}
@@ -1474,6 +1489,7 @@ iframe{max-width:100%}
 .carousel-control-prev,.carousel-control-next{-webkit-transition:none;transition:none}
 .carousel-indicators li{-webkit-transition:none;transition:none}
 a,a:visited{-webkit-transition:none;transition:none}
+.toggle-panel .toggle-trigger{-webkit-transition:none;transition:none}
 .navbar-light #menu-primary .dropdown-menu,.navbar-dark #menu-primary .dropdown-menu,.dropdown-menu,.text-white .dropdown-menu{-webkit-transition:none;transition:none}
 .btn,.post-edit-link,.comment-form input.submit,.pager li>a,.pager li>span>a{-webkit-transition:none;transition:none}
 .symple-toggle .symple-toggle-trigger{-webkit-transition:none;transition:none}
@@ -2358,6 +2374,7 @@ blockquote.text-right{padding:0 1rem 0 0}
 .text-xl-right{text-align:right !important}
 .text-xl-center{text-align:center !important}
 .lead{font-size:2rem}
+.toggle-panel .toggle-trigger{font-size:1.2rem}
 #menu-primary>li>a{padding-right:.55rem;padding-left:.55rem}
 .card-img.bg-img{height:370px}
 .card-deck.card-deck-twos .card{-webkit-box-flex:0;-webkit-flex:0 0 calc(50% - 30px);-ms-flex:0 0 calc(50% - 30px);flex:0 0 calc(50% - 30px)}
