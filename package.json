@@ -10,7 +10,7 @@
   "homepage": "https://github.com/dd9/boiler2#readme",
   "dependencies": {
     "bootstrap": "4.5.0",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.27.10",
     "hoek": "^5.0.4",
     "jquery.easing": "^1.4.1",
     "npm": "^6.14.5",
